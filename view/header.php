@@ -1,3 +1,31 @@
-<link rel="stylesheet" href="styles.css">
-<img src="mandala.jpg" height="50" width="50">
-<h1 id="title">RDC Memory Madness with Memero</h1>
+<!-- <!DOCTYPE html>
+<html> -->
+<!-- the head section -->
+<!-- <head>
+    <title>RDC My Guitar Shop</title>
+    <link rel="stylesheet" type="text/css" href="http://localhost/INFO3426/assign4/main.css">
+</head> -->
+
+<!-- the body section -->
+<!-- <body>
+<header><h1>My Guitar Shop</h1></header> -->
+
+<?php
+   if ( !isset($_SESSION['Email']) ) {
+       header("location:loginform.php");
+   }
+   $first_name = $_SESSION['Firstname'];
+   $last_name = $_SESSION['Lastname'];
+?>
+<!DOCTYPE html>
+<html>
+<!-- the head section /INFO3426/Assignment_6-->
+<head>
+  <title>OPL - Event Tracker</title>
+  <link rel="stylesheet" type="text/css" href="http://localhost/INFO4430/styles.css">
+</head>
+
+<!-- the body section -->
+<body>
+Welcome <?=$first_name?> <?=$last_name?>
+<header><h1>The Book Loan System</h1> </header>
