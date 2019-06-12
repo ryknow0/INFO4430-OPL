@@ -1,0 +1,265 @@
+.page-wrapper {
+  padding-top: 55px;
+  padding-bottom: 55px;
+  background-color: rgba(0, 0, 0, 0.06);
+}
+
+.container {
+  padding: 30px;
+  border-radius: 20px;
+  background-color: #fff;
+  box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.11);
+}
+
+.field-label {
+  width: 100px;
+  margin-right: 10px;
+}
+
+.field-label.wide {
+  width: 220px;
+}
+
+.form-field {
+  margin-bottom: 0px;
+}
+
+.div-block {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.heading {
+  margin-top: 10px;
+}
+
+.field-wrapper {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  margin-bottom: 15px;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.form {
+  max-width: 430px;
+  margin-top: 30px;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.form-button-wrapper {
+  margin-top: 35px;
+  text-align: center;
+}
+
+.button {
+  margin-right: 15px;
+  margin-bottom: 22px;
+  margin-left: 15px;
+  padding: 15px 35px;
+  border-radius: 10px;
+}
+
+.button.login {
+  background-color: #34c018;
+}
+
+.button.fixed-width-button {
+  width: 190px;
+  padding-right: 15px;
+  padding-left: 15px;
+}
+
+.logo-image {
+  height: 140px;
+  padding-right: 20px;
+}
+
+.forgot-password-link {
+  float: right;
+  text-decoration: none;
+}
+
+.asterisk {
+  margin-right: 3px;
+  margin-left: 3px;
+  color: red;
+  font-size: 17px;
+}
+
+.right-aligned-text {
+  margin-bottom: 10px;
+  text-align: right;
+}
+
+.centered-h1 {
+  margin-top: 0px;
+  text-align: center;
+}
+
+.navbar {
+  background-color: #fff;
+}
+
+.columns {
+  margin-bottom: 80px;
+}
+
+.h3 {
+  text-align: center;
+}
+
+.h1-huge {
+  font-size: 60px;
+  line-height: 80px;
+  text-align: center;
+}
+
+.centered-contents-div {
+  text-align: center;
+}
+
+.bold-text {
+  font-weight: 700;
+}
+
+.radio-button {
+  margin-right: 15px;
+  margin-left: 15px;
+}
+
+.button-and-field-wrapper {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.button-2 {
+  width: 210px;
+  margin-right: 10px;
+  -webkit-box-flex: 0;
+  -webkit-flex: 0 auto;
+  -ms-flex: 0 auto;
+  flex: 0 auto;
+  text-align: center;
+}
+
+.text-field {
+  margin-bottom: 0px;
+}
+
+.fields-wrapper {
+  max-width: 430px;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.add-attendee-button {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  width: 140px;
+  height: 50px;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+  border-radius: 10px;
+  background-color: #11c20b;
+  cursor: pointer;
+}
+
+.image-2 {
+  max-height: 100%;
+}
+
+.add-attendee-wrapper {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  margin-top: 25px;
+  margin-bottom: 20px;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.heading-2 {
+  margin-top: 10px;
+  margin-right: 30px;
+  text-align: center;
+}
+
+.h2-centered {
+  text-align: center;
+}
+
+.attendance-demographic-wrapper {
+  margin-bottom: 15px;
+  padding: 10px;
+  border-style: solid;
+  border-width: 1px;
+  border-color: rgba(0, 0, 0, 0.15);
+  border-radius: 5px;
+}
+
+.demographic-heading {
+  margin-top: 10px;
+}
+
+.navbar-image {
+  height: 120px;
+}
+
+.nav-menu {
+  -webkit-box-flex: 1;
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+  text-align: right;
+}
+
+.link {
+  display: block;
+}
