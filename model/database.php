@@ -5,7 +5,7 @@
    mb_regex_encoding('UTF-8');
    $dsn = 'mysql:host=localhost;dbname=event_tracker';
    $username = 'remoteuser';
-   $password = 'remoteuser0!';
+   $password = 'remote_User0!';
   
    try {
        //db = global variable it is declared here and used other plces on the site
