@@ -42,7 +42,7 @@
           <div class="field-wrapper"><label for="name" class="field-label">Username: </label><input type="text" class="form-field w-input" maxlength="256" name="name" data-name="Name" id="name"></div>
           <div class="field-wrapper"><label for="name-2" class="field-label">Password:</label><input type="text" class="form-field w-input" maxlength="256" name="name-2" data-name="Name 2" id="name-2"></div>
           <div class="w-clearfix"><a href="#" class="forgot-password-link">forgot password?</a></div>
-          <div class="form-button-wrapper"><input type="submit" value="Login" data-wait="Please wait..." class="button login w-button"><input type="submit" value="Sign Up" data-wait="Please wait..." class="button w-button"></div>
+          <div class="form-button-wrapper"><input type="submit" onclick="window.location.href = 'account/index.php';" value="Login" data-wait="Please wait..." class="button login w-button"><input type="submit" value="Sign Up" data-wait="Please wait..." class="button w-button"></div>
         </form>
         <div class="w-form-done">
           <div>Thank you! Your submission has been received!</div>
@@ -54,7 +54,7 @@
     </div>
   </div>
   <div>
-    <a href="account/create-account.html" class="link">Create Account</a>
+    <a href="account/index.php" class="link">Create Account</a>
     <a href="event/create-event.html" class="link">Create Event</a>
     <a href="user/add-user.html" class="link">Add User</a>
     <a href="report/generate-report.html" class="link">Generate Report</a>

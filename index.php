@@ -2,6 +2,7 @@
 session_start();
 include 'view/header.php';
 ?>
+<!-- User Account Page-->
 <body>
   <div data-collapse="medium" data-animation="default" data-duration="400" class="navbar w-nav">
     <div class="container-2 w-container"><a href="index.html" class="w-nav-brand"><img src="images/orem-library.jpg" alt="" class="navbar-image"></a>
