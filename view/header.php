@@ -9,14 +9,14 @@
 <!-- the body section -->
 <!-- <body>
 <header><h1>My Guitar Shop</h1></header> -->
-
 <?php
-   if ( !isset($_SESSION['Email']) ) {
-      header("location:loginform.php");
+   session_start();
+   if ( isset($_SESSION['username']) ) {
+       header('Location: http://localhost/account/index.php');
    }
-   $first_name = $_SESSION['Firstname'];
-   $last_name = $_SESSION['Lastname'];
+   $errors='';
 ?>
+
 <!-- <!DOCTYPE html>
 <html> -->
 <!-- the head section /INFO3426/Assignment_6-->
