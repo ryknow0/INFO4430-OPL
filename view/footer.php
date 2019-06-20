@@ -1,10 +1,10 @@
-<<!-- <footer>
+<!-- <footer>
     <p class="copyright">
         &copy; <?php //echo date("Y"); ?> Event Tracker
     </p>
 </footer>
 </body>
-</html>
+</html>-->
 <!-- <footer>
   <a href="http://localhost/INFO3426/Assignment_6/index.php">Home</a><p class="copyright">&copy; <?php echo date("Y"); ?> The Book Loan System</p>
 </footer>
@@ -14,7 +14,7 @@
 
 <footer>
     <a href="account/index.php" class="link">Create Account</a>
-    <a href="event/create_event.php" class="link">Create Event</a>
+    <a href="event/index.php" class="link">Create Event</a>
     <a href="user/index.php" class="link">Add User</a>
     <a href="report/generate-report.html" class="link">Generate Report</a>
     <a href="user/index.php" class="link">Admin Page</a>
