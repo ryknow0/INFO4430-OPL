@@ -4,7 +4,7 @@ include '../view/header.php';
 <!--Account Creation Page Body -->
 <body>
   <div data-collapse="medium" data-animation="default" data-duration="400" class="navbar w-nav">
-    <div class="container-2 w-container"><a href="index.html" class="w-nav-brand"><img src="../images/orem-library.jpg" alt="" class="navbar-image"></a>
+    <div class="container-2 w-container"><a href="index.php" class="w-nav-brand"><img src="../images/orem-library.jpg" alt="" class="navbar-image"></a>
       <div class="w-nav-button">
         <div class="w-icon-nav-menu"></div>
       </div>

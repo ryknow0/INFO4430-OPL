@@ -13,18 +13,19 @@
 </html> -->
 
 <footer>
-    <a href="account/index.php" class="link">Create Account</a>
-    <a href="event/index.php" class="link">Create Event</a>
-    <a href="user/index.php" class="link">Add User</a>
-    <a href="report/generate-report.html" class="link">Generate Report</a>
-    <a href="user/index.php" class="link">Admin Page</a>
-    <a href="event/index.php" class="link">Event Tracker</a>
-    <a href="index.php" class="link">Home</a>
-    <a href="logout.php" class="link">Logout</a>
+    <a href="http://10.52.2.69/account/index.php" class="link">Create Account</a>
+    <a href="http://10.52.2.69/event/index.php" class="link">Create Event</a>
+    <a href="http://10.52.2.69/user/index.php" class="link">Add User</a>
+    <a href="http://10.52.2.69/report/index.php" class="link">Generate Report</a>
+    <a href="http://10.52.2.69/user/index.php" class="link">Admin Page</a>
+    <a href="http://10.52.2.69/event/index.php" class="link">Event Tracker</a>
+    <a href="http://10.52.2.69/index.php" class="link">Home</a>
+    <a href="http://10.52.2.69/logout.php" class="link">Logout</a>
+    <a href="http://10.52.2.69/loginform.php" class="link">Login</a>
 </div>
 </footer>
 <script src="https://d1tdp7z6w94jbb.cloudfront.net/js/jquery-3.3.1.min.js" type="text/javascript" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
-  <script src="js/webflow.js" type="text/javascript"></script>
+  <script src="http://10.52.2.69/js/webflow.js" type="text/javascript"></script>
   <!-- [if lte IE 9]><script src="https://cdnjs.cloudflare.com/ajax/libs/placeholders/3.0.2/placeholders.min.js"></script><![endif] -->
 </body>
 </html>
