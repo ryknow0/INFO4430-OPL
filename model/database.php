@@ -3,7 +3,7 @@
    mb_http_output('UTF-8');
    mb_http_input('UTF-8');
    mb_regex_encoding('UTF-8');
-   $dsn = 'mysql:host=localhost;dbname=event_tracker';
+   $dsn = 'mysql:host=localhost;dbname=Library';
    $username = 'remoteuser';
    $password = 'remote_User0!';
   

@@ -12,7 +12,7 @@ function get_users() {
 function login($email, $password){
    global $db;
    //
-   $query = 'SELECT UserId, Firstname, Lastname, Email FROM user WHERE Email = :email AND Password = md5(:password)';
+   $query = 'SELECT UserId, Firstname, Lastname, Email FROM Users WHERE Email = :email AND Password = md5(:password)';
    //db query gets passed to the prepare function
    $statement = $db->prepare($query);
   
