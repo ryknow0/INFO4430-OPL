@@ -1,7 +1,7 @@
-<?php include '../view/header.php'; ?>
+<?php include 'view/header.php' ?>
 <body>
   <div data-collapse="medium" data-animation="default" data-duration="400" class="navbar w-nav">
-    <div class="container-2 w-container"><a href="../index.php" class="w-nav-brand"><img src="../images/orem-library.jpg" alt="" class="navbar-image"></a>
+    <div class="container-2 w-container"><a href="index.html" class="w-nav-brand"><img src="images/orem-library.jpg" alt="" class="navbar-image"></a>
       <div class="w-nav-button">
         <div class="w-icon-nav-menu"></div>
       </div>
@@ -14,7 +14,7 @@
       <div class="fields-wrapper">
         <div class="add-attendee-wrapper">
           <h2 class="heading-2">Add Attendee</h2>
-          <div id="add-attendee-button" class="add-attendee-button"><img src="../images/person_add_white_2048x2048.png" srcset="../images/person_add_white_2048x2048.png 500w, ../images/person_add_white_2048x2048.png 800w, ../images/person_add_white_2048x2048.png 1080w, ../images/person_add_white_2048x2048.png 2048w" sizes="(max-width: 479px) 7vw, 34px" alt="" class="image-2"></div>
+          <div id="add-attendee-button" class="add-attendee-button"><img src="images/person_add_white_2048x2048.png" srcset="images/person_add_white_2048x2048.png 500w, images/person_add_white_2048x2048.png 800w, images/person_add_white_2048x2048.png 1080w, images/person_add_white_2048x2048.png 2048w" sizes="(max-width: 479px) 7vw, 34px" alt="" class="image-2"></div>
         </div>
         <div>
           <h2 class="h2-centered">Total: 85</h2>
@@ -69,4 +69,4 @@
       </div>
     </div>
   </div>
-  <?php include '../view/footer.php'; ?>
+  <?php include 'view/footer.php'>
