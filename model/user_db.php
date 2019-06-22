@@ -2,7 +2,7 @@
 require('database.php');
 function get_users() {
    global $db;
-   $query = 'SELECT Firstname, Lastname, Email FROM user';
+   $query = 'SELECT Firstname, Lastname, Email FROM Users';
    $statement = $db->prepare($query);
    $statement->execute();
    $users = $statement->fetchAll();
@@ -12,7 +12,7 @@ function get_users() {
 function login($email, $password){
    global $db;
    //
-   $query = 'SELECT UserId, Firstname, Lastname, Email FROM Users WHERE Email = :email AND Password = md5(:password)';
+   $query = 'SELECT UserId, Email, First_Name, Last_Name  FROM Users WHERE Email = :email AND Password = md5(:password)';
    //db query gets passed to the prepare function
    $statement = $db->prepare($query);
   
