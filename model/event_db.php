@@ -8,6 +8,8 @@ function get_all_events(){
     //Need to write the DB query to pull all relevant events
     $query = '';
     $statement = $db->prepare($query);
+    $statement->bindParam(':userid', $userid);
+    $statement->bindParam(':accountid', $accountid);
     $statement->execute();
     $events = $statement->fetchAll();
     //var_dump($events);
@@ -20,6 +22,7 @@ function get_ytd_attendees(){
     global $db;
     $query = '';
     $statement = $db->prepare($query);
+    
     $statement->execute();
     $ytd_attendees = $statement->fetchAll();
     //var_dump(ytd_attendees);
