@@ -1,7 +1,6 @@
 
-<<<<<<< HEAD
+
 <?php include 'view/header.php';?>
-=======
 <!-- 
 <?php
 //   session_start();
@@ -29,7 +28,7 @@
   <link href="https://daks2k3a4ib2z.cloudfront.net/img/webclip.png" rel="apple-touch-icon">
 </head>
 
->>>>>>> 3af75f6c629fd95dd3b0ad18fa6d7efb3f1488a0
+
 <!-- the body section -->
 <body>
   <div data-collapse="medium" data-animation="default" data-duration="400" class="navbar w-nav">

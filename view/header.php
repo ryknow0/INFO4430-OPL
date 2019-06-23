@@ -5,14 +5,14 @@
   <title>OPL - Event Tracker</title>
   <link rel="stylesheet" type="text/css" href="http://localhost/INFO4430/styles.css">
 </head> -->
-
+<!--
 <?php
-   if ( !isset($_SESSION['Email']) ) {
-      header("location:loginform.php");
-   }
-   $first_name = $_SESSION['Firstname'];
-   $last_name = $_SESSION['Lastname'];
-?>
+//   if ( !isset($_SESSION['Email']) ) {
+//      header("location:index.php");
+//   }
+//   $first_name = $_SESSION['First_Name'];
+//   $last_name = $_SESSION['Last_Niame'];
+?>-->
 
 <!DOCTYPE html>
 <!--  This site was created in Webflow. http://www.webflow.com  -->

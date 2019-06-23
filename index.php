@@ -2,6 +2,7 @@
 session_start();
 include 'view/header.php';
 require ('model/event_db.php');
+ini_set('display_errors', 1);
 ?>
 <!-- User Account Page-->
 <body>
@@ -35,14 +36,14 @@ require ('model/event_db.php');
           <div class="w-col w-col-4">
           <table border="1">
             <tr><td>Date</td><td>Event</td><td>Event Type</td><td>Action</td></tr>
-            <?php foreach ($event as $event) ?>
-              <tr>
-                <?php echo '<td width=\'400\'>'. $event['Name'] . 
-                '</td><td width='\'400\'>'. $event['Date'] .
-                '</td><td width='\'400\'>' . $event['Type'] .
-                '</td><td>Edit | Delete</td>'; ?>
-              </tr>
-              <?php endforeach; ?>
+          <!-- // <?php foreach ($event as $event) ?>
+             // <tr>
+               // <?php echo '<td width=\'400\'>'. $event['Name'] . 
+               // '</td><td width='\'400\'>'. $event['Date'] .
+               // '</td><td width='\'400\'>' . $event['Type'] .
+               // '</td><td>Edit | Delete</td>'; ?>
+             // </tr>
+             // <?php endforeach; ?>-->n
           </table>
           </div>
         </div>
