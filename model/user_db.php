@@ -1,18 +1,20 @@
 <?php
 require('database.php');
+//get_user = returns all the users in the system
 function get_users() {
    global $db;
-   $query = 'SELECT Firstname, Lastname, Email FROM Users';
+   $query = 'SELECT Firstname, Lastname, Email FROM user';
    $statement = $db->prepare($query);
    $statement->execute();
    $users = $statement->fetchAll();
    $statement->closeCursor();
    return $users;
 }
+//login = gets userid for user with the matching username and password 
 function login($email, $password){
    global $db;
    //
-   $query = 'SELECT UserId, Email, First_Name, Last_Name  FROM Users WHERE Email = :email AND Password = md5(:password)';
+   $query = 'SELECT UserId, Firstname, Lastname, Email FROM user WHERE Email = :email AND Password = md5(:password)';
    //db query gets passed to the prepare function
    $statement = $db->prepare($query);
   
@@ -24,6 +26,6 @@ function login($email, $password){
    $user = $statement->fetch(PDO::FETCH_BOTH);//access the return array allows you to use names or numbers to access array items
    $statement->closeCursor();
    //$user is an aray of 4 elements
-   var_dump($user);
+   //var_dump($user);
    return $user;   
 }
