@@ -13,17 +13,17 @@ if ($action == 'list_users') {
    include('user_list.php');
 }
 elseif($action == 'login'){  
-   $email = filter_input(INPUT_POST,'email');
-   $password = filter_input(INPUT_POST,'password');
+   $email = filter_input(INPUT_POST,'Email');
+   $password = filter_input(INPUT_POST,'Password');
    $user = login($email, $password);
    var_dump($user);
    if($user == NULL){
-       header("Location: /INFO3426/Assignment_6/loginform.php?errors=Missing login credentials.");
+       header("Location: ../loginform.php?errors=Missing login credentials.");
    } else{
        $_SESSION['Email'] = $user['Email'];
-       $_SESSION['Firstname'] = $user['Firstname'];
-       $_SESSION['Lastname'] = $user['Lastname'];
-       $_SESSION['UserId'] = $user['UserId'];
-       header('Location: /INFO3426/Assignment_6/index.php');
+       $_SESSION['First_Name'] = $user['First_Name'];
+       $_SESSION['Last_Name'] = $user['Last_Name'];
+       $_SESSION['UserID'] = $user['UserID'];
+       header('Location: ../index.php');
    }
 }

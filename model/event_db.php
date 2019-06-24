@@ -8,8 +8,8 @@ function get_all_events(){
     //Need to write the DB query to pull all relevant events
     $query = '';
     $statement = $db->prepare($query);
-    $statement->bindParam(':userid', $userid);
-    $statement->bindParam(':accountid', $accountid);
+    $statement->bindParam(':UserID', $userid);
+    $statement->bindParam(':AccounD', $accountid);
     $statement->execute();
     $events = $statement->fetchAll();
     //var_dump($events);

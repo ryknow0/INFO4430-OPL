@@ -3,7 +3,7 @@ require('database.php');
 //get_user = returns all the users in the system
 function get_users() {
    global $db;
-   $query = 'SELECT Firstname, Lastname, Email FROM user';
+   $query = 'SELECT First_Name, Last_Name, Email FROM Users';
    $statement = $db->prepare($query);
    $statement->execute();
    $users = $statement->fetchAll();
@@ -14,12 +14,12 @@ function get_users() {
 function login($email, $password){
    global $db;
    //
-   $query = 'SELECT UserId, Firstname, Lastname, Email FROM user WHERE Email = :email AND Password = md5(:password)';
+   $query = 'SELECT UserID, First_Name, Last_Name, Email FROM Users WHERE Email = :Email AND Password = md5(:Password)';
    //db query gets passed to the prepare function
    $statement = $db->prepare($query);
   
-   $statement->bindParam(':email', $email);
-   $statement->bindParam(':password', $password);   
+   $statement->bindParam(':Email', $email);
+   $statement->bindParam(':Password', $password);   
    //execute passes the statement (query) and sends it across the connection to the db sever       
    $statement->execute();
    // fetch is cursor runction

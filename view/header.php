@@ -1,10 +1,21 @@
+<<<<<<< HEAD
+=======
+<!-- <!DOCTYPE html>
+<html> -->
+<!-- the head section /INFO3426/Assignment_6-->
+<!-- <head>
+  <title>OPL - Event Tracker</title>
+  <link rel="stylesheet" type="text/css" href="http://localhost/INFO4430/styles.css">
+</head> -->
+<!--
+>>>>>>> c93bdbf09252555af69e54f7f690903382bbcfab
 <?php
-   if ( !isset($_SESSION['Email']) ) {
-      header("location:loginform.php");
-   }
-   $first_name = $_SESSION['Firstname'];
-   $last_name = $_SESSION['Lastname'];
-?>
+//   if ( !isset($_SESSION['Email']) ) {
+//      header("location:index.php");
+//   }
+//   $first_name = $_SESSION['First_Name'];
+//   $last_name = $_SESSION['Last_Niame'];
+?>-->
 
 <!DOCTYPE html>
 <!--  This site was created in Webflow. http://www.webflow.com  -->
