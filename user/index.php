@@ -14,8 +14,8 @@ if ($action == NULL) {
 }
 if ($action == 'login'){
     //grabs value from Post "Email and Password" sets them to variables for use in the function
-   $email = filter_input(INPUT_POST,'Email');
-   $password = filter_input(INPUT_POST,'Password');
+   $email = filter_input(INPUT_POST,'username');
+   $password = filter_input(INPUT_POST,'password');
    //email and password are passed as parameters to login() and set to $user
    $user = login($email, $password);
    //var_dump($user);
