@@ -15,7 +15,7 @@
 <footer>
     <a href="http://10.52.2.69/account/index.php" class="link">Create Account</a>
     <a href="http://10.52.2.69/event/index.php" class="link">Create Event</a>
-    <a href="http://10.52.2.69/user/index.php" class="link">Add User</a>
+    <a href="http://10.52.2.69/user/user_add.php" class="link">Add User</a>
     <a href="http://10.52.2.69/report/index.php" class="link">Generate Report</a>
     <a href="http://10.52.2.69/user/index.php" class="link">Admin Page</a>
     <a href="http://10.52.2.69/event/index.php" class="link">Event Tracker</a>
