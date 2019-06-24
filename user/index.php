@@ -9,15 +9,10 @@ if ($action == NULL) {
     //If $action is NULL check get for 'action'
    $action = filter_input(INPUT_GET, 'action');
    if ($action == NULL) {
-       $action = 'user_add';
+       $action = 'login';
    }
 }
-if ($action == 'user_add') {
-   $users = get_users();
-   include('user_add.php');
-}
-//processes the login information from the loginform.php
-elseif($action == 'login'){
+if ($action == 'login'){
     //grabs value from Post "Email and Password" sets them to variables for use in the function
    $email = filter_input(INPUT_POST,'Email');
    $password = filter_input(INPUT_POST,'Password');
