@@ -1,11 +1,3 @@
-<!-- <!DOCTYPE html>
-<html> -->
-<!-- the head section /INFO3426/Assignment_6-->
-<!-- <head>
-  <title>OPL - Event Tracker</title>
-  <link rel="stylesheet" type="text/css" href="http://localhost/INFO4430/styles.css">
-</head> -->
-
 <?php
    if ( !isset($_SESSION['Email']) ) {
       header("location:loginform.php");
