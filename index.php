@@ -36,14 +36,14 @@ include 'view/header.php';
           <div class="w-col w-col-4">
           <table border="1">
             <tr><td>Date</td><td>Event</td><td>Event Type</td><td>Action</td></tr>
-          <!-- // <?php foreach ($event as $event) ?>
-             // <tr>
-               // <?php echo '<td width=\'400\'>'. $event['Name'] . 
+          <!--<?php //foreach ($event as $event) ?>
+            <tr>
+               <?php //echo '<td width=\'400\'>'. $event['Name'] . 
                // '</td><td width='\'400\'>'. $event['Date'] .
                // '</td><td width='\'400\'>' . $event['Type'] .
-               // '</td><td>Edit | Delete</td>'; ?>
-             // </tr>
-             // <?php endforeach; ?>-->
+               //'</td><td>Edit | Delete</td>'; ?>
+             </tr>
+             <?php //endforeach; ?>-->
           </table>
           </div>
         </div>
