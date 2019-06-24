@@ -1,8 +1,8 @@
 <?php
 session_start();
 include 'view/header.php';
-require ('model/event_db.php');
-ini_set('display_errors', 1);
+//require ('model/event_db.php');
+//ini_set('display_errors', 1);
 ?>
 <!-- User Account Page-->
 <body>
