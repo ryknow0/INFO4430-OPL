@@ -43,7 +43,7 @@ ini_set('display_errors', 1);
                // '</td><td width='\'400\'>' . $event['Type'] .
                // '</td><td>Edit | Delete</td>'; ?>
              // </tr>
-             // <?php endforeach; ?>-->n
+             // <?php endforeach; ?>-->
           </table>
           </div>
         </div>
