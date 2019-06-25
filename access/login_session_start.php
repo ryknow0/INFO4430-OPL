@@ -1,7 +1,7 @@
 <?php
-   session_start();
-   if ( isset($_SESSION['username']) ) {
-       header('Location:index.php');
+   if ( !isset($_SESSION['Email']) ) {
+      header("location:index.php");
    }
-   $errors='';
+   $first_name = $_SESSION['First_Name'];
+   $last_name = $_SESSION['Last_Niame'];
 ?>
