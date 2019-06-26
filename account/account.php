@@ -13,7 +13,7 @@ include '../view/header.php';
   <div class="page-wrapper">
     <div class="container w-container">
       <h1 class="centered-h1">Account</h1>
-      <?php echo $message . '<br/>'; ?>
+      <?php echo $message . '<br/>'; g?>
       <div class="w-form">
         <form id="email-form" name="email-form" data-name="Email Form" class="form">
           <div class="right-aligned-text"><span class="asterisk">*</span>Required Fields</div>
