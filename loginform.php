@@ -52,6 +52,7 @@
             <input type="submit" value="Login" onclick="window.location.href = 'index.php';" data-wait="Please wait..." class="button login w-button">
             <input type="hidden" name="action" value="login"/>
             <input type="submit" value="Sign Up" onclick="window.location.href = '/account/index.php?action=create_acount' data-wait="Please wait..." class="button w-button">
+            <a href="http://10.52.2.69/account/index.php?action=create_account">Sign UP!</a>
           </div>
         </form>
         <div class="w-form-done">
