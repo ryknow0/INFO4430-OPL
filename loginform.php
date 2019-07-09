@@ -55,6 +55,9 @@
             <a href="http://10.52.2.69/account/index.php?action=create_account">Sign UP!</a>
           </div>
         </form>
+        <form>
+        <input type="submit" value="Sign Up" onclick="window.location.href = '/account/index.php?action=create_acount' data-wait="Please wait..." class="button w-button">
+        </form>
         <div class="w-form-done">
           <div>Thank you! Your submission has been received!</div>
         </div>
