@@ -23,7 +23,11 @@ include '../view/header.php';
           <div class="field-wrapper"><label for="name-3" class="field-label wide">Username/Email:</label><label for="name-3" class="asterisk">*</label><input type="text" class="form-field w-input" maxlength="256" name="name-2" data-name="Name 2" id="name-2"></div>
           <div class="field-wrapper"><label for="name-3" class="field-label wide">Password:</label><label for="name-3" class="asterisk">*</label><input type="text" class="form-field w-input" maxlength="256" name="name-2" data-name="Name 2" id="name-2"></div>
           <div class="field-wrapper"><label for="name-3" class="field-label wide">Re-Enter Password:</label><label for="name-3" class="asterisk">*</label><input type="text" class="form-field w-input" maxlength="256" name="name-2" data-name="Name 2" id="name-2"></div>
-          <div class="form-button-wrapper"><input type="submit" value="Submit" data-wait="Please wait..." class="button login w-button"><input type="submit" value="Cancel" data-wait="Please wait..." class="button w-button"></div>
+          <div class="form-button-wrapper">
+            <input type="submit" value="Submit" onclick="window.location.href = 'index.php';" data-wait="Please wait..." class="button login w-button">
+            <input type="hidden" name="action" value="create_account"/>
+            <input type="submit" value="Cancel" data-wait="Please wait..." class="button w-button">
+          </div>
         </form>
         <div class="w-form-done">
           <div>Thank you! Your submission has been received!</div>

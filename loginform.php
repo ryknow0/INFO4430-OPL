@@ -49,14 +49,11 @@
           <div class="field-wrapper"><label for="name-2" class="field-label">Password:</label><input type="password" class="form-field w-input" maxlength="256" name="password" data-name="Name 2" id="name-2" placeholder="Password"></div>
           <div class="w-clearfix"><a href="password/#" class="forgot-password-link">forgot password?</a></div>
           <div class="form-button-wrapper">
-            <input type="submit" value="Login" onclick="window.location.href = 'index.php';" data-wait="Please wait..." class="button login w-button">
+          <input type="submit" value="Login" onclick="window.location.href = 'index.php';" data-wait="Please wait..." class="button login w-button">
             <input type="hidden" name="action" value="login"/>
             <input type="submit" value="Sign Up" onclick="window.location.href = '/account/index.php?action=create_acount' data-wait="Please wait..." class="button w-button">
-            <a href="http://10.52.2.69/account/index.php?action=create_account">Sign UP!</a>
+            <a href="http://10.52.2.69/account/create_account.php">Sign UP!</a>
           </div>
-        </form>
-        <form>
-        <input type="submit" value="Sign Up" onclick="window.location.href = '/account/index.php?action=create_acount' data-wait="Please wait..." class="button w-button">
         </form>
         <div class="w-form-done">
           <div>Thank you! Your submission has been received!</div>
