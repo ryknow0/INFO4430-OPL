@@ -50,9 +50,8 @@
           <div class="w-clearfix"><a href="password/#" class="forgot-password-link">forgot password?</a></div>
           <div class="form-button-wrapper">
           <input type="submit" value="Login" onclick="window.location.href = 'index.php';" data-wait="Please wait..." class="button login w-button">
-          <input value="Sign Up" onclick="location.href = '../account/index.php?action=create_acount' data-wait="Please wait..." class="button w-button">
+          <a class="button w-button" href="../account/account_edit.php" role="button">Sign Up</a>
           <input type="hidden" name="action" value="login"/>
-            <!--<a href="http://10.52.2.69/account/create_account.php" class="button w-button">Sign UP!</a>-->
           </div>
         </form>
         <div class="w-form-done">
