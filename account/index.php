@@ -26,10 +26,10 @@ include '../view/header.php';
             <input type="text" class="form-field w-input" maxlength="256" name="account_name" data-name="account_name" id="name">
           </div>
           <!-- Department Name          -->
-          <!-- name="department_name"   -->
+          <!-- name="department"   -->
           <div class="field-wrapper">
             <label for="name-2" class="field-label wide">Department:</label><label for="name-3" class="asterisk">*</label>
-            <input type="text" class="form-field w-input" maxlength="256" name="department_name" data-name="department_name" id="name-2">
+            <input type="text" class="form-field w-input" maxlength="256" name="department" data-name="department" id="name-2">
           </div>
           <!-- Account Admin Section Label  --> 
           <label for="name-3" class="field-label wide">ACCOUNT ADMINISTRATOR</label>
