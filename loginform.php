@@ -44,14 +44,27 @@
         <h1 class="heading">Event<br>Tracker</h1>
       </div>
       <div class="w-form">
+        <!-- Login Form-->
         <form id="email-form" name="email-form" data-name="Email Form" class="form" action="user/index.php" method="post">
-          <div class="field-wrapper"><label for="name" class="field-label">Username: </label><input type="text" class="form-field w-input" maxlength="256" name="username" data-name="username" id="name" placeholder="Username"></div>
-          <div class="field-wrapper"><label for="name-2" class="field-label">Password:</label><input type="password" class="form-field w-input" maxlength="256" name="password" data-name="Name 2" id="name-2" placeholder="Password"></div>
-          <div class="w-clearfix"><a href="password/#" class="forgot-password-link">forgot password?</a></div>
+          <!-- Username Field -->
+          <div class="field-wrapper">
+            <label for="name" class="field-label">Username: </label>
+            <input type="text" class="form-field w-input" maxlength="256" name="username" data-name="username" id="name" placeholder="Username">
+          </div>
+          <!-- Password Field -->
+          <div class="field-wrapper">
+            <label for="name-2" class="field-label">Password:</label>
+            <input type="password" class="form-field w-input" maxlength="256" name="password" data-name="Name 2" id="name-2" placeholder="Password">
+          </div>
+          <!-- Link for forgot password -->
+          <div class="w-clearfix">
+            <a href="password/#" class="forgot-password-link">forgot password?</a>
+          </div>
           <div class="form-button-wrapper">
-          <input type="submit" value="Login" onclick="window.location.href = 'index.php';" data-wait="Please wait..." class="button login w-button">
-          <a class="button w-button" href="../account/account_edit.php" role="button">Sign Up</a>
-          <input type="hidden" name="action" value="login"/>
+          <!-- Login page form button and link to sign up page -->
+            <input type="submit" value="Login" onclick="window.location.href = 'index.php';" data-wait="Please wait..." class="button login w-button">
+            <a class="button w-button" href="../account/index.php" role="button">Sign Up</a>
+            <input type="hidden" name="action" value="login"/>
           </div>
         </form>
         <div class="w-form-done">
