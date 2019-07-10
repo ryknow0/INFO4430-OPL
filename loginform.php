@@ -44,7 +44,9 @@
         <h1 class="heading">Event<br>Tracker</h1>
       </div>
       <div class="w-form">
-        <!-- Login Form-->
+        <!-- LOGIN FORM               -->
+        <!-- action="user/index.php"  -->
+        <!-- method="post"            -->
         <form id="email-form" name="email-form" data-name="Email Form" class="form" action="user/index.php" method="post">
           <!-- Username Field -->
           <div class="field-wrapper">

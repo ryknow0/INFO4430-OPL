@@ -32,7 +32,7 @@ if($action == 'create_account'){
    else{
      $message = "Error Adding Account";
    }
-   include('account.php'};
+   header('Location: ../index.php');
 
 
 

@@ -14,40 +14,49 @@ include '../view/header.php';
     <div class="container w-container">
       <h1 class="centered-h1">Create Account</h1>
       <div class="w-form">
-      <!-- Account Creation Form-->
-        <form id="email-form" name="email-form" data-name="Email Form" class="form">
+      <!-- ACCOUNT CREATION FORM            --> 
+      <!-- action="account_controller.php"  -->
+      <!-- method="post"                    -->
+        <form id="email-form" name="email-form" data-name="Email Form" action='../account/account_controller.php' class="form" method="post">
           <div class="right-aligned-text"><span class="asterisk">*</span>Required Fields</div>
-          <!-- Account Name Field -->
+          <!-- Account Name Field   -->
+          <!-- name="account_name"  -->
           <div class="field-wrapper">
             <label for="name" class="field-label wide">Account Name:</label><label for="name-3" class="asterisk">*</label>
             <input type="text" class="form-field w-input" maxlength="256" name="name" data-name="Name" id="name">
           </div>
-          <!-- Department Name -->
+          <!-- Department Name          -->
+          <!-- name="department_name"   -->
           <div class="field-wrapper">
             <label for="name-2" class="field-label wide">Department:</label><label for="name-3" class="asterisk">*</label>
             <input type="text" class="form-field w-input" maxlength="256" name="name-2" data-name="Name 2" id="name-2">
           </div>
-          <!-- Primary Account Contact -->
+          <!-- Primary Account Contact    -->
+          <!-- name="primary_user_name"   -->
           <div class="field-wrapper">
             <label for="name-3" class="field-label wide">Primary Contact:</label><label for="name-3" class="asterisk">*</label>
             <input type="text" class="form-field w-input" maxlength="256" name="name-2" data-name="Name 2" id="name-2">
           </div>
-          <!-- Phone Number -->
+          <!-- Phone Number         -->
+          <!-- name="phone_number"  -->
           <div class="field-wrapper">
             <label for="name-3" class="field-label wide">Phone Number:</label><label for="name-3" class="asterisk">*</label>
             <input type="text" class="form-field w-input" maxlength="256" name="name-2" data-name="Name 2" id="name-2">
           </div>
-          <!-- Email -->
+          <!-- Email          -->
+          <!-- name="email"   -->
           <div class="field-wrapper">
             <label for="name-3" class="field-label wide">Username/Email:</label><label for="name-3" class="asterisk">*</label>
             <input type="text" class="form-field w-input" maxlength="256" name="name-2" data-name="Name 2" id="name-2">
           </div>
-          <!-- Password -->
+          <!-- Password           -->
+          <!-- name="password1"    -->
           <div class="field-wrapper">
             <label for="name-3" class="field-label wide">Password:</label><label for="name-3" class="asterisk">*</label>
             <input type="text" class="form-field w-input" maxlength="256" name="name-2" data-name="Name 2" id="name-2">
           </div>
-          <!-- Re-enter password -->
+          <!-- Re-enter password  -->
+          <!-- name="password2"   -->
           <div class="field-wrapper">
             <label for="name-3" class="field-label wide">Re-Enter Password:</label><label for="name-3" class="asterisk">*</label>
             <input type="text" class="form-field w-input" maxlength="256" name="name-2" data-name="Name 2" id="name-2">
@@ -65,6 +74,7 @@ include '../view/header.php';
         <div class="w-form-fail">
           <div>Oops! Something went wrong while submitting the form.</div>
         </div>
+        <?php var_dump($_SESSION); ?>
       </div>
     </div>
   </div>
