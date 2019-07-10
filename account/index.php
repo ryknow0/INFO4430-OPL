@@ -23,48 +23,59 @@ include '../view/header.php';
           <!-- name="account_name"  -->
           <div class="field-wrapper">
             <label for="name" class="field-label wide">Account Name:</label><label for="name-3" class="asterisk">*</label>
-            <input type="text" class="form-field w-input" maxlength="256" name="name" data-name="Name" id="name">
+            <input type="text" class="form-field w-input" maxlength="256" name="account_name" data-name="account_name" id="name">
           </div>
           <!-- Department Name          -->
           <!-- name="department_name"   -->
           <div class="field-wrapper">
             <label for="name-2" class="field-label wide">Department:</label><label for="name-3" class="asterisk">*</label>
-            <input type="text" class="form-field w-input" maxlength="256" name="name-2" data-name="Name 2" id="name-2">
+            <input type="text" class="form-field w-input" maxlength="256" name="department_name" data-name="department_name" id="name-2">
           </div>
-          <!-- Primary Account Contact    -->
-          <!-- name="primary_user_name"   -->
+          <!-- Account Admin Section Label  --> 
+          <label for="name-3" class="field-label wide">ACCOUNT ADMINISTRATOR</label>
+          <!-- Account Admin First Name   -->
+          <!-- name="first_name"          -->
           <div class="field-wrapper">
-            <label for="name-3" class="field-label wide">Primary Contact:</label><label for="name-3" class="asterisk">*</label>
-            <input type="text" class="form-field w-input" maxlength="256" name="name-2" data-name="Name 2" id="name-2">
+            <label for="name-3" class="field-label wide">First Name:</label><label for="name-3" class="asterisk">*</label>
+            <input type="text" class="form-field w-input" maxlength="256" name="first_name" data-name="first_name" id="name-2">
+          </div>
+          <!-- Account Admin Last Name    -->
+          <!-- name="last_name"           -->
+          <div class="field-wrapper">
+            <label for="name-3" class="field-label wide">Last Name:</label><label for="name-3" class="asterisk">*</label>
+            <input type="text" class="form-field w-input" maxlength="256" name="last_name" data-name="last_name" id="name-2">
           </div>
           <!-- Phone Number         -->
-          <!-- name="phone_number"  -->
+          <!-- name="phone  -->
           <div class="field-wrapper">
             <label for="name-3" class="field-label wide">Phone Number:</label><label for="name-3" class="asterisk">*</label>
-            <input type="text" class="form-field w-input" maxlength="256" name="name-2" data-name="Name 2" id="name-2">
+            <input type="text" class="form-field w-input" maxlength="256" name="phone" data-name="phone" id="name-2">
           </div>
           <!-- Email          -->
           <!-- name="email"   -->
           <div class="field-wrapper">
             <label for="name-3" class="field-label wide">Username/Email:</label><label for="name-3" class="asterisk">*</label>
-            <input type="text" class="form-field w-input" maxlength="256" name="name-2" data-name="Name 2" id="name-2">
+            <input type="text" class="form-field w-input" maxlength="256" name="email" data-name="email" id="name-2">
           </div>
           <!-- Password           -->
-          <!-- name="password1"    -->
+          <!-- name="password1"   -->
           <div class="field-wrapper">
             <label for="name-3" class="field-label wide">Password:</label><label for="name-3" class="asterisk">*</label>
-            <input type="text" class="form-field w-input" maxlength="256" name="name-2" data-name="Name 2" id="name-2">
+            <input type="text" class="form-field w-input" maxlength="256" name="password1" data-name="password1" id="name-2">
           </div>
           <!-- Re-enter password  -->
           <!-- name="password2"   -->
           <div class="field-wrapper">
             <label for="name-3" class="field-label wide">Re-Enter Password:</label><label for="name-3" class="asterisk">*</label>
-            <input type="text" class="form-field w-input" maxlength="256" name="name-2" data-name="Name 2" id="name-2">
+            <input type="text" class="form-field w-input" maxlength="256" name="password2" data-name="password2" id="name-2">
           </div>
           <div class="form-button-wrapper">
-          <!--Account Creation form buttons -->          
-            <input type="submit" value="Submit" data-wait="Please wait..." class="button login w-button">
-            <input type="submit" value="Cancel" data-wait="Please wait..." class="button w-button">
+          <!-- Account Creation form buttons                      -->
+          <!-- name="action"  value="create_account"              -->
+          <!-- SUCCESS redirect to account dashboard(index.php)   -->
+          <!-- FAIL or CANCEL redirect to account loginform.php   -->          
+            <input type="submit" value="Submit" onclick="window.location.href = '../index.php';" data-wait="Please wait..." class="button login w-button">
+            <input type="submit" value="Cancel" onclick="window.location.href = '../index.php';" data-wait="Please wait..." class="button w-button">
             <input type="hidden" name="action" value="create_account">
             </div>
         </form>

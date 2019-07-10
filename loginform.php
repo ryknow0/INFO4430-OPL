@@ -48,23 +48,33 @@
         <!-- action="user/index.php"  -->
         <!-- method="post"            -->
         <form id="email-form" name="email-form" data-name="Email Form" class="form" action="user/index.php" method="post">
-          <!-- Username Field -->
+          <!-- Username Field   -->
+          <!-- name="username"  -->
           <div class="field-wrapper">
             <label for="name" class="field-label">Username: </label>
             <input type="text" class="form-field w-input" maxlength="256" name="username" data-name="username" id="name" placeholder="Username">
           </div>
-          <!-- Password Field -->
+          <!-- Password Field   -->
+          <!-- name="password"  -->
           <div class="field-wrapper">
             <label for="name-2" class="field-label">Password:</label>
             <input type="password" class="form-field w-input" maxlength="256" name="password" data-name="Name 2" id="name-2" placeholder="Password">
           </div>
-          <!-- Link for forgot password -->
+          <!-- FORGOT PASSWORD page form button and link to sign up page               -->
+          <!-- href="password/password_reset.php"                                      -->
+          <!-- SUCCESS redirect to password reset page (password/password_reset.php)   -->
           <div class="w-clearfix">
-            <a href="password/#" class="forgot-password-link">forgot password?</a>
+            <a href="password/password_reset.php" class="forgot-password-link">forgot password?</a>
           </div>
           <div class="form-button-wrapper">
-          <!-- Login page form button and link to sign up page -->
+          <!-- LOGIN BUTTON form submit button                    -->
+          <!-- name="action" value="login"                        -->
+          <!-- SUCCESS redirect to account dashboard(index.php)   -->
+          <!-- FAIL redirect to loginform.php)                    -->
             <input type="submit" value="Login" onclick="window.location.href = 'index.php';" data-wait="Please wait..." class="button login w-button">
+          <!-- SIGN UP BUTTON page form button and link to sign up page         -->
+          <!-- href="../account/index.php"                                      -->
+          <!-- SUCCESS redirect to account create page (../account/index.php)   -->
             <a class="button w-button" href="../account/index.php" role="button">Sign Up</a>
             <input type="hidden" name="action" value="login"/>
           </div>
