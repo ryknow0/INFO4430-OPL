@@ -33,7 +33,7 @@ if($action == 'create_account'){
     header("Location: ../account/index.php?errors=Passwords do not match.");
    }
    //Create account first then add admin user to account
-   $account = create_account($account_name, $department);
+   $account = create_account($account_name, $phone);
    //$user = login($email, $password);
    //$account_added = create_account($account_name, $department, $primary_contact, $phone_number, $email, $password);
    $message = '';
@@ -43,7 +43,7 @@ if($action == 'create_account'){
    //then add admin user with the accountID added
    if($account_added > 0) {
      $message = 'Account Added';
-     $user = add_user($accountID, $first_name, $last_name, $phone, $email, $password);
+     $user = add_user($accountID, $first_name, $last_name, $phone, $email, $password, $department);
 
      $_SESSION['AccountID'] = $accountID['AccountID'];
      $_SESSION['First_Name'] = $accountID['First_Name'];
