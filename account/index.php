@@ -25,7 +25,7 @@ include '../view/header.php';
             <label for="name" class="field-label wide">Account Name:</label><label for="name-3" class="asterisk">*</label>
             <input type="text" class="form-field w-input" maxlength="256" name="account_name" data-name="account_name" id="name">
           </div>
-          <!-- Department Name          -->
+          <!-- Department Name     -->
           <!-- name="department"   -->
           <div class="field-wrapper">
             <label for="name-2" class="field-label wide">Department:</label><label for="name-3" class="asterisk">*</label>
@@ -76,9 +76,10 @@ include '../view/header.php';
           <!-- FAIL or CANCEL redirect to account loginform.php   -->          
             <input type="submit" value="Submit" onclick="window.location.href = '../index.php';" data-wait="Please wait..." class="button login w-button">
             <input type="submit" value="Cancel" onclick="window.location.href = '../index.php';" data-wait="Please wait..." class="button w-button">
-            <input type="hidden" name="action" value="create_account">
+            <input type="hidden" name="action" value="add_user">
             </div>
         </form>
+        <?php var_dump($_SESSION);?>
         <div class="w-form-done">
           <div>Thank you! Your submission has been received!</div>
         </div>

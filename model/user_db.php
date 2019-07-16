@@ -30,6 +30,26 @@ function login($email, $password){
    return $user;   
 }
 
+//Add User Function
+function add_user(){
+   global $db;
+   $query = 'INSERT  First_Name, Last_Name, Email FROM Users';
+   $statement = $db->prepare($query);
+   $statement->bindParam(':', $email);
+   $statement->bindParam(':', $)
+   $statement->execute();
+   $users = $statement->fetchAll();
+   $statement->closeCursor();
+   return $user;
+}
+//Delete User Function
+function delete_user(){
 
+   return $user;
+}
+//Update User
+function update_user(){
 
+   return $user;
+}
    ?>

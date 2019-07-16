@@ -9,11 +9,10 @@ if ($action == NULL) {
     //If $action is NULL check get for 'action'
    $action = filter_input(INPUT_GET, 'action');
    if ($action == NULL) {
-       $action = 'add_user';
+       $action = 'login';
    }
 }
-//Gathers all items from the Session that are needed to add the user to generate the query
-if ($action == 'add_user'){
+if ($action == 'login'){
     //grabs value from Post "Email and Password" sets them to variables for use in the function
    $email = filter_input(INPUT_POST,'username');
    $password = filter_input(INPUT_POST,'password');

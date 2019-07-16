@@ -47,7 +47,7 @@
         <!-- LOGIN FORM               -->
         <!-- action="user/index.php"  -->
         <!-- method="post"            -->
-        <form id="email-form" name="email-form" data-name="Email Form" class="form" action="user/index.php" method="post">
+        <form id="email-form" name="email-form" data-name="Email Form" class="form" action="user/user_login.php" method="post">
           <!-- Username Field   -->
           <!-- name="username"  -->
           <div class="field-wrapper">
