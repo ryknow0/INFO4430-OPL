@@ -9,7 +9,7 @@ function get_all_events(){
     $query = '';
     $statement = $db->prepare($query);
     $statement->bindParam(':UserID', $userid);
-    $statement->bindParam(':AccounD', $accountid);
+    $statement->bindParam(':AccounID', $accountid);
     $statement->execute();
     $events = $statement->fetchAll();
     //var_dump($events);

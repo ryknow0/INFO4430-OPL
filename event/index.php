@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 <?php include '../view/header.php'; ?>
 
 <body>
@@ -24,22 +23,26 @@
             <label for="name" class="field-label wide">Event Name:</label><label for="event-name" class="asterisk">*</label>
             <input type="text" class="form-field w-input" maxlength="256" name="event_name" data-name="event_name" id="event-name">
           </div>
-
+          <!-- Date Field   -->
+          <!-- name="date"  -->
           <div class="field-wrapper">
             <label for="name-2" class="field-label wide">Date:</label><label for="date" class="asterisk">*</label>
             <input type="text" class="form-field w-input" maxlength="256" name="date" data-name="date" id="date">
           </div>
-
+          <!-- Start Time Field   -->
+          <!-- name="start_time"  -->
           <div class="field-wrapper">
             <label for="name-3" class="field-label wide">Start Time:</label><label for="start-time" class="asterisk">*</label>
-            <input type="text" class="form-field w-input" maxlength="256" name="start-time" data-name="start time" id="start-time">
+            <input type="text" class="form-field w-input" maxlength="256" name="start_time" data-name="start_time" id="start-time">
           </div>
-
+          <!-- End Time Field   -->
+          <!-- name="end_time"  -->
           <div class="field-wrapper">
             <label for="name-3" class="field-label wide">End Time:</label><label for="end-time" class="asterisk">*</label>
-            <input type="text" class="form-field w-input" maxlength="256" name="end-time" data-name="end time" id="end-time">
+            <input type="text" class="form-field w-input" maxlength="256" name="end_time" data-name="end_time" id="end-time">
           </div>
-
+          <!-- Location Field   -->
+          <!-- name="location"  -->
           <div class="field-wrapper">
             <label for="name-3" class="field-label wide">Location:</label><label for="location" class="asterisk">*</label>
             <select id="location" name="location" data-name="location" class="w-select">
@@ -56,7 +59,8 @@
               <option value="11">Outdoor Stage</option>
             </select>
           </div>
-
+          <!-- Category Field   -->
+          <!-- name="category"  -->
           <div class="field-wrapper">
             <label for="name-3" class="field-label wide">Category:</label><label for="category" class="asterisk">*</label>
             <select id="category" name="category" data-name="category" class="w-select">
@@ -73,27 +77,30 @@
               <option value="11">Storytimes</option>
             </select>
           </div>
-
+          <!-- Target Audience Field   -->
+          <!-- name="target_audience"  -->
           <div class="field-wrapper">
             <label for="target-audience" class="field-label wide">Target Audience:</label>
-            <select id="target-audience" name="target-audience" data-name="target audience" class="w-select">
+            <select id="target-audience" name="target_audience" data-name="target_audience" class="w-select">
               <option value="1">Kids</option>
               <option value="2">Teen</option>
               <option value="3">Adult</option>
               <option value="4">Family</option>
             </select>
           </div>
-
+          <!-- Event Type Field   -->
+          <!-- name="event_type"  -->
           <div class="field-wrapper">
             <label for="event-type" class="field-label wide">Event Type:</label>
-            <select id="event-type" name="event-type" data-name="event type" class="w-select">
+            <select id="event-type" name="event_type" data-name="event_type" class="w-select">
               <option value="1">Library Sponsored</option>
               <option value="2">Community Sponsored</option>
               <option value="3">Recurring</option>
               <option value="4">Series</option>
             </select>
           </div>
-
+          <!-- Topic Field   -->
+          <!-- name="topic"  -->
           <div class="field-wrapper">
             <label for="topic" class="field-label wide">Topic:</label>
             <select id="topic" name="topic" data-name="topic" class="w-select">
@@ -102,23 +109,25 @@
               option value="3">Science</option>
             </select>
           </div>
-
+          <!-- Series Field   -->
+          <!-- name="part_of_series"  -->
           <div class="field-wrapper">
             <label for="name-3" class="field-label wide">Part of a series?</label>
             <label class="radio-button w-radio">
-              <input type="radio" data-name="part-of-series" id="series-yes" name="part-of-series" value="Radio" class="w-radio-input">
+              <input type="radio" data-name="part_of_series" id="series-yes" name="part_of_series" value="Radio" class="w-radio-input">
               <span for="radio" class="w-form-label">Yes</span>
             </label>
             <label class="radio-button w-radio">
-              <input type="radio" data-name="part-of-series" id="series-no" name="part-of-series" value="Radio" class="w-radio-input">
+              <input type="radio" data-name="part_of_series" id="series-no" name="part_of_series" value="Radio" class="w-radio-input">
               <span for="radio-2" class="w-form-label">No</span>
             </label
             ></div>
-
+          <!-- Series Field   -->
+          <!-- name="series"  -->
           <div id="series-details-div">
             <div class="field-wrapper">
               <label for="select-series" class="field-label wide">Select Series:</label>
-              <select id="select-series" name="select-series" data-name="select series" class="w-select">
+              <select id="select-series" name="series" data-name="series" class="w-select">
                 <option value="1">Summer Reading</option>
                 <option value="2">Orem Reads</option>
                 <option value="3">Research Revolution</option>
@@ -126,15 +135,21 @@
                 <option value="5">Holiday Concerts</option>
               </select>
             </div>
-
+            <!-- Add Series Field   -->
+            <!-- name="series_add"  -->
             <div class="button-and-field-wrapper">
               <a href="#" class="button-2 w-button">Add Series</a>
-              <input type="text" class="text-field w-input" maxlength="256" name="add-series" data-name="add series" placeholder="series name" id="add-series">
+              <input type="text" class="text-field w-input" maxlength="256" name="series_add" data-name="series_add" placeholder="series name" id="add-series">
             </div>
           </div>
-
+          <!-- Create Event form buttons                                -->
+          <!-- name="action"  value="create_event"                      -->
+          <!-- SUCCESS redirect to account dashboard(index.php)         -->
+          <!-- FAIL or CANCEL redirect to account dashboard index.php   --> 
           <div class="form-button-wrapper">
-            <input type="submit" value="Create Event" data-wait="Please wait..." class="button login w-button">
+            <input type="submit" value="Create Event" onclick="window.location.href = '../index.php';" data-wait="Please wait..." class="button login w-button">
+            <input type="submit" value="Cancel" onclick="window.location.href = '../index.php';" data-wait="Please wait..." class="button w-button">
+            <input type="hidden" name="action" value="create_event">
           </div>
           <div class="w-embed w-script">
             <script>
@@ -166,24 +181,3 @@
   <!-- [if lte IE 9]><script src="https://cdnjs.cloudflare.com/ajax/libs/placeholders/3.0.2/placeholders.min.js"></script><![endif] -->
 </body>
 </html>
-=======
-<?php
-requore('../model/event_db.php');
-
-$action = filter_input(INPUT_POST, 'action');
-if ($action == NULL) {
-    $action = filter_input(INPUT_GET, 'action');
-    if ($action == NULL) {
-        $action = 'get_all_events';
-    }
-}
-
-if ($acton == 'get_all_events') {
-    $events = get_all_events();//an array of arrays
-    include('event_tracker.php');//event view
-} //else if ($action == 'get_all_events') {
-  //  $events = 
-//}
-
-?>
->>>>>>> 39b3af1a905d560ff44d0821a7bad92724c496b1
