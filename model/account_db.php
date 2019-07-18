@@ -27,7 +27,7 @@ function create_account() {
     $statement->execute();
     }
     else{
-        $message = ''
+        $message = '';
     }
     $record_added2 = $statement->rowCount();
 
