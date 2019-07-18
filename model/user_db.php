@@ -1,14 +1,14 @@
 <?php
 require('database.php');
 //get_user = returns all the users in the system
-function get_users() {
+function get_account_users($accountID) {
    global $db;
-   $query = 'SELECT First_Name, Last_Name, Email FROM Users';
+   $query = 'SELECT First_Name, Last_Name, Email FROM Users WHERE AccountID = :AccountID';
    $statement = $db->prepare($query);
    $statement->execute();
-   $users = $statement->fetchAll();
+   $account_users = $statement->fetchAll();
    $statement->closeCursor();
-   return $users;
+   return $account_users;
 }
 //login = gets userid for user with the matching username and password 
 function login($email, $password){
@@ -40,6 +40,18 @@ function add_user(){
    $statement->execute();
    $users = $statement->fetchAll();
    $statement->closeCursor();
+
+   $user_query = 'INSERT INTO User(Email, First_Name, Last_Name, Department, Permissions, Password, AccountID)
+   VALUES (:email, :first_name, :last_name, :department, :permissions, :password, $last_id)';
+$statement = $db-prepare($user_query);
+$statement->bindParam(':email', $email);
+$statement->bindParam(':first_name', $first_name);
+$statement->bindParam(':last_name', $last_name);
+$statement->bindParam('primary_contact', $primary_contact);
+$statement->bindParam(':department', $department);
+$statement->bindParam(':account_id', $last_id);
+$statement->execute();
+
    return $user;
 }
 //Delete User Function
