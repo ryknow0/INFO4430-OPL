@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <?php include '../view/header.php'; ?>
 
 <body>
@@ -165,3 +166,24 @@
   <!-- [if lte IE 9]><script src="https://cdnjs.cloudflare.com/ajax/libs/placeholders/3.0.2/placeholders.min.js"></script><![endif] -->
 </body>
 </html>
+=======
+<?php
+requore('../model/event_db.php');
+
+$action = filter_input(INPUT_POST, 'action');
+if ($action == NULL) {
+    $action = filter_input(INPUT_GET, 'action');
+    if ($action == NULL) {
+        $action = 'get_all_events';
+    }
+}
+
+if ($acton == 'get_all_events') {
+    $events = get_all_events();//an array of arrays
+    include('event_tracker.php');//event view
+} //else if ($action == 'get_all_events') {
+  //  $events = 
+//}
+
+?>
+>>>>>>> 39b3af1a905d560ff44d0821a7bad92724c496b1

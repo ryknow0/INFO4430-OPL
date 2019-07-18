@@ -1,4 +1,4 @@
-<?php ?
+<?php 
 require('database.php'); //databse connection file
 
 //get_all_events= to return all current events for a customer account for display on the
@@ -13,7 +13,7 @@ function get_all_events(){
     $statement->execute();
     $events = $statement->fetchAll();
     //var_dump($events);
-    return $events
+    return $events;
  }
 
 //get_ytd_attendees= to return $ytd_attendees or  the total numbrer of attendees across all past events for display on the
@@ -54,4 +54,4 @@ function get_ytd_event_types(){
     return $ytd_event_types;     
 }
 
->
+?>
