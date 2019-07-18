@@ -47,13 +47,13 @@
             <input type="text" class="form-field w-input" maxlength="256" name="last_name" data-name="last_name" id="name-2">
           </div>
           <!-- Department Name Field    -->
-          <!-- name="department"   -->
+          <!-- name="department"        -->
           <div class="field-wrapper">
             <label for="name-2" class="field-label wide">Department:</label><label for="name-3" class="asterisk">*</label>
             <input type="text" class="form-field w-input" maxlength="256" name="department" data-name="department" id="name-2">
           </div>
           <!-- Permissions Field    -->
-          <!-- name="permission"   -->
+          <!-- name="permission"    -->
           <div class="field-wrapper">
             <label for="name-3" class="field-label wide">Permissions:</label><label for="Admin" class="asterisk">*</label>
             <select id="Admin" name="permission" data-name="permission" class="w-select">
@@ -63,10 +63,10 @@
               <option value="view-only">View Only</option>
             </select>
           </div>
-          <!-- Account Creation form buttons                      -->
-          <!-- name="action"  value="add_user"              -->
-          <!-- SUCCESS redirect to account dashboard(index.php)   -->
-          <!-- FAIL or CANCEL redirect to account loginform.php   --> 
+          <!-- Account Creation form buttons                            -->
+          <!-- name="action"  value="add_user"                          -->
+          <!-- SUCCESS redirect to account dashboard(index.php)         -->
+          <!-- FAIL or CANCEL redirect to account dashboard(index.php)  --> 
           <div class="form-button-wrapper">
             <input type="submit" value="Submit" onclick="window.location.href = '../index.php';" data-wait="Please wait..." class="button login w-button">
             <input type="submit" value="Cancel" data-wait="Please wait..." class="button w-button">
