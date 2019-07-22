@@ -1,4 +1,4 @@
-git <?php 
+<?php 
 require('database.php');
 
 function create_account() {
@@ -34,6 +34,14 @@ function create_account() {
 
     //Success will return 1 row if succesful and 0 if it fails
     return $statement->rowCount();
+}
+
+function add_primary_user(){
+    global $db;
+    $query = '';
+    $statement = $db->prepare($query);
+    $statement->bindParam('', );
+    $statement->execute();
 }
 
 function get_account(){

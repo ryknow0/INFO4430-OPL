@@ -34,8 +34,8 @@ if($action == 'create_account'){
      if($account == NULL){
        header("Location: ../account/index.php?errors=Unable to create account");
      } else{
-          $account_user = get_user($accontID, $email)
-          //returns users account
+          $account_primary_user = add_primary_user($accontID, $email, $first_name, $last_name, $password1)
+          //returns account primary user
 
 
         $_SESSION['AccountID'] = $account['AccountID'];
