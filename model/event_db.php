@@ -39,6 +39,7 @@ function get_all_events(){
     $statement->bindParam(':Other', $Other);
     $statement->bindParam(':Attendance', $Attendance);
 
+    $statement->bindParam(':AccounID', $accountid);
     $statement->execute();
     $events = $statement->fetchAll();
     //var_dump($events);
