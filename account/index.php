@@ -39,28 +39,34 @@ if($action == 'create_account'){
   //grab variables sent to this action (create_account.php) values from create account form 
   //Get account name info from account creation form
   $account_name = filter_input(INPUT_POST, 'account_name');
-  $account_phone = filter_input(INPUT_POST, 'account_phone');
+  $account_phone = filter_input(INPUT_POST, 'phone');
 
   //Get user input from acount creation form
   $admin_email = filter_input(INPUT_POST, 'email');
-
+  $admin_department = filter_input(INPUT_POST, 'department');
   $admin_first_name = filter_input(INPUT_POST, 'first_name');
   $admin_last_name = filter_input(INPUT_POST, 'last_name');
-  $admin_accountID = filter_input(INPUT_POST, 'accountIDl');
-  $account_created = create_account();
-  //
-  $admin_user_added = add_user();
+  $admin_accountID = filter_input(INPUT_POST, 'accountID');
+  $admin_password = filter_input(INPUT_POST, 'password1');
+  //Create account
+  $account_created = create_account($account_name, $account_phone);
+  $accountID = $account_created;
+  //Get Account ID
+
+  //Create Admin User
+  $admin_user_added = add_user($admin_email, $admin_first_name, $admin_last_name, $admin_accountID;
   
   $message ='';
   //var_dump($account_created);
   //Display messages depending on success or failure
   if($admin_user_added > 0){
     $message = "Account Created"
+    include('index.php');
   }
   else{
     $message = "Error Creating Account"
+    include('create_account.php');
   }
-  include('add_account.php');
 } else if($action == 'edit_account'){
     $account = get_account_id($userID);
     include('edit_account.php');

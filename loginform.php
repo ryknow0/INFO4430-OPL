@@ -70,7 +70,7 @@
           <!-- LOGIN BUTTON form submit button                    -->
           <!-- name="action" value="login"                        -->
           <!-- SUCCESS redirect to account dashboard(index.php)   -->
-          <!-- FAIL redirect to loginform.php)                    -->
+          <!-- FAIL redirect to loginform.php                     -->
             <input type="submit" value="Login" onclick="window.location.href = 'index.php';" data-wait="Please wait..." class="button login w-button">
           <!-- SIGN UP BUTTON page form button and link to sign up page         -->
           <!-- href="../account/index.php"                                      -->
