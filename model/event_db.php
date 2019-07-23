@@ -46,11 +46,11 @@ function get_all_events(){
     return $events;
  }
 
-//get_ytd_attendees= to return $ytd_attendees or  the total numbrer of attendees across all past events for display on the
+//get_ytd_attendees= to return $ytd_attendees or  the total number of attendees across all past events for display on the
 //user/admin dashboard page
 function get_ytd_attendees(){
     global $db;
-    $query = '';
+    $query = 'SELECT SUM(Attendance)FROM Events WHERE Event_Date < NOW()';
     $statement = $db->prepare($query);
     
     $statement->execute();
@@ -64,7 +64,7 @@ function get_ytd_attendees(){
 //user/admin dashboard page
 function get_ytd_event_count(){
     global $db;
-    $query = '';
+    $query = 'SELECT COUNT(EventID) FROM Events WHERE Event_Date < NOW();';
     $statement = $db->prepare($query);
     $statement->execute();
     $ytd_event_count = $statement->fetchAll();
