@@ -3,6 +3,7 @@ require('database.php'); //databse connection file
 
 //get_all_events= to return all current events for a customer account for display on the
 //user/admin dashboard page
+
 function get_all_events(){
     global $db;
     //Need to write the DB query to pull all relevant events
@@ -53,5 +54,3 @@ function get_ytd_event_types(){
     //var_dump(ytd_event_types);
     return $ytd_event_types;     
 }
-
->
