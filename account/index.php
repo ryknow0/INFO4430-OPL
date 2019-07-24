@@ -13,7 +13,7 @@ if ($action == NULL) {
     if ($action == NULL) {
       $action = 'create_account';
     }
-}*/
+}
 
 if($action == 'create_account'){
   //grab variables sent to this action (create_account.php) valuse from the create account form   
