@@ -76,7 +76,10 @@ function get_ytd_event_count(){
 //for display on the user/admin dashboard page
 function get_ytd_event_types(){
     global $db;
-    $query = '';
+    $query = 'SELECT count(EventID), concat(round(count( * ) *100 / (SELECT count(*)  
+    FROM Events)), "%") AS percent FROM Events
+    where Event_Date < now()
+    GROUP BY Event_Type; ';
     $statement = $db->prepare($query);
     $statement->execute();
     $ytd_event_types = $statement->fetchAll();
