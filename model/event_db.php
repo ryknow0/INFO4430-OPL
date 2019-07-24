@@ -9,10 +9,10 @@ function get_all_events(){
     $query = 'SELECT AccountID_FK, Event_Name, Event_Date, Start_Time, End_Time, Event_Location, Category, Target_Audience, Event_Type, Topic, Age_Under_18,
     Age_18_64, Age_65_Above, Boys, Girls, Men, Women, Hispanic, Black, White, Asian, Other, Attendance 
     FROM Events
-     WHERE Event_name = :Event_Name AND Event_Date = :Event_Date AND Start_Time = :Start_Time AND End_Time = :End_Time AND Event_Location = :Event_Location 
-     AND Category = :Category AND Target_Audience = :Target_Audience AND Event_Type = :Event_Type AND Topic = :Topic AND Age_Under_18 = :Age_Under_18 
-     AND Age_18_64 = :Age_18_64 AND Age_65_Above = :Age_65_Above AND Boys = :Boys AND Girls = :Girls AND Men = :Men AND Women = :Women AND Hispanic = :Hispanic
-     AND Black = :Black AND White = :White AND Asian = :Asian AND Other = :Other AND Attendance = :Attendance';
+        WHERE Event_name = :Event_Name AND Event_Date = :Event_Date AND Start_Time = :Start_Time AND End_Time = :End_Time AND Event_Location = :Event_Location 
+        AND Category = :Category AND Target_Audience = :Target_Audience AND Event_Type = :Event_Type AND Topic = :Topic AND Age_Under_18 = :Age_Under_18 
+        AND Age_18_64 = :Age_18_64 AND Age_65_Above = :Age_65_Above AND Boys = :Boys AND Girls = :Girls AND Men = :Men AND Women = :Women AND Hispanic = :Hispanic
+        AND Black = :Black AND White = :White AND Asian = :Asian AND Other = :Other AND Attendance = :Attendance';
     $statement = $db->prepare($query);
     $statement->bindParam(':UserID', $userid);
     $statement->bindParam(':AccountID', $accountid);
@@ -44,7 +44,7 @@ function get_all_events(){
     $events = $statement->fetchAll();
     //var_dump($events);
     return $events;
- }
+}
 
 //get_ytd_attendees= to return $ytd_attendees or  the total number of attendees across all past events for display on the
 //user/admin dashboard page
@@ -57,7 +57,6 @@ function get_ytd_attendees(){
     $ytd_attendees = $statement->fetchAll();
     //var_dump(ytd_attendees);
     return $ytd_attendees;
-
 }
 
 //get_ytd_event_count= to return $ytd_event_count or the total number of past events in the last year for display on the

@@ -13,7 +13,7 @@
 </html> -->
 
 <footer>
-    <a href="http://10.52.2.69/account/account_edit.php" class="link">Create Account</a>
+    <a href="http://10.52.2.69/account/create_account.php" class="link">Create Account</a>
     <a href="http://10.52.2.69/event/event_tracker.php" class="link">Create Event</a>
     <a href="http://10.52.2.69/user/user_add.php" class="link">Add User</a>
     <a href="http://10.52.2.69/report/index.php" class="link">Generate Report</a>

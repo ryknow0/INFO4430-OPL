@@ -33,8 +33,8 @@ if($action == 'create_account'){
     //This can be removed if we do the password validation on the /account/index.php
     //if($password1 == $password2){
     //$password == $password1; 
-     // if($account == NULL){
-       // header("Location: ../account/index.php?errors=Unable to create account");
+    // if($account == NULL){
+    // header("Location: ../account/index.php?errors=Unable to create account");
 } else if($action == 'add_account'){
   //grab variables sent to this action (create_account.php) values from create account form 
   //Get account name info from account creation form
@@ -54,14 +54,14 @@ if($action == 'create_account'){
   //Get Account ID
 
   //Create Admin User
-  $admin_user_added = add_user($admin_email, $admin_first_name, $admin_last_name, $admin_accountID;
+  $admin_user_added = add_user($admin_email, $admin_first_name, $admin_last_name, $admin_accountID);
   
   $message ='';
   //var_dump($account_created);
   //Display messages depending on success or failure
   if($admin_user_added > 0){
     $message = "Account Created"
-    include('index.php');
+    include('http://10.52.2.69/index.php');
   }
   else{
     $message = "Error Creating Account"

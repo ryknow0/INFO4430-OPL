@@ -1,18 +1,21 @@
 <?php 
 require('database.php');
 
-function create_account() {
+function create_account($account_name, $account_phone) {
     global $db;
     $account_insert_query = 'INSERT INTO Account(Account_Name, Phone_Number)
-                VALUES (:account_name, :phone_number)';
-                //var_dump($query);
+                VALUES (:account_name, :phone)';
+    //var_dump($query);
     $statement = $db->prepare($account_insert_query);
     $statement->bindParam(':account_name', $account_name);
-    $statement->bindParam(':phone_number', $phone_number);
+    $statement->bindParam(':phone', $phone_number);
     $statement->execute();
     $last_id = $statement->lastInsertID();
     echo "New record created succesfully. Last inserted ID is: " . $last_id;
-    $account_record_added = $statement->rowCount();
+    
+    return $last_id;
+    /***
+    *$account_record_added = $statement->rowCount();
 
     if ($account_record_added == 1) {
     $user_insert_query = 'INSERT INTO User(Email, First_Name, Last_Name, Department, Permissions, Password, AccountID)
@@ -34,14 +37,26 @@ function create_account() {
 
     //Success will return 1 row if succesful and 0 if it fails
     return $statement->rowCount();
+    */
 }
 
-function add_primary_user(){
+function add_user($admin_email, $admin_first_name, $admin_last_name, $admin_accountID){
     global $db;
     $query = '';
     $statement = $db->prepare($query);
     $statement->bindParam('', );
     $statement->execute();
+    $last_id = $statement->lastInsertID();
+    $statement-closeCursor();
+
+    $query = 'SELECT 
+                FROM library.users
+                WHERE userid = "$last_id"';
+    $statement->bindParam('');
+    $statement->execute();
+    
+
+    return $statement->rowCount();
 }
 
 function get_account(){
