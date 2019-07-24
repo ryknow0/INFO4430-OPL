@@ -3,10 +3,10 @@ session_start();
 require('../model/account_db.php');
 //require('../model/user_db.php');
 
-/**
- * $action = filter_input(INPUT_POST, 'action');
-*var_dump($action);
-*echo "$action"
+
+$action = filter_input(INPUT_POST, 'action');
+var_dump($action);
+echo "$action"
 if ($action == NULL) {
     //If $action is NULL check get for 'action'
     $action = filter_input(INPUT_GET, 'action');
@@ -76,12 +76,7 @@ if($action == 'create_account'){
 } else if ($action == 'delete_account'){
     $account = get_account_id($userID);
     include('delete_account.php');
-*}
- * 
- * 
- * 
-
-*/
+}
 /**
  *
  *   //$account_primary_user = add_primary_user($accontID, $email, $first_name, $last_name, $password1)

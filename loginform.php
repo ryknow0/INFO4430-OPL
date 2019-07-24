@@ -75,7 +75,7 @@
           <!-- SIGN UP BUTTON page form button and link to sign up page         -->
           <!-- href="../account/index.php"                                      -->
           <!-- SUCCESS redirect to account create page (../account/index.php)   -->
-            <a class="button w-button" href="../account/index.php?action=create_account" role="button">Sign Up</a>
+            <a class="button w-button" href="../account/account_controller.php?action=create_account" role="button">Sign Up</a>
             <input type="hidden" name="action" value="login"/>
           </div>
         </form>
