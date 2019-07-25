@@ -4,11 +4,11 @@ require('database.php');
 function create_account($account_name, $account_phone) {
     global $db;
     $account_insert_query = 'INSERT INTO Account(Account_Name, Phone_Number)
-                VALUES (:account_name, :phone)';
+                VALUES (:Account_Name, :Phone)';
     //var_dump($query);
     $statement = $db->prepare($account_insert_query);
-    $statement->bindParam(':account_name', $account_name);
-    $statement->bindParam(':phone', $phone_number);
+    $statement->bindParam(':Account_Name', $account_name);
+    $statement->bindParam(':Phone', $phone_number);
     $statement->execute();
     $last_id = $statement->lastInsertID();
     echo "New record created succesfully. Last inserted ID is: " . $last_id;
@@ -44,7 +44,10 @@ function add_user($admin_email, $admin_first_name, $admin_last_name, $admin_acco
     global $db;
     $query = '';
     $statement = $db->prepare($query);
-    $statement->bindParam('', );
+    $statement->bindParam(':Email', $admin_email);
+    $statement->bindParam(':First_Name', $admin_first_name);
+    $statement->bindParam(':Last_Name', $admin_last_name);
+    $statement->bindParam(':AccountID', $admin_accountID);
     $statement->execute();
     $last_id = $statement->lastInsertID();
     $statement-closeCursor();
@@ -52,7 +55,7 @@ function add_user($admin_email, $admin_first_name, $admin_last_name, $admin_acco
     $query = 'SELECT 
                 FROM library.users
                 WHERE userid = "$last_id"';
-    $statement->bindParam('');
+    //$statement->bindParam('');
     $statement->execute();
     
 
@@ -63,7 +66,7 @@ function get_account(){
     global $db;
     $query = '';
     $statement = $db->prepare($query);
-    $statement->bindParam('', );
+    //$statement->bindParam('', );
     $statement->execute();
 
 }
@@ -93,6 +96,4 @@ function get_account(){
 //       $_SESSION['UserId'] = $user['UserId'];
 //       header('Location: /INFO3426/Assignment_6/index.php');
 //  }
-   
-
 ?>

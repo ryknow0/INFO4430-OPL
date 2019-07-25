@@ -10,14 +10,13 @@ if ($action == NULL) {
     //If $action is NULL check get for 'action'
     $action = filter_input(INPUT_GET, 'action');
     if ($action == NULL) {
-      $action = 'create_account';
+        $action = 'create_account';
     }
 }
 
 if($action == 'create_account'){
   //grab variables sent to this action (create_account.php) valuse from the create account form   
-     header("Location: ../account/create_account.php");
+    header("Location: ../account/create_account.php");
 } else {
-     header("Location: ../index.php");
+    header("Location: ../index.php");
 }
-

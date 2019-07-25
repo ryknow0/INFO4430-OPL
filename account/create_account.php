@@ -81,14 +81,14 @@ include '../view/header.php';
             <input type="hidden" name="action" value="add_account">
             </div>
         </form>
-        <?php var_dump($_SESSION);?>
+        <?php //var_dump($_SESSION);?>
         <div class="w-form-done">
           <div>Thank you! Your submission has been received!</div>
         </div>
         <div class="w-form-fail">
           <div>Oops! Something went wrong while submitting the form.</div>
         </div>
-        <?php var_dump($_SESSION); ?>
+        <?php //var_dump($_SESSION); ?>
       </div>
     </div>
   </div>

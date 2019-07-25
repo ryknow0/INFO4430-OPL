@@ -64,18 +64,18 @@ if($action == 'create_account'){
   //Display messages depending on success or failure
   if($admin_user_added > 0){
     $message = "Account Created"
-    include('http://10.52.2.69/index.php');
+    header('Llocation: ../index.php');
   }
   else{
     $message = "Error Creating Account"
-    include('create_account.php');
+    header('Location: ../account/create_account.php');
   }
 } else if($action == 'edit_account'){
     $account = get_account_id($userID);
-    include('edit_account.php');
+    header('Location: ../account/edit_account.php');
 } else if ($action == 'delete_account'){
     $account = get_account_id($userID);
-    include('delete_account.php');
+    header('Location: ../account/delete_account.php');
 }
 /**
  *
