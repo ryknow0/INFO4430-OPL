@@ -10,7 +10,12 @@ function create_account($account_name, $account_phone) {
     $statement->bindParam(':Account_Name', $account_name);
     $statement->bindParam(':Phone', $phone_number);
     $statement->execute();
+<<<<<<< HEAD
     $last_id = $statement->mysql_insert_id();
+=======
+    $last_id = $db->LastInsertId();
+   // $last_id = $statement->mysal_insert_id();
+>>>>>>> dad89f53c09952d9377be323603fa46c23eab620
     echo "New record created succesfully. Last inserted ID is: " . $last_id;
     
     return $last_id;
