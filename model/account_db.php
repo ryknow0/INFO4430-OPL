@@ -12,7 +12,7 @@ function create_account($account_name, $account_phone) {
     $statement->execute();
     $last_id = $statement->lastInsertId();
     //$last_id = $statement->insert_Id();
-    $last_id =  $db->mysql_insert_id();
+    //$last_id =  $db->mysql_insert_id();
     echo "New record created succesfully. Last inserted ID is: " . $last_id;
     $statement->closeCursor();
     
