@@ -10,7 +10,7 @@ function create_account($account_name, $account_phone) {
     $statement->bindParam(':Account_Name', $account_name);
     $statement->bindParam(':Phone', $phone_number);
     $statement->execute();
-    $last_id = $statement->mysal_insert_id();
+    $last_id = $statement->mysql_insert_id();
     echo "New record created succesfully. Last inserted ID is: " . $last_id;
     
     return $last_id;
@@ -49,7 +49,7 @@ function add_user($admin_email, $admin_first_name, $admin_last_name, $admin_acco
     $statement->bindParam(':Last_Name', $admin_last_name);
     $statement->bindParam(':AccountID', $admin_accountID);
     $statement->execute();
-    $last_id = $statement->lastInsertID();
+    $last_id = $statement->mysql_insert_id();
     $statement-closeCursor();
 
     $query = 'SELECT 
