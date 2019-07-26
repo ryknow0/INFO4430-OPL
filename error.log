@@ -79,3 +79,8 @@
 [Wed Jul 24 23:50:38.997492 2019] [php7:emerg] [pid 4626] [client 161.28.3.10:56522] PHP Parse error:  syntax error, unexpected ')' in /var/www/html/model/account_db.php on line 47, referer: http://10.52.2.69/loginform.php
 [Wed Jul 24 23:50:39.185785 2019] [php7:emerg] [pid 7844] [client 161.28.3.10:56525] PHP Parse error:  syntax error, unexpected ')' in /var/www/html/model/account_db.php on line 47, referer: http://10.52.2.69/loginform.php
 [Thu Jul 25 06:25:02.425081 2019] [mpm_prefork:notice] [pid 6541] AH00171: Graceful restart requested, doing restart
+[Thu Jul 25 06:25:03.729958 2019] [mpm_prefork:notice] [pid 6541] AH00163: Apache/2.4.29 (Ubuntu) configured -- resuming normal operations
+[Thu Jul 25 06:25:03.730006 2019] [core:notice] [pid 6541] AH00094: Command line: '/usr/sbin/apache2'
+[Thu Jul 25 15:32:56.724525 2019] [php7:emerg] [pid 24734] [client 161.28.3.14:60625] PHP Parse error:  syntax error, unexpected 'if' (T_IF), expecting ',' or ';' in /var/www/html/account/index.php on line 10, referer: http://10.52.2.69/account/create_account.php
+[Thu Jul 25 21:29:24.578295 2019] [php7:emerg] [pid 22852] [client 161.28.249.72:55577] PHP Parse error:  syntax error, unexpected end of file in /var/www/html/event/event_tracker.php on line 74, referer: http://10.52.2.69/
+[Fri Jul 26 02:06:45.443487 2019] [php7:emerg] [pid 22853] [client 161.28.3.35:65136] PHP Parse error:  syntax error, unexpected 'if' (T_IF), expecting ',' or ';' in /var/www/html/account/index.php on line 10, referer: http://10.52.2.69/account/create_account.php

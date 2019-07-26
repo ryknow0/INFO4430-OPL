@@ -6,8 +6,8 @@ require('../model/account_db.php');
 
 $action = filter_input(INPUT_POST, 'action');
 var_dump($action);
-echo "$action"
-if ($action == NULL) {
+
+if ($action == NULL){
     //If $action is NULL check get for 'action'
     $action = filter_input(INPUT_GET, 'action');
     if ($action == NULL) {
