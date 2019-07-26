@@ -3,15 +3,16 @@ require('database.php');
 
 function create_account($account_name, $account_phone) {
     global $db;
-    $account_insert_query = 'INSERT INTO Account(Account_Name, Phone_Number)
+    $query = 'INSERT INTO Account(Account_Name, Phone_Number)
                 VALUES (:Account_Name, :Phone)';
     //var_dump($query);
-    $statement = $db->prepare($account_insert_query);
+    $statement = $db->prepare($query);
     $statement->bindParam(':Account_Name', $account_name);
     $statement->bindParam(':Phone', $phone_number);
     $statement->execute();
-    $last_id = $statement->mysql_insert_id();
+    $last_id = $statement->lastInsertId();
     echo "New record created succesfully. Last inserted ID is: " . $last_id;
+    $statement->closeCursor();
     
     return $last_id;
     /***
