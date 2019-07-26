@@ -63,11 +63,11 @@ if($action == 'create_account'){
   //var_dump($account_created);
   //Display messages depending on success or failure
   if($admin_user_added > 0){
-    $message = "Account Created"
-    header('Llocation: ../index.php');
+    $message = "Account Created";
+    header('Location: ../index.php');
   }
   else{
-    $message = "Error Creating Account"
+    $message = "Error Creating Account";
     header('Location: ../account/create_account.php');
   }
 } else if($action == 'edit_account'){
