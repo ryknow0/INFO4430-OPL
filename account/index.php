@@ -58,7 +58,7 @@ if($action == 'create_account'){
 
   //Create Admin User
   $admin_user_added = add_user($admin_email, $admin_first_name, $admin_last_name, $admin_accountID);
-  
+  var_dump($admin_user_added);
   $message ='';
   
   header('Location: ../index.php');

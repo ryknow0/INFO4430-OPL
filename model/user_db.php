@@ -29,7 +29,7 @@ function login($email, $password){
    //var_dump($user);
    return $user;   
 }
-var_dump($_SESSION);
+//var_dump($_SESSION);
 //Add User Function
 function add_user($first_name, $last_name, $email, $department, $permissions, $password){
    //get account ID
