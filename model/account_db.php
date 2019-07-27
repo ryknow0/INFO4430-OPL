@@ -55,7 +55,7 @@ function add_user($admin_email, $admin_first_name, $admin_last_name, $admin_acco
     $last_id = $db->lastInsertId();
     echo "New record created succesfully. Last inserted ID is: " . $last_id;
     $user = $statement->fetch(PDO::FETCH_BOTH);
-    $statement-closeCursor();
+    $statement->closeCursor();
     return $user;
 
     //$query = 'SELECT 
