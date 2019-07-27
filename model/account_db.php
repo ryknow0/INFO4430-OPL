@@ -22,7 +22,7 @@ function create_account($account_name, $account_phone) {
                 FROM Accounts
                 WHERE Account_Name = :Account_Name';
     $stmt = $db->prepare($query2);
-    $stmt->bindParam('Account_Name', $account_name);
+    //$stmt->bindParam('Account_Name', $account_name);
     $stmt->bindParam('AccountID', $accountId);
     $stmt->execute();
     $new_accountID = $statement->fetch(PDO::FETCH_BOTH);
