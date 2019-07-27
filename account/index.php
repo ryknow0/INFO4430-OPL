@@ -42,7 +42,7 @@ if($action == 'create_account'){
   //grab variables sent to this action (create_account.php) values from create account form 
   //Get account name info from account creation form
   $account_name = filter_input(INPUT_POST, 'account_name');
-  $account_phone = filter_input(INPUT_POST, 'phone');
+  $account_phone = filter_input(INPUT_POST, 'account_phone');
 
   //Get user input from acount creation form
   $admin_email = filter_input(INPUT_POST, 'email');
@@ -60,22 +60,27 @@ if($action == 'create_account'){
   $admin_user_added = add_user($admin_email, $admin_first_name, $admin_last_name, $admin_accountID);
   
   $message ='';
+  
+  header('Location: ../index.php');
   //var_dump($account_created);
   //Display messages depending on success or failure
-  if($admin_user_added > 0){
-    $message = "Account Created";
-    header('Location: ../index.php');
-  }
-  else{
-    $message = "Error Creating Account";
-    header('Location: ../account/create_account.php');
-  }
-} else if($action == 'edit_account'){
-    $account = get_account_id($userID);
-    header('Location: ../account/edit_account.php');
-} else if ($action == 'delete_account'){
-    $account = get_account_id($userID);
-    header('Location: ../account/delete_account.php');
+  //if($admin_user_added > 0){
+  //  $message = "Account Created";
+  //  header('Location: ../index.php');
+  //}
+  //else{
+  //  $message = "Error Creating Account";
+
+  //  header('Location: ../account/create_account.php');
+  //}
+
+//} else if($action == 'edit_account'){
+//    $account = get_account_id($userID);
+//    header('Location: ../account/edit_account.php');
+//} else if ($action == 'delete_account'){
+//    $account = get_account_id($userID);
+//    header('Location: ../account/delete_account.php');
+
 }
 /**
  *

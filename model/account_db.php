@@ -4,13 +4,13 @@ require('database.php');
 function create_account($account_name, $account_phone) {
     global $db;
     $query = 'INSERT INTO Account(Account_Name, Phone_Number)
-                VALUES (:Account_Name, :Phone)';
+                VALUES (:Account_Name, :Account_Phone)';
     //var_dump($query);
     $statement = $db->prepare($query);
     $statement->bindParam(':Account_Name', $account_name);
-    $statement->bindParam(':Phone', $phone_number);
+    $statement->bindParam(':Account_Phone', $account_phone);
     $statement->execute();
-    $last_id = $db->lastInsertId();
+    $last_id = $statement->lastInsertId();
     //$last_id = $statement->insert_Id();
     //$last_id =  $db->mysql_insert_id();
     echo "New record created succesfully. Last inserted ID is: " . $last_id;
@@ -52,17 +52,20 @@ function add_user($admin_email, $admin_first_name, $admin_last_name, $admin_acco
     $statement->bindParam(':Last_Name', $admin_last_name);
     $statement->bindParam(':AccountID', $admin_accountID);
     $statement->execute();
-    $last_id = $statement->mysql_insert_id();
+    $last_id = $db->lastInsertId();
+    echo "New record created succesfully. Last inserted ID is: " . $last_id;
+    $user = $statement->fetch(PDO::FETCH_BOTH);
     $statement-closeCursor();
+    return $user;
 
-    $query = 'SELECT 
-                FROM library.users
-                WHERE userid = "$last_id"';
+    //$query = 'SELECT 
+    //            FROM library.users
+    //            WHERE userid = "$last_id"';
     //$statement->bindParam('');
-    $statement->execute();
+    //$statement->execute();
     
 
-    return $statement->rowCount();
+    //return $statement->rowCount();
 }
 
 function get_account(){
