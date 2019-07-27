@@ -29,7 +29,7 @@ function create_account($account_name, $account_phone) {
     echo "New Record Account ID: " . $new_accountID;
 
 
-
+    var_dump($account_name);
     return $new_accountID;
     /***
     *$account_record_added = $statement->rowCount();
