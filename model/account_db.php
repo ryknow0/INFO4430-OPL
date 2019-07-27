@@ -2,7 +2,7 @@
 require('database.php');
 
 var_dump($_SESSION);
-var_dump($account_name);
+//var_dump($account_name);
 function create_account($account_name, $account_phone) {
     global $db;
     $query = 'INSERT INTO Account(Account_Name, Phone_Number)

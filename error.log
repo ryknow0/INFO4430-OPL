@@ -99,4 +99,4 @@ Error: Call to undefined method PDOStatement::lastInsertId() in /var/www/html/mo
 [Sat Jul 27 09:03:40.144595 2019] [php7:notice] [pid 4754] [client 161.28.3.68:63759] PHP Notice:  Undefined variable: account_name in /var/www/html/model/account_db.php on line 5, referer: http://10.52.2.69/loginform.php
 [Sat Jul 27 09:03:59.720277 2019] [php7:notice] [pid 4269] [client 161.28.3.68:63781] PHP Notice:  Undefined variable: account_name in /var/www/html/model/account_db.php on line 5, referer: http://10.52.2.69/account/create_account.php
 [Sat Jul 27 09:03:59.721754 2019] [php7:warn] [pid 4269] [client 161.28.3.68:63781] PHP Warning:  PDOStatement::execute(): SQLSTATE[HY093]: Invalid parameter number: parameter was not defined in /var/www/html/model/account_db.php on line 27, referer: http://10.52.2.69/account/create_account.php
-
+[Sat Jul 27 09:08:12.956017 2019] [php7:notice] [pid 4753] [client 161.28.3.68:64005] PHP Notice:  Undefined variable: account_name in /var/www/html/model/account_db.php on line 5, referer: http://10.52.2.69/account/create_account.php
