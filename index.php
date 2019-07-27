@@ -3,6 +3,7 @@ session_start();
 include 'view/header.php';
 //require ('model/event_db.php');
 //ini_set('display_errors', 1);
+var_dump($_SESSION);
 ?>
 <!-- User Account Page-->
 <body>
