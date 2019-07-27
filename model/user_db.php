@@ -1,6 +1,15 @@
 <?php
 require('database.php');
 //get_user = returns all the users in the system
+
+SELECT user_name(owner_sid) as 'Owner', state_desc, * 
+from user_db.php
+
+SELECT * from user_db.php
+}
+
+
+
 function get_account_users($accountID) {
    global $db;
    $query = 'SELECT First_Name, Last_Name, Email FROM Users WHERE AccountID = :AccountID';
