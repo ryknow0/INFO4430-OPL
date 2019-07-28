@@ -5,7 +5,7 @@ var_dump($_SESSION);
 //var_dump($account_name);
 function create_account($account_name, $account_phone) {
     global $db;
-    $query = 'INSERT INTO Account(Account_Name, Phone_Number)
+    $query = 'INSERT INTO Accounts(Account_Name, Phone_Number)
                 VALUES (:Account_Name, :Account_Phone)';
     //var_dump($query);
     $db->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
