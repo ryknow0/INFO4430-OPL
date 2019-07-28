@@ -8,7 +8,9 @@ function create_account($account_name, $account_phone) {
     $query = 'INSERT INTO Account(Account_Name, Phone_Number)
                 VALUES (:Account_Name, :Account_Phone)';
     //var_dump($query);
+    $db->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
     $statement = $db->prepare($query);
+    var_dump($statement);
     $statement->bindParam(':Account_Name', $account_name);
     $statement->bindParam(':Account_Phone', $account_phone);
     $statement->execute();
