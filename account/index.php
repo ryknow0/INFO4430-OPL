@@ -42,7 +42,7 @@ if($action == 'create_account'){
   //grab variables sent to this action (create_account.php) values from create account form 
   //Get account name info from account creation form
   $account_name = filter_input(INPUT_POST, 'account_name');
-  $account_phone = filter_input(INPUT_POST, 'account_phone');
+  $account_phone = filter_input(INPUT_POST, 'phone');
 
   //Get user input from acount creation form
   $admin_email = filter_input(INPUT_POST, 'email');
