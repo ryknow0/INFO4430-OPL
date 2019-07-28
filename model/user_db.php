@@ -7,7 +7,7 @@ from user_db.php
 
 SELECT * from user_db.php
 }
-
+SELECT SUM(AccountID) from user_db.php
 
 
 function get_account_users($accountID) {
