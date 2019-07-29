@@ -52,9 +52,9 @@ if($action == 'create_account'){
   $admin_accountID = filter_input(INPUT_POST, 'accountID');
   $admin_password = filter_input(INPUT_POST, 'password1');
   //Create account
-  $account_created = create_account($account_name, $account_phone);
+  $accountID = create_account($account_name, $account_phone);
   var_dump($account_created);
-  $accountID = $account_created;
+  //$accountID = $account_created;
   var_dump($accountID);
   //Get Account ID
 
