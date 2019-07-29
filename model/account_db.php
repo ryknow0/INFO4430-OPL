@@ -1,6 +1,24 @@
 <?php 
+/**
+ * FUNCTION: Template
+ * PURPOSE:
+ * PARAMETERS:
+ * RETURN:
+ * NOTES:
+ */
+
 require('database.php');
-//var_dump
+//var_dump();
+
+/**
+ * FUNCTION: create_account
+ * PURPOSE: Create new account from user data entered on /account/create_account.php
+ * PARAMETERS: $account_name, $account_phone
+ * RETURN: $last_id => will return the auto generated primary key of the recently
+ *  created entry in the Library.Accounts table 
+ * NOTES: The account needs to be created and AccountID generated before the first 
+ * user can be added
+ */
 function create_account($account_name, $account_phone) {
     global $db;
     $query = 'INSERT INTO Accounts(Account_Name, Phone_Number)
@@ -13,48 +31,23 @@ function create_account($account_name, $account_phone) {
     $statement->bindParam(':Account_Phone', $account_phone);
     $statement->execute();
     $last_id = $db->lastInsertId();
-    //$last_id = $statement->insert_Id();
-    //$last_id =  $db->mysql_insert_id();
     echo "New record created succesfully. Last inserted ID is: " . $last_id ."<br>";
     $statement->closeCursor();
-    
-    //$query2 = 'SELECT AccountID
-    //            FROM Accounts
-    //            WHERE Account_Name = :Account_Name';
-    //$stmt = $db->prepare($query2);
-    //$stmt->bindParam('Account_Name', $account_name);
-    //$stmt->bindParam('AccountID', $accountId);
-    //$stmt->execute();
-    //$new_accountID = $statement->fetch(PDO::FETCH_BOTH);
-    //echo "New Record Account ID: " . $new_accountID;
     echo "New Entry Account ID: " . $last_id;
     return $last_id;
-    /***
-    *$account_record_added = $statement->rowCount();
-
-    if ($account_record_added == 1) {
-    $user_insert_query = 'INSERT INTO User(Email, First_Name, Last_Name, Department, Permissions, Password, AccountID)
-                    VALUES (:email, :first_name, :last_name, :department, :permissions, :password, $last_id)';
-    $statement = $db-prepare($user_insert_query);
-    $statement->bindParam(':email', $email);
-    $statement->bindParam(':first_name', $first_name);
-    $statement->bindParam(':last_name', $last_name);
-    $statement->bindParam('primary_contact', $primary_contact);
-    $statement->bindParam(':department', $department);
-    $statement->bindParam(':account_id', $last_id);
-    $statement->execute();
-    $statement->closeCursor();
-    }
-    else{
-        $message = '';
-    }
-    $record_added2 = $statement->rowCount();
-
-    //Success will return 1 row if succesful and 0 if it fails
-    return $statement->rowCount();
-    */
 }
 
+
+/**
+ * FUNCTION: add_user
+ * PURPOSE: Add the initial Admin user to the account as part of the "add_account" action 
+ * of the /account/index.php
+ * PARAMETERS:$admin_email, $admin_first_name, $admin_last_name, $admin_department, 
+ * $admin_password, $accountID, $permission
+ * RETURN: $last_id => the auto incremented primary key value of the Library.Users table
+ * NOTES:Initially implemented from the /account/index.php?action="add_account" probably 
+ * should be copied to the user_db.php
+ */
 function add_user($admin_email, $admin_first_name, $admin_last_name, $admin_department, $admin_password, $accountID, $permissions){
     global $db;
     $query = 'INSERT INTO Users(AccountID_FK, Username, Password, First_Name, Last_Name, Department, Permissions)
@@ -71,18 +64,8 @@ function add_user($admin_email, $admin_first_name, $admin_last_name, $admin_depa
     $statement->execute();
     $last_id = $db->lastInsertId();
     echo "New record created succesfully. User ID is: " . $last_id;
-    $user = $statement->fetch(PDO::FETCH_BOTH);
     $statement->closeCursor();
-    return $user;
-
-    //$query = 'SELECT 
-    //            FROM library.users
-    //            WHERE userid = "$last_id"';
-    //$statement->bindParam('');
-    //$statement->execute();
-    
-
-    //return $statement->rowCount();
+    return $last_id;
 }
 
 function get_account(){

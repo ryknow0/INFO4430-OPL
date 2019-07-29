@@ -1,4 +1,12 @@
 <?php 
+
+/**
+ * ACTION: Template
+ * ACTION SOURCE:
+ * PURPOSE:
+ * SUCCESS RE-DIRECTION:
+ * FAIL RE-DIRECTION:
+ */
 session_start();
 require('../model/account_db.php');
 //require('../model/user_db.php');
@@ -19,25 +27,6 @@ if($action == 'create_account'){
   //grab variables sent to this action (create_account.php) valuse from the create account form   
   header('Location: ../account/create_account.php');
   
-  //take POST values submitted from ../account/index.php
-  //and assign them to variables
-    //$account_name = filter_input(INPUT_POST, 'account_name');
-    //$department = filter_input(INPUT_POST, 'department');
-    //$first_name = filter_input(INPUT_POST, 'first_name');
-    //$last_name = filter_input(INPUT_POST, 'last_name');
-    //$phone = filter_input(INPUT_POST, 'phone');
-    //$email = filter_input(INPUT_POST, 'email');
-    //$password1 = filter_input(INPUT_POST, 'password1');
-    //$password2 = filter_input(INPUT_POST, 'password2');
-
-  //
-    //$account = create_account($account_name, $phone);
-    //var_dump($account);
-    //This can be removed if we do the password validation on the /account/index.php
-    //if($password1 == $password2){
-    //$password == $password1; 
-    // if($account == NULL){
-    // header("Location: ../account/index.php?errors=Unable to create account");
 } else if($action == 'add_account'){
   //grab variables sent to this action (create_account.php) values from create account form 
   //Get account name info from account creation form
@@ -51,7 +40,8 @@ if($action == 'create_account'){
   $admin_last_name = filter_input(INPUT_POST, 'last_name');
   $accountID = filter_input(INPUT_POST, 'accountID');
   $admin_password = filter_input(INPUT_POST, 'password1');
-  //Create account
+  //Create Account
+  //Call create account function from account_db.php
   $accountID = create_account($account_name, $account_phone);
   
   var_dump($accountID);
@@ -59,11 +49,12 @@ if($action == 'create_account'){
 
   //Create Admin User
   //By Default the account first user has Admin credentials
-  $permissions = "Admin";
+  $permissions = "Admin"; //set default Permission
   $admin_user_added = add_user($admin_email, $admin_first_name, $admin_last_name, $admin_department, $admin_password, $accountID, $permissions);
   var_dump($admin_user_added);
   $message ='';
   
+  //Re-direct user to Account Dashboard root/index.php
   header('Location: ../index.php');
   //var_dump($account_created);
   //Display messages depending on success or failure
