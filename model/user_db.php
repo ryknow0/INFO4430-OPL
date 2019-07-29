@@ -40,21 +40,24 @@ function login($email, $password){
 }
 //var_dump($_SESSION);
 //Add User Function
-function add_user($first_name, $last_name, $email, $department, $permissions, $password){
-   //get account ID
-   $accountID = $_SESSION['AccountID'];
-   global $db;
-   $query = 'INSERT INTO User(Email, First_Name, Last_Name, Department, Permissions, Password, AccountID)
-   VALUES (:email, :first_name, :last_name, :department, :permissions, :password, :accountID)';
-   $statement = $db->prepare($query);
-   $statement->bindParam(':email', $email);
-   $statement->bindParam(':first_name', $first_name);
-   $statement->bindParam(':last_name', $last_name);
-   $statement->bindParam('primary_contact', $primary_contact);
-   $statement->bindParam(':department', $department);
-   $statement->bindParam(':accountID', $accountID);
-   $statement->execute();
-   return $user;
+function add_user($email, $first_name, $last_name, $department, $password, $accountID, $permissions){
+      global $db;
+      $query = 'INSERT INTO Users(AccountID_FK, Username, Password, First_Name, Last_Name, Department, Permissions)
+                  VALUES (:AccountID, :Email, :Password, :First_Name, :Last_Name, :Department, :Permissions)';
+      $statement = $db->prepare($query);
+      $statement->bindParam(':Email', $email);
+      $statement->bindParam(':First_Name', $first_name);
+      $statement->bindParam(':Last_Name', $last_name);
+      $statement->bindParam(':Department', $department);
+      $statement->bindParam(':Password', $password);
+      $statement->bindParam(':AccountID', $accountID);
+      $statement->bindParam(':Permissions', $permissions);
+      echo "User Account ID is: " . $accountID;
+      $statement->execute();
+      $last_id = $db->lastInsertId();
+      echo "New record created succesfully. User ID is: " . $last_id;
+      $statement->closeCursor();
+      return $last_id;
 }
 //Delete User Function
 function delete_user(){

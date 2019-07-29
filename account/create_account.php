@@ -17,7 +17,7 @@ include '../view/header.php';
       <h1 class="centered-h1">Create Account</h1>
       <div class="w-form">
       <!-- ACCOUNT CREATION FORM            --> 
-      <!-- action="account_controller.php"  -->
+      <!-- action="../acocunt/index.php"  -->
       <!-- method="post"                    -->
         <form id="email-form" name="email-form" data-name="Email Form" action='../account/index.php' class="form" method="post">
           <div class="right-aligned-text"><span class="asterisk">*</span>Required Fields</div>
