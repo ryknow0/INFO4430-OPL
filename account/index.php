@@ -49,7 +49,7 @@ if($action == 'create_account'){
   $admin_department = filter_input(INPUT_POST, 'department');
   $admin_first_name = filter_input(INPUT_POST, 'first_name');
   $admin_last_name = filter_input(INPUT_POST, 'last_name');
-  $admin_accountID = filter_input(INPUT_POST, 'accountID');
+  $accountID = filter_input(INPUT_POST, 'accountID');
   $admin_password = filter_input(INPUT_POST, 'password1');
   //Create account
   $accountID = create_account($account_name, $account_phone);
