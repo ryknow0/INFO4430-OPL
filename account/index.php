@@ -5,7 +5,7 @@ require('../model/account_db.php');
 
 
 $action = filter_input(INPUT_POST, 'action');
-var_dump($action);
+//var_dump($action);
 
 if ($action == NULL){
     //If $action is NULL check get for 'action'
@@ -17,7 +17,7 @@ if ($action == NULL){
 
 if($action == 'create_account'){
   //grab variables sent to this action (create_account.php) valuse from the create account form   
-  include('create_account.php');
+  header('Location: ../account/create_account.php');
   
   //take POST values submitted from ../account/index.php
   //and assign them to variables
