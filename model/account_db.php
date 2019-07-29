@@ -1,8 +1,6 @@
 <?php 
 require('database.php');
-
-var_dump($_SESSION);
-//var_dump($account_name);
+//var_dump();
 function create_account($account_name, $account_phone) {
     global $db;
     $query = 'INSERT INTO Accounts(Account_Name, Phone_Number)
