@@ -53,13 +53,12 @@ if($action == 'create_account'){
   $admin_password = filter_input(INPUT_POST, 'password1');
   //Create account
   $accountID = create_account($account_name, $account_phone);
-  var_dump($account_created);
-  //$accountID = $account_created;
+  
   var_dump($accountID);
   //Get Account ID
 
   //Create Admin User
-  $admin_user_added = add_user($admin_email, $admin_first_name, $admin_last_name, $accountID);
+  $admin_user_added = add_user($admin_email, $admin_first_name, $admin_last_name, $admin_department, $admin_password, $accountID);
   var_dump($admin_user_added);
   $message ='';
   

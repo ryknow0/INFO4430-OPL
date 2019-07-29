@@ -55,17 +55,19 @@ function create_account($account_name, $account_phone) {
     */
 }
 
-function add_user($admin_email, $admin_first_name, $admin_last_name, $admin_accountID){
+function add_user($admin_email, $admin_first_name, $admin_last_name, $admin_department, $admin_password, $accountID){
     global $db;
     $query = '';
     $statement = $db->prepare($query);
     $statement->bindParam(':Email', $admin_email);
     $statement->bindParam(':First_Name', $admin_first_name);
     $statement->bindParam(':Last_Name', $admin_last_name);
+    $statement->bindParam(':Department', $admin_department);
+    $statement->bindParam(':Password', $admin_password)
     $statement->bindParam(':AccountID', $admin_accountID);
     $statement->execute();
     $last_id = $db->lastInsertId();
-    echo "New record created succesfully. Last inserted ID is: " . $last_id;
+    echo "New record created succesfully. User ID is: " . $last_id;
     $user = $statement->fetch(PDO::FETCH_BOTH);
     $statement->closeCursor();
     return $user;
