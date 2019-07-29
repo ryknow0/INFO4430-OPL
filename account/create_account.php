@@ -1,4 +1,4 @@
-jhnuuuuuuuuuuuuuuuuuuuuuuuuuhjnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnn<?php
+<?php
 include '../view/header.php';
 
 ?>
