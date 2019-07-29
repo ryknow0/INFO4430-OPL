@@ -11,7 +11,7 @@
 ?>-->
 
 <!DOCTYPE html>
- <html> 
+<html> 
 <!-- the head section -->
 <html data-wf-page="5ce2009f7c5e2f9884026c00" data-wf-site="5ce2009f7c5e2f0115026bff">
 <head>
@@ -75,7 +75,7 @@
           <!-- SIGN UP BUTTON page form button and link to sign up page         -->
           <!-- href="../account/index.php"                                      -->
           <!-- SUCCESS redirect to account create page (../account/index.php)   -->
-            <a class="button w-button" href = "/account/account_controller.php?action=create_account" role="button">Sign Up</a>
+            <a class="button w-button" href = "/account/index.php?action=create_account" role="button">Sign Up</a>
             <input type="hidden" name="action" value="login"/>
           </div>
         </form>
