@@ -55,7 +55,7 @@ function create_account($account_name, $account_phone) {
     */
 }
 
-function add_user($admin_email, $admin_first_name, $admin_last_name, $admin_department, $admin_password, $accountID){
+function add_user($admin_email, $admin_first_name, $admin_last_name, $admin_department, $admin_password, $accountID, $permissions){
     global $db;
     $query = 'INSERT INTO Users(AccountID_FK, Username, Password, First_Name, Last_Name, Department, Permissions)
                 VALUES (:AccountID, :Email, :Password, :First_Name, :Last_Name, :Department, :Permissions)';
