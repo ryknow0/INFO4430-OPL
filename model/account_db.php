@@ -63,7 +63,7 @@ function add_user($admin_email, $admin_first_name, $admin_last_name, $admin_depa
     $statement->bindParam(':First_Name', $admin_first_name);
     $statement->bindParam(':Last_Name', $admin_last_name);
     $statement->bindParam(':Department', $admin_department);
-    $statement->bindParam(':Password', $admin_password)
+    $statement->bindParam(':Password', $admin_password);
     $statement->bindParam(':AccountID', $accountID);
     $statement->execute();
     $last_id = $db->lastInsertId();
