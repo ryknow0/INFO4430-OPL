@@ -57,7 +57,8 @@ function create_account($account_name, $account_phone) {
 
 function add_user($admin_email, $admin_first_name, $admin_last_name, $admin_department, $admin_password, $accountID){
     global $db;
-    $query = '';
+    $query = 'INSERT INTO Users(AccountID_FK, Username, Password, First_Name, Last_Name, Department, Permissions)
+                VALUES (:AccountID, :Email, :Password, :First_Name, :Last_Name, :Department, :Permissions)';
     $statement = $db->prepare($query);
     $statement->bindParam(':Email', $admin_email);
     $statement->bindParam(':First_Name', $admin_first_name);
@@ -65,6 +66,7 @@ function add_user($admin_email, $admin_first_name, $admin_last_name, $admin_depa
     $statement->bindParam(':Department', $admin_department);
     $statement->bindParam(':Password', $admin_password);
     $statement->bindParam(':AccountID', $accountID);
+    $statement->bindParam(':Permissions', $permissions);
     echo "User Account ID is: " . $accountID;
     $statement->execute();
     $last_id = $db->lastInsertId();

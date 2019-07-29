@@ -58,7 +58,9 @@ if($action == 'create_account'){
   //Get Account ID
 
   //Create Admin User
-  $admin_user_added = add_user($admin_email, $admin_first_name, $admin_last_name, $admin_department, $admin_password, $accountID);
+  //By Default the account first user has Admin credentials
+  $permissions = "Admin";
+  $admin_user_added = add_user($admin_email, $admin_first_name, $admin_last_name, $admin_department, $admin_password, $accountID, $permissions);
   var_dump($admin_user_added);
   $message ='';
   
