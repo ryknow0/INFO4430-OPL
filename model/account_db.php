@@ -1,6 +1,6 @@
 <?php 
 require('database.php');
-//var_dump();
+//var_dump
 function create_account($account_name, $account_phone) {
     global $db;
     $query = 'INSERT INTO Accounts(Account_Name, Phone_Number)
@@ -15,22 +15,20 @@ function create_account($account_name, $account_phone) {
     $last_id = $db->lastInsertId();
     //$last_id = $statement->insert_Id();
     //$last_id =  $db->mysql_insert_id();
-    echo "New record created succesfully. Last inserted ID is: " . $last_id;
+    echo "New record created succesfully. Last inserted ID is: " . $last_id ."<br>";
     $statement->closeCursor();
     
-    $query2 = 'SELECT AccountID
-                FROM Accounts
-                WHERE Account_Name = :Account_Name';
-    $stmt = $db->prepare($query2);
-    $stmt->bindParam('Account_Name', $account_name);
+    //$query2 = 'SELECT AccountID
+    //            FROM Accounts
+    //            WHERE Account_Name = :Account_Name';
+    //$stmt = $db->prepare($query2);
+    //$stmt->bindParam('Account_Name', $account_name);
     //$stmt->bindParam('AccountID', $accountId);
-    $stmt->execute();
-    $new_accountID = $statement->fetch(PDO::FETCH_BOTH);
-    echo "New Record Account ID: " . $new_accountID;
-
-
-    var_dump($account_name);
-    return $new_accountID;
+    //$stmt->execute();
+    //$new_accountID = $statement->fetch(PDO::FETCH_BOTH);
+    //echo "New Record Account ID: " . $new_accountID;
+    echo "New Entry Account ID: " . $last_id;
+    return $last_id;
     /***
     *$account_record_added = $statement->rowCount();
 
