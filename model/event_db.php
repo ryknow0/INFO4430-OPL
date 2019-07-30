@@ -27,6 +27,12 @@ function create_event($event_name,$event_date, $event_start_time, $event_end_tim
 
 }
 
+function update_event_details(){
+    //
+}
+
+
+
 function edit_event(){
     global $db;
     //Need to write the DB query to edit existing event

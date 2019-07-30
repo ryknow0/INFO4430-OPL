@@ -15,8 +15,11 @@ if ($acton == 'get_all_events') {
     $events = get_all_events();//an array of arrays
     include('event_tracker.php');//event view
 } else if ($action == 'create_event') {
+    //Called from index.php CREATE EVENT or ADD EVENT Button
     header('Location: ../event/create_event.php');
 } else if ($action == 'add_event'){
+    //Called via SUBMIT buttion from /event/create_event.php
+    //take all POST  vales from create_event.php form 
     $event_name = filter_input(INPUT_POST, 'event_name');
     $event_date = filter_input(INPUT_POST, 'date');
     $event_start_time = filter_input(INPUT_POST, 'start_time');
@@ -29,12 +32,18 @@ if ($acton == 'get_all_events') {
     $event_part_of_series = filter_input(INPUT_POST, 'part_of_series');
     $accountID = $_SESSION['AccountID'];
     //Call Create Event Function
+    //Submit POST values 
     $eventID = create_event($event_name,$event_date, $event_start_time, $event_end_time, $event_location, $event_category, $event_target_audience,$event_type, $event_topic, $accountID);
     header('Location: ../index.php')
-} else if ($action == 'edit_event'){
+} else if ($action == 'select_event'){
+    //Call from event table on index.php
+    //Edit event button will contain link with update_event action
     header('Location: ../event/edit_event.php');
 } else if ($action == 'update_event'){
-     //Set update parameters
+    //Call from SUBMIT button on the edit_event.php form
+     //take all POST values from edit_event.php form (clone of create_event.php)
+     //update edit_event.php page to have Edit and Cancel button
+     //Submit button appears after edit was selected
     $event_name = filter_input(INPUT_POST, 'event_name');
     $event_date = filter_input(INPUT_POST, 'date');
     $event_start_time = filter_input(INPUT_POST, 'start_time');
@@ -46,13 +55,15 @@ if ($acton == 'get_all_events') {
     $event_topic = filter_input(INPUT_POST, 'topic');
     $event_part_of_series = filter_input(INPUT_POST, 'part_of_series');
     $event_update = update_event($event_name,$event_date, $event_start_time, $event_end_time, $event_location, $event_category, $event_target_audience,$event_type, $event_topic);
-    header('Location: ../event_info.php');
-} else if ($action == 'track_event'){
-    header('Location: ../event/track_event.php');
-    //get eventID from selected event on index.php
-    
+    header('Location: ../event/index.php');
+} else if ($action == 'event_tracker'){
+    header('Location: ../event/event_tracker.php');
+    //get eventID from selected "Track Event" button next to event on index.php table
+    //get eventID from array of arrays for events listed on the index.php dashboard
+
     $eventID = filter_input(INPUT_POST, 'eventID');
 } else if ($action == 'update_event_details'){
+    //Called from SUBMIT button on event_tracker.php (demographic information)
     //gather event details from event tracker POST
 }
 ?>
