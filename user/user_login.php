@@ -28,6 +28,7 @@ if ($action == 'login'){
         $_SESSION['First_Name'] = $user['First_Name'];
         $_SESSION['Last_Name'] = $user['Last_Name'];
         $_SESSION['UserID'] = $user['UserID'];
+        $_SESSION['AccountID'] = $user['AccountID'];
        //user is redirected to index.php
         header('Location: ../index.php');
     }

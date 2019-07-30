@@ -1,9 +1,41 @@
 <?php 
 require('database.php'); //databse connection file
 
+function create_event($event_name,$event_date, $event_start_time, $event_end_time, $event_location, $event_category, $event_target_audience, $event_type, $event_topic, $accountID){
+    global $db;
+    //Need to write the DB query to pull all relevant events
+    $query = 'INSERT INTO Events(AccountID_FK, Event_Name, Event_Date, Start_Time, End_Time, Event_Location, Category, Target_Audience, Event_Type, Topic)
+                VALUES (:AccountID_FK, :Event_Name, :Event_date, :Start_Time, :End_Time, :Event_Location, :Category, :Target_Audience, :Event_Type, :Topic)';
+    $db->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+    $statement = $db->prepare($query);
+    $statement->bindParam(':AccountID_FK', $accountID);
+    $statement->bindParam(':Event_Name', $event_name);
+    $statement->bindParam(':Event_Date', $event_date);
+    $statement->bindParam(':Start_Time', $event_start_time);
+    $statement->bindParam(':End_Name', $event_end_time);
+    $statement->bindParam(':Event_Location', $event_location);
+    $statement->bindParam(':Category', $event_category);
+    $statement->bindParam(':Target_Audience', $event_target_audience);
+    $statement->bindParam(':Event_Type', $event_type);
+    $statement->bindParam(':Topic', $event_topic);
+    $statement->execute();
+    $last_id = $db->lastInsertId();
+    echo "New record created succesfully. Last inserted ID is: " . $last_id ."<br>";
+    $statement->closeCursor();
+    echo "New Entry Event ID: " . $last_id;
+    return $last_id;
+
+}
+
+function edit_event(){
+    global $db;
+    //Need to write the DB query to edit existing event
+    $query = 'INSERT INTO Events()';
+}
+
 //get_all_events= to return all current events for a customer account for display on the
 //user/admin dashboard page
-function get_all_events(){
+function get_event(){
     global $db;
     //Need to write the DB query to pull all relevant events
     $query = 'SELECT AccountID_FK, Event_Name, Event_Date, Start_Time, End_Time, Event_Location, Category, Target_Audience, Event_Type, Topic, Age_Under_18,
