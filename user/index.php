@@ -40,7 +40,7 @@ if ($action == 'create_user'){
     $department = filter_input(INPUT_POST, 'department');
     $permission = filter_input(INPUT_POST, 'permission');
     //email and password are passed as parameters to login() and set to $user
-    $user = add_user($email, $first_name, $last_name, $department, $password, $accountID, $permissions;)
+    $user = add_user($email, $first_name, $last_name, $department, $password, $accountID, $permissions);
     //var_dump($user);
     if($user == NULL){//checks to see if $user is NOT empty
         //if $user is empty redirect user back to the loginform.php page
