@@ -59,11 +59,16 @@ if ($acton == 'get_all_events') {
 } else if ($action == 'event_tracker'){
     header('Location: ../event/event_tracker.php');
     //get eventID from selected "Track Event" button next to event on index.php table
-    //get eventID from array of arrays for events listed on the index.php dashboard
+    //get eventID from array of arrays for events listed on the index.php dashboard,
+    //submit value as a GET in the URL
 
     $eventID = filter_input(INPUT_POST, 'eventID');
 } else if ($action == 'update_event_details'){
     //Called from SUBMIT button on event_tracker.php (demographic information)
     //gather event details from event tracker POST
+    $event_name
+    $event_date
+    $event_start_time
+    $event_end_time
 }
 ?>

@@ -4,6 +4,7 @@ include 'view/header.php';
 //require ('model/event_db.php');
 //ini_set('display_errors', 1);
 var_dump($_SESSION);
+$user_first_name = $_SESSION['first_name'];
 ?>
 <!-- User Account Page-->
 <body>
@@ -16,7 +17,7 @@ var_dump($_SESSION);
   </div>
   <div class="page-wrapper">
     <div class="container w-container"><!--Maybe insert a heading for Account Name-->
-      <h1 class="centered-h1">Welcome, <?php echo $_SESSION['first_name'];?></h1>
+      <h1 class="centered-h1">Welcome, <?php echo $user_first_name?></h1>
       <div class="columns w-row">
         <div class="w-col w-col-4 w-col-small-small-stack">
           <h3 class="h3">Top Events</h3><!--Google Charts API -> pie chart of count of event types-->
@@ -51,7 +52,7 @@ var_dump($_SESSION);
         <div class="w-col w-col-5">
           <div class="centered-contents-div"><a href="report/index.php?action=current_events" class="button fixed-width-button w-button">Generate Report</a></div>
           <div class="centered-contents-div"><a href="event/index.php?action=create_event" class="button fixed-width-button w-button">Create Event</a></div>
-          <div class="centered-contents-div"><a href="user/index.php?action=add_user" class="button fixed-width-button w-button">Add User</a></div>
+          <div class="centered-contents-div"><a href="user/index.php?action=create_user" class="button fixed-width-button w-button">Add User</a></div>
         </div>
       </div>
     </div>

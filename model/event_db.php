@@ -54,10 +54,10 @@ function get_event(){
     $statement = $db->prepare($query);
     $statement->bindParam(':UserID', $userid);
     $statement->bindParam(':AccountID', $accountid);
-    $statement->bindParam(':Event_Name', $Event_Name);
-    $statement->bindParam(':Event_Date', $Event_Date);
-    $statement->bindParam(':Start_Time', $Start_Time);
-    $statement->bindParam(':End_Time', $End_Time);
+    $statement->bindParam(':Event_Name', $event_name);
+    $statement->bindParam(':Event_Date', $event_date);
+    $statement->bindParam(':Start_Time', $event_start_time);
+    $statement->bindParam(':End_Time', $event_end_time);
     $statement->bindParam(':Event_Location', $Event_Location);
     $statement->bindParam(':Category', $Category);
     $statement->bindParam(':Target_Audience', $Target_Audience);
