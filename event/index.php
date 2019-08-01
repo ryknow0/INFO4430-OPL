@@ -10,13 +10,13 @@ $action = filter_input(INPUT_POST, 'action');
 if ($action == NULL) {
     $action = filter_input(INPUT_GET, 'action');
     if ($action == NULL) {
-        $action = 'get_events';
+        $action = 'get_all_events';
     }
 }
 
-if ($action == 'get_events'){ 
-    $events = get_events($accountID);//an array of arrays
-    include('event_tracker.php');//event view
+if ($action == 'get_all_events'){ 
+    //$events = get_events($accountID);//an array of arrays
+    header('Location: ../index.php');//account dashboard with all events
 } else if ($action == 'create_event') {
     //Called from index.php CREATE EVENT or ADD EVENT Button
     header('Location: ../event/create_event.php');
@@ -40,7 +40,7 @@ if ($action == 'get_events'){
     //Submit POST values 
     $eventID = create_event($event_name,$event_date, $event_start_time, $event_end_time, $event_location, $event_category, $event_target_audience,$event_type, $event_topic, $accountID);
     var_dump($eventID);
-    header('Location: ../index.php?action=get_all_events');
+    header('Location: ../index.php');
 } else if ($action == 'select_event'){
     //Call from event table on index.php
     //Edit event button will contain link with update_event action

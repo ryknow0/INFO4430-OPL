@@ -32,7 +32,7 @@ function update_event_details(){
 }
 
 //Get Account Events Function
-function get_events($accountID){
+function get_all_events($accountID){
     global $db;
     $query = 'SELECT * FROM Events WHERE AccountID_FK = :AaccountID';
     $db->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
