@@ -9,11 +9,11 @@ $action = filter_input(INPUT_POST, 'action');
 if ($action == NULL) {
     $action = filter_input(INPUT_GET, 'action');
     if ($action == NULL) {
-        $action = 'get_all_events';
+        $action = 'get_events';
     }
 }
 
-if ($action == 'get_all_events') {
+if ($action == 'get_events') {
     $events = get_all_events();//an array of arrays
     include('event_tracker.php');//event view
 } else if ($action == 'create_event') {

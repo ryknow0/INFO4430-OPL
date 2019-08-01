@@ -96,15 +96,11 @@ function get_event(){
 
 //get_ytd_attendees= to return $ytd_attendees or  the total number of attendees across all past events for display on the
 //user/admin dashboard page
-function get_ytd_attendees($accountID){
+function get_ytd_attendees(){
     global $db;
-    $query = 'SELECT SUM(ed.Attendance)
-             FROM Event_Data AS ed JOIN Events AS e
-             ON ed.EventID_FK = e.EventID
-             JOIN Accounts a 
-             ON a.AccountID = ed.AccountID_FK
-             WHERE Event_Date < now() and a.AccountID = 1';
+    $query = 'SELECT SUM(Attendance)FROM Events WHERE Event_Date < NOW()';
     $statement = $db->prepare($query);
+    
     $statement->execute();
     $ytd_attendees = $statement->fetchAll();
     //var_dump(ytd_attendees);

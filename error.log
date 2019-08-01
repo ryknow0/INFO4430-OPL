@@ -141,3 +141,8 @@ Error: Call to undefined method PDOStatement::lastInsertId() in /var/www/html/mo
 [Thu Aug 01 01:07:05.227504 2019] [php7:warn] [pid 30244] [client 161.28.104.77:3317] PHP Warning:  Illegal string offset 'Last_Name' in /var/www/html/user/index.php on line 53, referer: http://10.52.2.69/user/add_user.php
 [Thu Aug 01 01:07:05.227514 2019] [php7:warn] [pid 30244] [client 161.28.104.77:3317] PHP Warning:  Illegal string offset 'UserID' in /var/www/html/user/index.php on line 54, referer: http://10.52.2.69/user/add_user.php
 [Thu Aug 01 01:07:05.227524 2019] [php7:warn] [pid 30244] [client 161.28.104.77:3317] PHP Warning:  Illegal string offset 'AccountID' in /var/www/html/user/index.php on line 55, referer: http://10.52.2.69/user/add_user.php
+
+
+[Thu Aug 01 03:38:08.563666 2019] [php7:error] [pid 26176] [client 161.28.3.139:11648] PHP Fatal error:  Uncaught Error: Call to undefined function get_all_events() in /var/www/html/event/index.php:17\nStack trace:\n#0 {main}\n  thrown in /var/www/html/event/index.php on line 17, referer: http://10.52.2.69/loginform.php
+[Thu Aug 01 03:39:26.503041 2019] [php7:error] [pid 30244] [client 161.28.3.139:11694] PHP Fatal error:  Uncaught Error: Call to undefined function get_all_events() in /var/www/html/event/index.php:17\nStack trace:\n#0 {main}\n  thrown in /var/www/html/event/index.php on line 17, referer: http://10.52.2.69/event/event_tracker.php
+[Thu Aug 01 03:39:29.094712 2019] [php7:error] [pid 26177] [client 161.28.3.139:11696] PHP Fatal error:  Uncaught Error: Call to undefined function get_all_events() in /var/www/html/event/index.php:17\nStack trace:\n#0 {main}\n  thrown in /var/www/html/event/index.php on line 17, referer: http://10.52.2.69/event/event_tracker.php
