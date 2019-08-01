@@ -6,7 +6,7 @@ include 'view/header.php';
 //require ('model/event_db.php');
 //ini_set('display_errors', 1);
 var_dump($_SESSION);
-$user_first_name = $_SESSION['first_name'];
+$user_first_name = 'Ryan';
 ?>
 <!-- User Account Page-->
 <body>
