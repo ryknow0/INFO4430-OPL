@@ -52,6 +52,7 @@ function add_primary_user($admin_email, $admin_first_name, $admin_last_name, $ad
     global $db;
     $query = 'INSERT INTO Users(AccountID_FK, Username, Password, First_Name, Last_Name, Department, Permissions)
                 VALUES (:AccountID, :Email, :Password, :First_Name, :Last_Name, :Department, :Permissions)';
+    $db->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
     $statement = $db->prepare($query);
     $statement->bindParam(':Email', $admin_email);
     $statement->bindParam(':First_Name', $admin_first_name);

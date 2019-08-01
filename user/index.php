@@ -31,7 +31,7 @@ if ($action == 'create_user'){
 }else if($action == 'add_user'){
 
     //Grab Account ID from current user
-    $userID=5;
+    $userID='5';
 
     //grabs value from Post "Email and Password" sets them to variables for use in the function
     $accountID = get_accountID($userID);

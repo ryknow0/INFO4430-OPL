@@ -5,6 +5,7 @@ require('database.php');
 function get_account_users($accountID) {
    global $db;
    $query = 'SELECT First_Name, Last_Name, Email FROM Users WHERE AccountID = :AccountID';
+   $db->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
    $statement = $db->prepare($query);
    $statement->execute();
    $account_users = $statement->fetchAll();
@@ -36,6 +37,7 @@ function add_user($email, $first_name, $last_name, $department, $password, $acco
       global $db;
       $query = 'INSERT INTO Users(AccountID_FK, Username, Password, First_Name, Last_Name, Department, Permissions)
                   VALUES (:AccountID, :Email, :Password, :First_Name, :Last_Name, :Department, :Permissions)';
+      $db->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
       $statement = $db->prepare($query);
       $statement->bindParam(':Email', $email);
       $statement->bindParam(':First_Name', $first_name);
