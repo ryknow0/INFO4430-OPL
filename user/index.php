@@ -41,7 +41,8 @@ if ($action == 'create_user'){
     $first_name = filter_input(INPUT_POST,'first_name');
     $last_name = filter_input(INPUT_POST,'last_name');
     $department = filter_input(INPUT_POST, 'department');
-    $permission = filter_input(INPUT_POST, 'permission');
+    //$permission = filter_input(INPUT_POST, 'permission');
+    $permission = 'Administrator';
     //email and password are passed as parameters to login() and set to $user
     $user = add_user($email, $first_name, $last_name, $department, $password, $accountID, $permissions);
     //var_dump($user);
