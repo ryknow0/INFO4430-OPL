@@ -24,6 +24,7 @@ if ($acton == 'get_all_events') {
     //take all POST  vales from create_event.php form 
     $userID=5;
     $accountID = get_accountID($userID);
+    var_dump($accountID);
     $event_name = filter_input(INPUT_POST, 'event_name');
     $event_date = filter_input(INPUT_POST, 'date');
     $event_start_time = filter_input(INPUT_POST, 'start_time');
