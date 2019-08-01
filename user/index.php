@@ -45,7 +45,7 @@ if ($action == 'create_user'){
     //var_dump($user);
     if($user == NULL){//checks to see if $user is NOT empty
         //if $user is empty redirect user back to the loginform.php page
-        header("Location: ../user/user_add.php?errors=Missing login credentials.");
+        header("Location: ../user/add_user.php?errors=Missing login credentials.");
     } else{
        //If $user is not NULL then user information is set in the $_SESSION
         $_SESSION['Email'] = $user['Email'];
