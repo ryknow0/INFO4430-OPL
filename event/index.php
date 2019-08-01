@@ -1,5 +1,7 @@
 <?php
-requore('../model/event_db.php');
+session_start();
+require('../model/event_db.php');
+require('../model/account_db.php');
 
 //filter_input(INPUT_POST, '');
 
@@ -7,7 +9,7 @@ $action = filter_input(INPUT_POST, 'action');
 if ($action == NULL) {
     $action = filter_input(INPUT_GET, 'action');
     if ($action == NULL) {
-        $action = 'get_all_events'
+        $action = 'get_all_events';
     }
 }
 
@@ -20,6 +22,8 @@ if ($acton == 'get_all_events') {
 } else if ($action == 'add_event'){
     //Called via SUBMIT buttion from /event/create_event.php
     //take all POST  vales from create_event.php form 
+    $userID=5;
+    $accountID = get_accountID($userID);
     $event_name = filter_input(INPUT_POST, 'event_name');
     $event_date = filter_input(INPUT_POST, 'date');
     $event_start_time = filter_input(INPUT_POST, 'start_time');
@@ -30,7 +34,7 @@ if ($acton == 'get_all_events') {
     $event_type = filter_input(INPUT_POST, 'event_type');
     $event_topic = filter_input(INPUT_POST, 'topic');
     $event_part_of_series = filter_input(INPUT_POST, 'part_of_series');
-    $accountID = $_SESSION['AccountID'];
+    
     //Call Create Event Function
     //Submit POST values 
     $eventID = create_event($event_name,$event_date, $event_start_time, $event_end_time, $event_location, $event_category, $event_target_audience,$event_type, $event_topic, $accountID);

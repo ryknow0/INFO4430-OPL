@@ -9,6 +9,7 @@
  */
 session_start();
 require('../model/user_db.php');
+require('../model/account_db.php');
 
 //Conditions to magange the various actions related to users
 //take 'action' from post and set to local $action variable

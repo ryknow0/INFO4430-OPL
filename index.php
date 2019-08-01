@@ -1,5 +1,7 @@
 <?php
 session_start();
+require('model/account_db.php');
+require('model/user_db.php');
 include 'view/header.php';
 //require ('model/event_db.php');
 //ini_set('display_errors', 1);
@@ -38,6 +40,9 @@ $user_first_name = $_SESSION['first_name'];
           <div class="w-col w-col-4">
           <table border="1">
             <tr><td>Date</td><td>Event</td><td>Event Type</td><td>Action</td></tr>
+            <?php 
+            $events = 
+            echo $?>
           <!--<?php //foreach ($event as $event) ?>
             <tr>
                <?php //echo '<td width=\'400\'>'. $event['Name'] . 

@@ -31,7 +31,17 @@ function update_event_details(){
     //
 }
 
-
+//Get Account Events Function
+function get_events($accountID){
+    global $db;
+    $query = 'SELECT * FROM Events WHERE AccountID_FK = :AaccountID';
+    $db->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+    $statement->bindParam(':AccountID', $accountID );
+    $statement->execute();
+    $events= $statement->fetch(PDO::FETCH_ALL);
+    $statement->closeCursor();
+    return $events;
+}
 
 function edit_event(){
     global $db;

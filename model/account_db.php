@@ -68,12 +68,15 @@ function add_user($admin_email, $admin_first_name, $admin_last_name, $admin_depa
     return $last_id;
 }
 
-function get_account(){
+function get_accountID($userID){
     global $db;
-    $query = '';
+    $query = 'SELECT AccountID_FK  FROM Users WHERE UserID = :UserID ';
     $statement = $db->prepare($query);
-    //$statement->bindParam('', );
+    $statement->bindParam(':UserID', $userID);
     $statement->execute();
+    $user_accountID = $statement->fetch(PDO::FETCH_ALL);
+    $statement->closeCursor();
+    return $user_accountID;
 
 }
 
