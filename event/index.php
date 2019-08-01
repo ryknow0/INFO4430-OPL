@@ -4,7 +4,8 @@ require('../model/event_db.php');
 require('../model/account_db.php');
 
 //filter_input(INPUT_POST, '');
-
+$accountID=5;
+$userID=5;
 $action = filter_input(INPUT_POST, 'action');
 if ($action == NULL) {
     $action = filter_input(INPUT_GET, 'action');
@@ -13,7 +14,7 @@ if ($action == NULL) {
     }
 }
 
-if ($action == 'get_events') {
+if ($action == 'get_events'){ 
     $events = get_events($accountID);//an array of arrays
     include('event_tracker.php');//event view
 } else if ($action == 'create_event') {
@@ -22,7 +23,6 @@ if ($action == 'get_events') {
 } else if ($action == 'add_event'){
     //Called via SUBMIT buttion from /event/create_event.php
     //take all POST  vales from create_event.php form 
-    $userID=5;
     $accountID = get_accountID($userID);
     var_dump($accountID);
     $event_name = filter_input(INPUT_POST, 'event_name');

@@ -2,7 +2,7 @@
 
 <body>
   <div data-collapse="medium" data-animation="default" data-duration="400" class="navbar w-nav">
-    <div class="container-2 w-container"><a href="index.html" class="w-nav-brand"><img src="images/orem-library.jpg" alt="" class="navbar-image"></a>
+    <div class="container-2 w-container"><a href="index.html" class="w-nav-brand"><img src="../images/orem-library.jpg" alt="" class="navbar-image"></a>
       <div class="w-nav-button">
         <div class="w-icon-nav-menu"></div>
       </div>
@@ -175,9 +175,3 @@
     </div>
   </div>
   <?php include '../view/footer.php'; ?>
-  <div><a href="create-account.html" class="link">Create Account</a><a href="create-event.html" class="link w--current">Create Event</a><a href="add-user.html" class="link">Add User</a><a href="generate-report.html" class="link">Generate Report</a><a href="admin-page.html" class="link">Admin Page</a><a href="event-tracker.html" class="link">Event Tracker</a><a href="reset-password.html" class="link">Reset Password</a></div>
-  <script src="https://d3e54v103j8qbb.cloudfront.net/js/jquery-3.4.1.min.220afd743d.js" type="text/javascript" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
-  <script src="js/webflow.js" type="text/javascript"></script>
-  <!-- [if lte IE 9]><script src="https://cdnjs.cloudflare.com/ajax/libs/placeholders/3.0.2/placeholders.min.js"></script><![endif] -->
-</body>
-</html>
