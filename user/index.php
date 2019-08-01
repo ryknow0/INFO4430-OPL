@@ -10,8 +10,7 @@
 session_start();
 require('../model/user_db.php');
 require('../model/account_db.php');
-$accountID=5;
-$userID=5;
+
 //Conditions to magange the various actions related to users
 //take 'action' from post and set to local $action variable
 $action = filter_input(INPUT_POST, 'action');
@@ -42,7 +41,7 @@ if ($action == 'create_user'){
     $last_name = filter_input(INPUT_POST,'last_name');
     $department = filter_input(INPUT_POST, 'department');
     //$permission = filter_input(INPUT_POST, 'permission');
-    $permission = 'Administrator';
+    $permissions = 'Administrator';
     //email and password are passed as parameters to login() and set to $user
     $user = add_user($email, $first_name, $last_name, $department, $password, $accountID, $permissions);
     //var_dump($user);
