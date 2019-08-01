@@ -40,6 +40,7 @@ function get_events($accountID){
     $statement->execute();
     $events= $statement->fetch(PDO::FETCH_BOTH);
     $statement->closeCursor();
+    var_dump($events);
     return $events;
 }
 

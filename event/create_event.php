@@ -46,17 +46,17 @@
           <div class="field-wrapper">
             <label for="name-3" class="field-label wide">Location:</label><label for="location" class="asterisk">*</label>
             <select id="location" name="location" data-name="location" class="w-select">
-              <option value="1">Story Telling Wing</option>
-              <option value="2">Fireplace</option>
-              <option value="3">Media Auditorium</option>
-              <option value="4">Library Hall</option>
-              <option value="5">Kids Zone</option>
-              <option value="6">City Center (Building)</option>
-              <option value="7">City Center (Courtyard)</option>
-              <option value="8">Offsite</option>
-              <option value="9">Book Discussion Room</option>
-              <option value="10">Makerspace</option>
-              <option value="11">Outdoor Stage</option>
+              <option value="Story Telling Wing">Story Telling Wing</option>
+              <option value="Fireplace">Fireplace</option>
+              <option value="Media Auditorium">Media Auditorium</option>
+              <option value="Library Hall">Library Hall</option>
+              <option value="Kids Zone">Kids Zone</option>
+              <option value="City Center (Building)">City Center (Building)</option>
+              <option value="City Center (Courtyard)">City Center (Courtyard)</option>
+              <option value="Offsite">Offsite</option>
+              <option value="Book Discussion Room">Book Discussion Room</option>
+              <option value="Makerspace">Makerspace</option>
+              <option value="Outdoor Stage">Outdoor Stage</option>
             </select>
           </div>
           <!-- Category Field   -->
@@ -64,17 +64,17 @@
           <div class="field-wrapper">
             <label for="name-3" class="field-label wide">Category:</label><label for="category" class="asterisk">*</label>
             <select id="category" name="category" data-name="category" class="w-select">
-              <option value="1">After Hours</option>
-              <option value="2">Author Reading/Book Signing</option>
-              <option value="3">Clubs</option>
-              <option value="4">Film Screening</option>
-              <option value="5">Lecture</option>
-              <option value="6">Outreach</option>
-              <option value="7">Panel</option>
-              <option value="8">Passive Program</option>
-              <option value="9">Performance</option>
-              <option value="10">Stations/Booths</option>
-              <option value="11">Storytimes</option>
+              <option value="After Hours">After Hours</option>
+              <option value="Author Reading/Book Signing">Author Reading/Book Signing</option>
+              <option value="Clubs">Clubs</option>
+              <option value="Film Screening">Film Screening</option>
+              <option value="Lecture">Lecture</option>
+              <option value="Outreach">Outreach</option>
+              <option value="Panel">Panel</option>
+              <option value="Passive Program">Passive Program</option>
+              <option value="Performance">Performance</option>
+              <option value="Stations/Booths">Stations/Booths</option>
+              <option value="Storytimes">Storytimes</option>
             </select>
           </div>
           <!-- Target Audience Field   -->
@@ -82,10 +82,10 @@
           <div class="field-wrapper">
             <label for="target-audience" class="field-label wide">Target Audience:</label>
             <select id="target-audience" name="target_audience" data-name="target_audience" class="w-select">
-              <option value="1">Kids</option>
-              <option value="2">Teen</option>
-              <option value="3">Adult</option>
-              <option value="4">Family</option>
+              <option value="Kids">Kids</option>
+              <option value="Teen">Teen</option>
+              <option value="Adult">Adult</option>
+              <option value="Family">Family</option>
             </select>
           </div>
           <!-- Event Type Field   -->
@@ -93,10 +93,10 @@
           <div class="field-wrapper">
             <label for="event-type" class="field-label wide">Event Type:</label>
             <select id="event-type" name="event_type" data-name="event_type" class="w-select">
-              <option value="1">Library Sponsored</option>
-              <option value="2">Community Sponsored</option>
-              <option value="3">Recurring</option>
-              <option value="4">Series</option>
+              <option value="Library Sponsored">Library Sponsored</option>
+              <option value="Community Sponsored">Community Sponsored</option>
+              <option value="Recurring">Recurring</option>
+              <option value="Series">Series</option>
             </select>
           </div>
           <!-- Topic Field   -->
@@ -104,9 +104,9 @@
           <div class="field-wrapper">
             <label for="topic" class="field-label wide">Topic:</label>
             <select id="topic" name="topic" data-name="topic" class="w-select">
-              <option value="1">STEM</option>
-              <option value="2">Arts</option
-              option value="3">Science</option>
+              <option value="STEM">STEM</option>
+              <option value="Arts">Arts</option>
+              <option value="Science">Science</option>
             </select>
           </div>
           <!-- Series Field   -->
@@ -114,11 +114,11 @@
           <div class="field-wrapper">
             <label for="name-3" class="field-label wide">Part of a series?</label>
             <label class="radio-button w-radio">
-              <input type="radio" data-name="part_of_series" id="series-yes" name="part_of_series" value="Radio" class="w-radio-input">
+              <input type="radio" data-name="part_of_series" id="series-yes" name="part_of_series" value="Yes" class="w-radio-input">
               <span for="radio" class="w-form-label">Yes</span>
             </label>
             <label class="radio-button w-radio">
-              <input type="radio" data-name="part_of_series" id="series-no" name="part_of_series" value="Radio" class="w-radio-input">
+              <input type="radio" data-name="part_of_series" id="series-no" name="part_of_series" value="No" class="w-radio-input">
               <span for="radio-2" class="w-form-label">No</span>
             </label
             ></div>
@@ -128,11 +128,11 @@
             <div class="field-wrapper">
               <label for="select-series" class="field-label wide">Select Series:</label>
               <select id="select-series" name="series" data-name="series" class="w-select">
-                <option value="1">Summer Reading</option>
-                <option value="2">Orem Reads</option>
-                <option value="3">Research Revolution</option>
-                <option value="4">New Year New You</option>
-                <option value="5">Holiday Concerts</option>
+                <option value="Summer Reading">Summer Reading</option>
+                <option value="Orem Reads">Orem Reads</option>
+                <option value="Research Revolution">Research Revolution</option>
+                <option value="New Year New You">New Year New You</option>
+                <option value="Holiday Concerts">Holiday Concerts</option>
               </select>
             </div>
             <!-- Add Series Field   -->
