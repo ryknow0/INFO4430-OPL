@@ -14,7 +14,7 @@ if ($action == NULL) {
 }
 
 if ($action == 'get_events') {
-    $events = get_all_events();//an array of arrays
+    $events = get_events($accountID);//an array of arrays
     include('event_tracker.php');//event view
 } else if ($action == 'create_event') {
     //Called from index.php CREATE EVENT or ADD EVENT Button
