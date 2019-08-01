@@ -76,6 +76,7 @@ function get_accountID($userID){
     $statement->bindParam(':UserID', $userID);
     $statement->execute();
     $user_accountID = $statement->fetch(PDO::FETCH_BOTH);
+    var_dump($user_accountID);
     $statement->closeCursor();
     return $user_accountID;
 
