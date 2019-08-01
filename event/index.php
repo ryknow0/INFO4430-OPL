@@ -39,6 +39,7 @@ if ($action == 'get_events'){
     //Call Create Event Function
     //Submit POST values 
     $eventID = create_event($event_name,$event_date, $event_start_time, $event_end_time, $event_location, $event_category, $event_target_audience,$event_type, $event_topic, $accountID);
+    var_dump($eventID);
     header('Location: ../index.php');
 } else if ($action == 'select_event'){
     //Call from event table on index.php
