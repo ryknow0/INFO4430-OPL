@@ -34,7 +34,8 @@ if ($action == 'create_user'){
     $userID='5';
 
     //grabs value from Post "Email and Password" sets them to variables for use in the function
-    $accountID = get_accountID($userID);
+    $arrayAccountID = get_accountID($userID);
+    $accountID = $arrayAccountID["AccountID_FK"]
     $email = filter_input(INPUT_POST,'email');
     $password = filter_input(INPUT_POST,'password1');
     $first_name = filter_input(INPUT_POST,'first_name');
@@ -50,11 +51,11 @@ if ($action == 'create_user'){
         header("Location: ../user/add_user.php?errors=Missing login credentials.");
     } else{
        //If $user is not NULL then user information is set in the $_SESSION
-        $_SESSION['Email'] = $user['Email'];
-        $_SESSION['First_Name'] = $user['First_Name'];
-        $_SESSION['Last_Name'] = $user['Last_Name'];
-        $_SESSION['UserID'] = $user['UserID'];
-        $_SESSION['AccountID'] = $user['AccountID'];
+        //$_SESSION['Email'] = ;
+        //$_SESSION['First_Name'] = $user['First_Name'];
+        //$_SESSION['Last_Name'] = $user['Last_Name'];
+        $_SESSION['UserID'] = $user;
+        $_SESSION['AccountID'] = $accountID;
        //user is redirected to index.php
         header('Location: ../index.php');
     }
