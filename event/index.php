@@ -13,7 +13,7 @@ if ($action == NULL) {
     }
 }
 
-if ($acton == 'get_all_events') {
+if ($action == 'get_all_events') {
     $events = get_all_events();//an array of arrays
     include('event_tracker.php');//event view
 } else if ($action == 'create_event') {

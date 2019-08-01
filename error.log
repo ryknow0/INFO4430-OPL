@@ -132,3 +132,12 @@ Error: Call to undefined method PDOStatement::lastInsertId() in /var/www/html/mo
 [Wed Jul 31 20:50:16.353305 2019] [php7:warn] [pid 29235] [client 161.28.3.113:58423] PHP Warning:  Illegal string offset 'UserID' in /var/www/html/user/index.php on line 53, referer: http://10.52.2.69/user/add_user.php
 [Wed Jul 31 20:50:16.353309 2019] [php7:warn] [pid 29235] [client 161.28.3.113:58423] PHP Warning:  Illegal string offset 'AccountID' in /var/www/html/user/index.php on line 54, referer: http://10.52.2.69/user/add_user.php
 [Wed Jul 31 20:50:16.417923 2019] [php7:notice] [pid 29235] [client 161.28.3.113:58423] PHP Notice:  Undefined index: first_name in /var/www/html/index.php on line 7, referer: http://10.52.2.69/user/add_user.php
+
+[Thu Aug 01 01:07:02.603513 2019] [php7:error] [pid 26179] [client 161.28.235.91:55144] script '/var/www/html/event/event_controller.php' not found or unable to stat, referer: http://10.52.2.69/event/create_event.php
+[Thu Aug 01 01:07:05.225221 2019] [php7:notice] [pid 30244] [client 161.28.104.77:3317] PHP Notice:  Undefined variable: accountID in /var/www/html/user/index.php on line 44, referer: http://10.52.2.69/user/add_user.php
+[Thu Aug 01 01:07:05.225256 2019] [php7:notice] [pid 30244] [client 161.28.104.77:3317] PHP Notice:  Undefined variable: permissions in /var/www/html/user/index.php on line 44, referer: http://10.52.2.69/user/add_user.php
+[Thu Aug 01 01:07:05.227456 2019] [php7:warn] [pid 30244] [client 161.28.104.77:3317] PHP Warning:  Illegal string offset 'Email' in /var/www/html/user/index.php on line 51, referer: http://10.52.2.69/user/add_user.php
+[Thu Aug 01 01:07:05.227492 2019] [php7:warn] [pid 30244] [client 161.28.104.77:3317] PHP Warning:  Illegal string offset 'First_Name' in /var/www/html/user/index.php on line 52, referer: http://10.52.2.69/user/add_user.php
+[Thu Aug 01 01:07:05.227504 2019] [php7:warn] [pid 30244] [client 161.28.104.77:3317] PHP Warning:  Illegal string offset 'Last_Name' in /var/www/html/user/index.php on line 53, referer: http://10.52.2.69/user/add_user.php
+[Thu Aug 01 01:07:05.227514 2019] [php7:warn] [pid 30244] [client 161.28.104.77:3317] PHP Warning:  Illegal string offset 'UserID' in /var/www/html/user/index.php on line 54, referer: http://10.52.2.69/user/add_user.php
+[Thu Aug 01 01:07:05.227524 2019] [php7:warn] [pid 30244] [client 161.28.104.77:3317] PHP Warning:  Illegal string offset 'AccountID' in /var/www/html/user/index.php on line 55, referer: http://10.52.2.69/user/add_user.php
