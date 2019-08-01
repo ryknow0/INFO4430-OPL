@@ -13,7 +13,7 @@
       <h1 class="centered-h1">Create Event</h1>
       <div class="w-form">
       <!-- Event CREATION FORM            --> 
-      <!-- action="event_controller.php"  -->
+      <!-- action="index.php"  -->
       <!-- method="post"                    -->  
         <form id="email-form" name="email-form" data-name="Email Form" action='../event/index.php' class="form" method="post">
           <div class="right-aligned-text"><span class="asterisk">*</span>Required Fields</div>
