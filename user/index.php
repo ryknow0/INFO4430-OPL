@@ -35,7 +35,7 @@ if ($action == 'create_user'){
 
 
     //grabs value from Post "Email and Password" sets them to variables for use in the function
-    $accountID = get_account($userID);
+    $accountID = get_accountID($userID);
     $email = filter_input(INPUT_POST,'email');
     $password = filter_input(INPUT_POST,'password1');
     $first_name = filter_input(INPUT_POST,'first_name');
