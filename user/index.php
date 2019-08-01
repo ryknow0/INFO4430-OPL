@@ -10,7 +10,8 @@
 session_start();
 require('../model/user_db.php');
 require('../model/account_db.php');
-
+$accountID=5;
+$userID=5;
 //Conditions to magange the various actions related to users
 //take 'action' from post and set to local $action variable
 $action = filter_input(INPUT_POST, 'action');
@@ -34,6 +35,7 @@ if ($action == 'create_user'){
 
 
     //grabs value from Post "Email and Password" sets them to variables for use in the function
+    $accountID = get_account($userID);
     $email = filter_input(INPUT_POST,'email');
     $password = filter_input(INPUT_POST,'password1');
     $first_name = filter_input(INPUT_POST,'first_name');
