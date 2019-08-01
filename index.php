@@ -40,9 +40,7 @@ $user_first_name = $_SESSION['first_name'];
           <div class="w-col w-col-4">
           <table border="1">
             <tr><td>Date</td><td>Event</td><td>Event Type</td><td>Action</td></tr>
-            <?php 
-            $events = 
-            echo $?>
+            <?php ?>
           <!--<?php //foreach ($event as $event) ?>
             <tr>
                <?php //echo '<td width=\'400\'>'. $event['Name'] . 

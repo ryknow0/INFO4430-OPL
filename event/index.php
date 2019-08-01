@@ -71,9 +71,9 @@ if ($acton == 'get_all_events') {
 } else if ($action == 'update_event_details'){
     //Called from SUBMIT button on event_tracker.php (demographic information)
     //gather event details from event tracker POST
-    $event_name
-    $event_date
-    $event_start_time
-    $event_end_time
+    $event_name = ' ';
+    $event_date = ' ';
+    $event_start_time = ' ';
+    $event_end_time = ' ';
 }
 ?>
