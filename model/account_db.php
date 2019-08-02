@@ -69,6 +69,14 @@ function add_primary_user($admin_email, $admin_first_name, $admin_last_name, $ad
     return $last_id;
 }
 
+/**
+ * FUNCTION: get_accountID
+ * PURPOSE: get the account ID of the logged in user
+ * PARAMETERS: $userID
+ * RETURN:
+ * NOTES:
+ */
+
 function get_accountID($userID){
     global $db;
     var_dump($userID);

@@ -4,7 +4,9 @@ require('database.php');
 
 function get_account_users($accountID) {
    global $db;
-   $query = 'SELECT First_Name, Last_Name, Email FROM Users WHERE AccountID = :AccountID';
+   $query = 'SELECT First_Name, Last_Name, Email 
+               FROM Users 
+               WHERE AccountID = :AccountID';
    $db->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
    $statement = $db->prepare($query);
    $statement->execute();
@@ -12,11 +14,21 @@ function get_account_users($accountID) {
    $statement->closeCursor();
    return $account_users;
 }
-//login = gets userid for user with the matching username and password 
+
+/**
+ * FUNCTION: login
+ * PURPOSE:  gets userid for user with the matching username and password
+ * PARAMETERS: $mail, $password
+ * RETURN: Information of logged in user
+ * NOTES: called from the user/index.php 
+ */
+
 function login($email, $password){
    global $db;
    //
-   $query = 'SELECT UserID, First_Name, Last_Name, Email FROM Users WHERE Email = :Email AND Password = :Password';
+   $query = 'SELECT UserID, First_Name, Last_Name, Email 
+               FROM Users 
+               WHERE Email = :Email AND Password = :Password';
    //db query gets passed to the prepare function
    $statement = $db->prepare($query);
 
