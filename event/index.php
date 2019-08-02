@@ -27,7 +27,7 @@ if ($action == 'get_all_events'){
     //take all POST  vales from create_event.php form 
     $arrayAccountID = get_accountID($userID);
     $accountID = $arrayAccountID[0];
-    var_dump($accountID);
+    //var_dump($accountID);
     $event_name = filter_input(INPUT_POST, 'event_name');
     $event_date = filter_input(INPUT_POST, 'date');
     $event_start_time = filter_input(INPUT_POST, 'start_time');
@@ -42,7 +42,7 @@ if ($action == 'get_all_events'){
     //Call Create Event Function
     //Submit POST values 
     $eventID = create_event($event_name,$event_date, $event_start_time, $event_end_time, $event_location, $event_category, $event_target_audience,$event_type, $event_topic, $accountID);
-    var_dump($eventID);
+    //var_dump($eventID);
     header('Location: ../index.php');
 } else if ($action == 'select_event'){
     //Call from event table on index.php
