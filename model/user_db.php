@@ -46,7 +46,7 @@ function add_user($email, $first_name, $last_name, $department, $password, $acco
       $statement->bindParam(':Password', $password);
       $statement->bindParam(':AccountID', $accountID);
       $statement->bindParam(':Permissions', $permissions);
-      echo "User Account ID is: " . $accountID;
+      echo "User Add Function Account ID is: " . $accountID;
       $statement->execute();
       $last_id = $db->lastInsertId();
       echo "New record created succesfully. User ID is: " . $last_id;

@@ -40,7 +40,8 @@ if ($action == 'create_user'){
     $accountID = $arrayAccountID["AccountID"];
     var_dump($accountID);
     var_dump($userID);
-    echo "This is the user ID:  ". $userID . " ";
+    echo "This is the user ID:  ". $userID . "<br> ";
+    echo "User Account ID is: " . $accountID;
     $email = filter_input(INPUT_POST,'email');
     $password = filter_input(INPUT_POST,'password1');
     $first_name = filter_input(INPUT_POST,'first_name');
