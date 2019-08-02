@@ -38,7 +38,6 @@ if ($action == 'create_user'){
     var_dump($arrayAccountID);
     echo "<br>";
     $accountID = $arrayAccountID['AccountID_FK'];
-    $accountID
     $a = $arrayAccountID['AccountID_FK'];
     $b = $arrayAccountID['0'];
     $c = $arrayAccountID['A'];
