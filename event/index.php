@@ -37,7 +37,7 @@ if ($action == 'get_all_events'){
     $event_target_audience = filter_input(INPUT_POST, 'target_audience');
     $event_type = filter_input(INPUT_POST, 'event_type');
     $event_topic = filter_input(INPUT_POST, 'topic');
-    $event_part_of_series = filter_input(INPUT_POST, 'part_of_series');
+    //$event_part_of_series = filter_input(INPUT_POST, 'part_of_series');
     
     //Call Create Event Function
     //Submit POST values 

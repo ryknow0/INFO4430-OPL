@@ -5,7 +5,7 @@ function create_event($accountID, $event_name, $event_date, $event_start_time, $
     global $db;
     //Need to write the DB query to pull all relevant events
     $query = 'INSERT INTO Events(AccountID_FK, Event_Name, Event_Date, Start_Time, End_Time, Event_Location, Category, Target_Audience, Event_Type, Topic)
-                VALUES (:AccountID_FK, :Event_Name, :Event_date, :Start_Time, :End_Time, :Event_Location, :Category, :Target_Audience, :Event_Type, :Topic)';
+                VALUES (:AccountID_FK, :Event_Name, :Event_Date, :Start_Time, :End_Time, :Event_Location, :Category, :Target_Audience, :Event_Type, :Topic)';
     $db->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
     $statement = $db->prepare($query);
     $statement->bindParam(':AccountID_FK', $accountID);
