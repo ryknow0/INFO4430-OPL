@@ -35,7 +35,7 @@ if ($action == 'create_user'){
 
     //grabs value from Post "Email and Password" sets them to variables for use in the function
     $arrayAccountID = get_accountID($userID);
-    $accountID = $arrayAccountID["AccountID_FK"];
+    $accountID = $arrayAccountID["AccountID"];
     var_dump($userID);
     echo "This is the user ID:  ". $userID . " ";
     $email = filter_input(INPUT_POST,'email');
@@ -43,7 +43,7 @@ if ($action == 'create_user'){
     $first_name = filter_input(INPUT_POST,'first_name');
     $last_name = filter_input(INPUT_POST,'last_name');
     $department = filter_input(INPUT_POST, 'department');
-    //$permission = filter_input(INPUT_POST, 'permission');
+    //$permission = filter_input(INPUT_POST, 'permissions');
     $permissions = 'Administrator';
     //email and password are passed as parameters to login() and set to $user
     $user = add_user($email, $first_name, $last_name, $department, $password, $accountID, $permissions);
