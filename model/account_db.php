@@ -78,7 +78,9 @@ function get_accountID($userID){
     $statement->execute();
     $user_accountID = $statement->fetchAll();
     var_dump($user_accountID);
-    echo "get_accountID: " . $user_accountID . "<br>";
+    echo "get_accountID: " . $user_accountID["AccountID_FK"] . "<br>";
+    echo "get_accountID: " . $user_accountID[0] . "<br>";
+    echo "get_accountID: " . $user_accountID["0"] . "<br>";
     $statement->closeCursor();
     return $user_accountID;
 
