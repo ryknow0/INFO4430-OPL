@@ -78,9 +78,9 @@ function get_accountID($userID){
     $statement->execute();
     $user_accountID = $statement->fetchAll(PDO::FETCH_COLUMN);
     var_dump($user_accountID);
-    echo "get_accountID: " . $user_accountID["AccountID_FK"] . "<br>";
-    echo "get_accountID: " . $user_accountID[0] . "<br>";
-    echo "get_accountID: " . $user_accountID["0"] . "<br>";
+    //echo "<br> get_accountID: " . $user_accountID["AccountID_FK"] . "<br>";
+    echo "<br> get_accountID: " . $user_accountID[0] . "<br>";
+    //echo "get_accountID: " . $user_accountID["0"] . "<br>";
     $statement->closeCursor();
     return $user_accountID;
 

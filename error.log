@@ -146,3 +146,10 @@ Error: Call to undefined method PDOStatement::lastInsertId() in /var/www/html/mo
 [Thu Aug 01 03:38:08.563666 2019] [php7:error] [pid 26176] [client 161.28.3.139:11648] PHP Fatal error:  Uncaught Error: Call to undefined function get_all_events() in /var/www/html/event/index.php:17\nStack trace:\n#0 {main}\n  thrown in /var/www/html/event/index.php on line 17, referer: http://10.52.2.69/loginform.php
 [Thu Aug 01 03:39:26.503041 2019] [php7:error] [pid 30244] [client 161.28.3.139:11694] PHP Fatal error:  Uncaught Error: Call to undefined function get_all_events() in /var/www/html/event/index.php:17\nStack trace:\n#0 {main}\n  thrown in /var/www/html/event/index.php on line 17, referer: http://10.52.2.69/event/event_tracker.php
 [Thu Aug 01 03:39:29.094712 2019] [php7:error] [pid 26177] [client 161.28.3.139:11696] PHP Fatal error:  Uncaught Error: Call to undefined function get_all_events() in /var/www/html/event/index.php:17\nStack trace:\n#0 {main}\n  thrown in /var/www/html/event/index.php on line 17, referer: http://10.52.2.69/event/event_tracker.php
+
+string(1) "5" array(1) { [0]=> string(1) "5" } get_accountID: 
+get_accountID: 5
+get_accountID: 5
+array(1) { [0]=> string(1) "5" } 
+NULL string(1) "5" This is the user ID: 5
+User Account ID is: User Add Function Account ID is:
