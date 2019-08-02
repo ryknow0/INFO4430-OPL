@@ -4,7 +4,6 @@ require('../model/event_db.php');
 require('../model/account_db.php');
 
 //filter_input(INPUT_POST, '');
-$accountID=5;
 $userID=5;
 $action = filter_input(INPUT_POST, 'action');
 if ($action == NULL) {
@@ -18,6 +17,7 @@ if ($action == 'get_all_events'){
     $arrayAccountID = get_accountID($userID);
     $accountID = $arrayAccountID[0];
     $events = get_all_events($accountID);//an array of arrays
+    var_dump($events);
     header('Location: ../index.php');//account dashboard with all events
 } else if ($action == 'create_event') {
     //Called from index.php CREATE EVENT or ADD EVENT Button
