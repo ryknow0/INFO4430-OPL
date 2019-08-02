@@ -1,7 +1,7 @@
 <?php 
 require('database.php'); //databse connection file
 
-function create_event($event_name,$event_date, $event_start_time, $event_end_time, $event_location, $event_category, $event_target_audience, $event_type, $event_topic, $accountID){
+function create_event($accountID, $event_name, $event_date, $event_start_time, $event_end_time, $event_location, $event_category, $event_target_audience, $event_type, $event_topic){
     global $db;
     //Need to write the DB query to pull all relevant events
     $query = 'INSERT INTO Events(AccountID_FK, Event_Name, Event_Date, Start_Time, End_Time, Event_Location, Category, Target_Audience, Event_Type, Topic)
@@ -34,7 +34,7 @@ function update_event_details(){
 //Get Account Events Function
 function get_all_events($accountID){
     global $db;
-    $query = 'SELECT * FROM Events WHERE AccountID_FK = :AaccountID';
+    $query = 'SELECT * FROM Events WHERE AccountID_FK = :AccountID';
     $db->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
     $statement->bindParam(':AccountID', $accountID );
     $statement->execute();
