@@ -56,7 +56,7 @@
           <!-- name="permission"    -->
           <div class="field-wrapper">
             <label for="name-3" class="field-label wide">Permissions:</label><label for="Admin" class="asterisk">*</label>
-            <select id="Admin" name="permission" data-name="permission" class="w-select">
+            <select id="Admin" name="permissions" data-name="permissions" class="w-select">
               <option value="admin">Administrator</option>
               <option value="employee">Employee</option>
               <option value="volunteer">Volunteer</option>
@@ -68,7 +68,7 @@
           <!-- SUCCESS redirect to account dashboard(index.php)         -->
           <!-- FAIL or CANCEL redirect to account dashboard(index.php)  --> 
           <div class="form-button-wrapper">
-            <input type="submit" value="Submit" onclick="window.location.href = '../user/index.php?action=add_user';" data-wait="Please wait..." class="button login w-button">
+            <input type="submit" value="Submit" onclick="window.location.href = '../user/index.php';" data-wait="Please wait..." class="button login w-button">
             <input type="submit" value="Cancel" onclick="window.location.href = '../index.php';" data-wait="Please wait..." class="button w-button">
             <input type="hidden" name="action" value="add_user">
           </div>

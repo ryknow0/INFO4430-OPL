@@ -37,6 +37,7 @@ if ($action == 'create_user'){
     $arrayAccountID = get_accountID($userID);
     $accountID = $arrayAccountID["AccountID_FK"];
     var_dump($userID);
+    echo "This is the user ID:  ". $userID . " ";
     $email = filter_input(INPUT_POST,'email');
     $password = filter_input(INPUT_POST,'password1');
     $first_name = filter_input(INPUT_POST,'first_name');
@@ -46,7 +47,7 @@ if ($action == 'create_user'){
     $permissions = 'Administrator';
     //email and password are passed as parameters to login() and set to $user
     $user = add_user($email, $first_name, $last_name, $department, $password, $accountID, $permissions);
-    //var_dump($user);
+    var_dump($user);
     if($user == NULL){//checks to see if $user is NOT empty
         //if $user is empty redirect user back to the loginform.php page
         header("Location: ../user/add_user.php?errors=Missing login credentials.");
