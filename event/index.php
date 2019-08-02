@@ -25,7 +25,7 @@ if ($action == 'get_all_events'){
 } else if ($action == 'add_event'){
     //Called via SUBMIT buttion from /event/create_event.php
     //take all POST  vales from create_event.php form 
-    $acc$arrayAccountID = get_accountID($userID);
+    $arrayAccountID = get_accountID($userID);
     $accountID = $arrayAccountID[0];
     var_dump($accountID);
     $event_name = filter_input(INPUT_POST, 'event_name');
