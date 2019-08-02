@@ -71,12 +71,14 @@ function add_primary_user($admin_email, $admin_first_name, $admin_last_name, $ad
 
 function get_accountID($userID){
     global $db;
+    var_dump($userID);
     $query = 'SELECT AccountID_FK  FROM Users WHERE UserID = :UserID';
     $statement = $db->prepare($query);
     $statement->bindParam(':UserID', $userID);
     $statement->execute();
     $user_accountID = $statement->fetchAll();
     var_dump($user_accountID);
+    echo "get_accountID: " . $user_accountID . "<br>";
     $statement->closeCursor();
     return $user_accountID;
 
