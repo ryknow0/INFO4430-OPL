@@ -12,7 +12,7 @@ function create_event($accountID, $event_name, $event_date, $event_start_time, $
     $statement->bindParam(':Event_Name', $event_name);
     $statement->bindParam(':Event_Date', $event_date);
     $statement->bindParam(':Start_Time', $event_start_time);
-    $statement->bindParam(':End_Name', $event_end_time);
+    $statement->bindParam(':End_Time', $event_end_time);
     $statement->bindParam(':Event_Location', $event_location);
     $statement->bindParam(':Category', $event_category);
     $statement->bindParam(':Target_Audience', $event_target_audience);
