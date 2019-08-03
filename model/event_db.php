@@ -38,7 +38,7 @@ function get_all_events($accountID){
     $db->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
     $statement->bindParam(':AccountID', $accountID );
     $statement->execute();
-    $events= $statement->fetch(PDO::FETCH_BOTH);
+    $events= $statement->fetch(PDO::FETCH_ASSOC);
     $statement->closeCursor();
     var_dump($events);
     return $events;

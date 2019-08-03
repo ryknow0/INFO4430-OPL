@@ -2,11 +2,11 @@
 session_start();
 require('model/account_db.php');
 require('model/user_db.php');
-include 'view/header.php';
-//require ('model/event_db.php');
-//ini_set('display_errors', 1);
-var_dump($_SESSION);
-$user_first_name = 'Ryan';
+require('model/event_db.php')
+include 'view/account_dashboard_header.php';
+$user_first_name = "Ryan";
+$ytd_attendance =1202 ;
+$ytd_events =12 ;
 ?>
 <!-- User Account Page-->
 <body>
@@ -26,20 +26,21 @@ $user_first_name = 'Ryan';
         </div>
         <div class="w-col w-col-4 w-col-small-small-stack">
           <h3 class="h3">YTD Attendance</h3>
-          <h1 class="h1-huge">1895</h1><!--Google Charts API? or need query and function to get this number-->
+          <h1 class="h1-huge"><?php echo $ytd_attendance?></h1><!--Google Charts API? or need query and function to get this number-->
         </div>
         <div class="w-col w-col-4 w-col-small-small-stack">
           <h3 class="h3">YTD Events</h3>
-          <h1 class="h1-huge">12</h1><!--Goolge Charts API? or need query and function to get this number -->
+          <h1 class="h1-huge"><?php echo $ytd_events?></h1><!--Goolge Charts API? or need query and function to get this number -->
         </div>
       </div>
       <div class="columns w-row">
         <div class="w-col w-col-7">
           <!-- Google Charts API or manual Table to display upcoming events on an account-->
-          <div class="bold-text">Upcoming Events</div>
+          <div id="table_div"></div>
+          <!-- <div class="bold-text">Upcoming Events</div>
           <div class="w-col w-col-4">
           <table border="1">
-            <tr><td>Date</td><td>Event</td><td>Event Type</td><td>Action</td></tr>
+            <tr><td>Date</td><td>Event</td><td>Event Type</td><td>Action</td></tr> -->
             <?php ?>
           <!--<?php //foreach ($event as $event) ?>
             <tr>

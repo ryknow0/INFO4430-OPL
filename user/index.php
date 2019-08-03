@@ -10,6 +10,7 @@
 session_start();
 require('../model/user_db.php');
 require('../model/account_db.php');
+require('../model/event_db.php');
 
 //Conditions to magange the various actions related to users
 //take 'action' from post and set to local $action variable
@@ -18,7 +19,7 @@ if ($action == NULL) {
     //If $action is NULL check get for 'action'
     $action = filter_input(INPUT_GET, 'action');
     if ($action == NULL) {
-        $action = 'create_user';
+        $action = 'user_dashboard';
     }
 }
 
@@ -26,10 +27,16 @@ if ($action == NULL) {
 
 
 //Gathers all items from the Session that are needed to add the user to generate the query
-if ($action == 'create_user'){
+if ($action == 'user_dashboard'){
+    $arrayAccountID = get_accountID($userID);
+    $accountID = $arrayAccountID[0];
+    $events = get_all_events($accountID);
+    $json_events = json_encode($events);
+    header('Location: ../index.php');
+}else if($action == 'create_user'){
     header('Location: ../user/add_user.php');
 }else if($action == 'add_user'){
-
+]
     //Grab Account ID from current user
     $userID='5';
 
