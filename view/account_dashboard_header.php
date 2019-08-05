@@ -9,7 +9,7 @@
 require('model/account_db.php');
 require('model/user_db.php');
 require('model/event_db.php');
-require
+
 if($action= 'user_dashboard'){
 $arrayAccountID = get_accountID($userID);
 $accountID = $arrayAccountID[0];
