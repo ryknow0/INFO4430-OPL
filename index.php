@@ -49,10 +49,16 @@ include 'view/account_dashboard_header.php';
           </table>
           </div>
         </div>
-        <div class="w-col w-col-5">
-          <div class="centered-contents-div"><a href="report/index.php?action=current_events" class="button fixed-width-button w-button">Generate Report</a></div>
-          <div class="centered-contents-div"><a href="event/index.php?action=create_event" class="button fixed-width-button w-button">Create Event</a></div>
-          <div class="centered-contents-div"><a href="user/index.php?action=create_user" class="button fixed-width-button w-button">Add User</a></div>
+        <div class="columns w-row">
+          <div class="w-col w-col-4 w-col-small-small-stackv">
+            <a href="report/index.php?action=current_events" class="button fixed-width-button w-button">Generate Report</a>
+          </div>
+          <div class="w-col w-col-4 w-col-small-small-stack">
+            <a href="event/index.php?action=create_event" class="button fixed-width-button w-button">Create Event</a>
+          </div>
+          <div class="w-col w-col-4 w-col-small-small-stack">
+            <a href="user/index.php?action=create_user" class="button fixed-width-button w-button">Add User</a>
+          </div>
         </div>
       </div>
     </div>

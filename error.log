@@ -155,3 +155,17 @@ NULL string(1) "5" This is the user ID: 5
 User Account ID is: User Add Function Account ID is:
 
 [Fri Aug 02 19:59:58.715090 2019] [php7:error] [pid 10496] [client 161.28.3.159:63975] PHP Fatal error:  Uncaught PDOException: SQLSTATE[HY093]: Invalid parameter number: parameter was not defined in /var/www/html/model/event_db.php:21\nStack trace:\n#0 /var/www/html/model/event_db.php(21): PDOStatement->execute()\n#1 /var/www/html/event/index.php(44): create_event('Event Test 1', '2019-07-31', '7:00', '8:00', 'Story Telling W...', 'After Hours', 'Kids', 'Library Sponsor...', 'STEM', '5')\n#2 {main}\n  thrown in /var/www/html/model/event_db.php on line 21, referer: http://10.52.2.69/event/create_event.php
+
+
+
+<div class="w-col w-col-5">
+          <div class="centered-contents-div">
+            <a href="report/index.php?action=current_events" class="button fixed-width-button w-button">Generate Report</a>
+          </div>
+          <div class="centered-contents-div">
+            <a href="event/index.php?action=create_event" class="button fixed-width-button w-button">Create Event</a>
+          </div>
+          <div class="centered-contents-div">
+            <a href="user/index.php?action=create_user" class="button fixed-width-button w-button">Add User</a>
+          </div>
+        </div>
