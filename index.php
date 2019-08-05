@@ -34,14 +34,14 @@ include 'view/account_dashboard_header.php';
           <div id="table_div" class="gtable">
           </div>
         </div>
-        <div class="w-col w-col-7">
+        <div class="w-col w-col-4 w-col-small-small-stack">
             <div class="centered-contents-div">
             <a href="event/index.php?action=edit_event" class="button login w-button">Edit Event</a>
             </div>
         </div>
       </div>
       <div class="columns w-row">
-          <div class="w-col w-col-4 w-col-small-small-stackv">
+          <div class="w-col w-col-4 w-col-small-small-stack">
             <a href="report/index.php?action=current_events" class="button fixed-width-button w-button">Generate Report</a>
           </div>
           <div class="w-col w-col-4 w-col-small-small-stack">
