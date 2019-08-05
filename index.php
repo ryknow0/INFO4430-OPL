@@ -35,7 +35,7 @@ include 'view/account_dashboard_header.php';
           </div>
           <div class="w-col w-col-7">
           <!-- Google Charts API or manual Table to display upcoming events on an account-->
-          <div id="table_div" class="centered-contents-div">
+          <div class="centered-contents-div">
             <a href="event/index.php?action=edit_event" class="button login w-button">Edit Event</a>
           </div>
           </div>
