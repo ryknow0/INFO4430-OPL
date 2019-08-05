@@ -39,7 +39,7 @@ function get_all_events($accountID){
     var_dump($query);
     echo "<br>";
     $db->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-    $statement->bindParam(':AccountID_FK', $accountID );
+    $statement->bindParam(':AccountID_FK', $accountID);
     var_dump($statement);
     $statement->execute();
     $events= $statement->fetch(PDO::FETCH_ASSOC);
