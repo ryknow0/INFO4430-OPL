@@ -35,11 +35,11 @@ function update_event_details(){
 function get_all_events($accountID){
     echo "this is get_all_events accountID: " . $accountID;
     global $db;
-    $query = 'SELECT * FROM Events WHERE AccountID_FK = :AccountID';
+    $query = 'SELECT * FROM Events WHERE AccountID_FK = :AccountID_FK';
     var_dump($query);
     echo "<br>";
     $db->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-    $statement->bindParam(':AccountID', $accountID );
+    $statement->bindParam(':AccountID_FK', $accountID );
     var_dump($statement);
     $statement->execute();
     $events= $statement->fetch(PDO::FETCH_ASSOC);
