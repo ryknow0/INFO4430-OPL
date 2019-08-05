@@ -1,9 +1,7 @@
 <?php
 session_start();
 include 'view/account_dashboard_header.php';
-$user_first_name = "Ryan";
-$ytd_attendance = 1202;
-$ytd_events = 12;
+
 ?>
 <!-- User Account Page-->
 <body>

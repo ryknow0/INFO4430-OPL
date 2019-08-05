@@ -14,10 +14,13 @@ if($action= 'user_dashboard'){
 $arrayAccountID = get_accountID($userID);
 $accountID = $arrayAccountID[0];
 $events = get_all_events($accountID);
+var_dump($events);
 $json_events = json_encode($events);
 
 }
 $user_first_name = 'Ryan';
+$ytd_attendance = 1202;
+$ytd_events = 12;
 ?>
 
 <!DOCTYPE html>
