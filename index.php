@@ -21,7 +21,7 @@ $ytd_events =12 ;
     <div class="container w-container"><!--Maybe insert a heading for Account Name-->
       <h1 class="centered-h1">Welcome, <?php echo $user_first_name?></h1>
       <div class="columns w-row">
-        <div class="w-col w-col-4 w-col-small-small-stack">
+        <div class="w-col w-col-4 w-col-small-small-stack" id='table_div'>
           <h3 class="h3">Top Events</h3><!--Google Charts API -> pie chart of count of event types-->
         </div>
         <div class="w-col w-col-4 w-col-small-small-stack">
