@@ -16,7 +16,7 @@ include 'view/account_dashboard_header.php';
     <div class="container w-container"><!--Maybe insert a heading for Account Name-->
       <h1 class="centered-h1">Welcome, <?php echo $user_first_name?></h1>
       <div class="columns w-row">
-        <div class="w-col w-col-4 w-col-small-small-stack" id='table_div'>
+        <div class="w-col w-col-4 w-col-small-small-stack">
           <h3 class="h3">Top Events</h3><!--Google Charts API -> pie chart of count of event types-->
         </div>
         <div class="w-col w-col-4 w-col-small-small-stack">
@@ -31,7 +31,8 @@ include 'view/account_dashboard_header.php';
       <div class="columns w-row">
         <div class="w-col w-col-7">
           <!-- Google Charts API or manual Table to display upcoming events on an account-->
-          <div id="table_div"></div>
+          <div id="table_div" style="width: 900px; height: 500px;" >
+          </div>
           <!-- <div class="bold-text">Upcoming Events</div>
           <div class="w-col w-col-4">
           <table border="1">
