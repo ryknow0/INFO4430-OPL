@@ -33,14 +33,9 @@ include 'view/account_dashboard_header.php';
           <!-- Google Charts API or manual Table to display upcoming events on an account-->
           <div id="table_div" class="gtable">
           </div>
-          <div class="w-col w-col-7">
-          <!-- Google Charts API or manual Table to display upcoming events on an account-->
-          <div class="centered-contents-div">
-            <a href="event/index.php?action=edit_event" class="button login w-button">Edit Event</a>
-          </div>
-          </div>
         </div>
-        <div class="columns w-row">
+      </div>
+      <div class="columns w-row">
           <div class="w-col w-col-4 w-col-small-small-stackv">
             <a href="report/index.php?action=current_events" class="button fixed-width-button w-button">Generate Report</a>
           </div>
@@ -51,7 +46,6 @@ include 'view/account_dashboard_header.php';
             <a href="user/index.php?action=create_user" class="button fixed-width-button w-button">Add User</a>
           </div>
         </div>
-      </div>
     </div>
   </div>
   <div>

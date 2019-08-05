@@ -169,3 +169,9 @@ User Account ID is: User Add Function Account ID is:
             <a href="user/index.php?action=create_user" class="button fixed-width-button w-button">Add User</a>
           </div>
         </div>
+
+        <div class="w-col w-col-7">
+            <div class="centered-contents-div">
+            <a href="event/index.php?action=edit_event" class="button login w-button">Edit Event</a>
+            </div>
+        </div>
