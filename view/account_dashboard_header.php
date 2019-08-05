@@ -9,10 +9,11 @@
 require('model/account_db.php');
 require('model/user_db.php');
 require('model/event_db.php');
-$userID=5;
+$userID='5';
 if($action= 'user_dashboard'){
 $arrayAccountID = get_accountID($userID);
 $accountID = $arrayAccountID[0];
+var_dump($accountID);
 $events = get_all_events($accountID);
 var_dump($events);
 $json_events = json_encode($events);
