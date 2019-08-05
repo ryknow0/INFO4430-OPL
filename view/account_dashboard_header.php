@@ -6,6 +6,10 @@
 //   }
 //   $first_name = $_SESSION['First_Name'];
 //   $last_name = $_SESSION['Last_Niame'];
+require('model/account_db.php');
+require('model/user_db.php');
+require('model/event_db.php');
+require
 if($action= 'user_dashboard'){
 $arrayAccountID = get_accountID($userID);
 $accountID = $arrayAccountID[0];

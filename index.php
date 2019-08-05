@@ -1,12 +1,9 @@
 <?php
 session_start();
-require('model/account_db.php');
-require('model/user_db.php');
-require('model/event_db.php');
 include 'view/account_dashboard_header.php';
 $user_first_name = "Ryan";
-$ytd_attendance =1202 ;
-$ytd_events =12 ;
+$ytd_attendance = 1202;
+$ytd_events = 12;
 ?>
 <!-- User Account Page-->
 <body>
