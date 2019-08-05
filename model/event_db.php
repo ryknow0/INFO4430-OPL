@@ -36,6 +36,7 @@ function get_all_events($accountID){
     echo "this is get_all_events accountID: " . $accountID;
     global $db;
     $query = 'SELECT * FROM Events WHERE AccountID_FK = :AccountID';
+    var_dump($query);
     $db->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
     $statement->bindParam(':AccountID', $accountID );
     $statement->execute();
