@@ -140,17 +140,6 @@ function get_ytd_event_types(){
     return $ytd_event_types;     
 }
 
-function event_table($events = array())
-{
-    $rows = array();
-    foreach ($events as $row) {
-        $cells = array();
-        foreach ($row as $cell) {
-            $cells[] = "<td>{$cell}</td>";
-        }
-        $rows[] = "<tr>" . implode('', $cells) . "</tr>";
-    }
-    return "<table class='hci-table'>" . implode('', $rows) . "</table>";
-}
+
 
 ?>

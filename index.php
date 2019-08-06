@@ -32,7 +32,20 @@ include 'view/account_dashboard_header.php';
         <div class="w-col w-col-7">
           <!-- Google Charts API or manual Table to display upcoming events on an account-->
           <div>
-          <?php echo event_table($events)?>
+          <?php 
+          function event_table($events = array()){
+            $rows = array();
+            foreach ($events as $row) {
+              $cells = array();
+              foreach ($row as $cell) {
+                  $cells[] = "<td>{$cell}</td>";
+                }
+              $rows[] = "<tr>" . implode('', $cells) . "</tr>";
+            }
+            return "<table class='hci-table'>" . implode('', $rows) . "</table>";
+          }
+          echo event_table($events);
+          ?>
           </div>
         </div>
         <div class="w-col w-col-4 w-col-small-small-stack">
