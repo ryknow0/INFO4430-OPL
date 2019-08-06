@@ -211,3 +211,6 @@ echo build_table($array);
                 location.href = "../loginform.php";
               };  
             </script>
+
+            onclick="window.location.href = 'index.php';"
+          
