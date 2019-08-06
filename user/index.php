@@ -76,7 +76,11 @@ if ($action == 'user_dashboard'){
 }else if ($action == 'login'){
  //grabs value from Post "Email and Password" sets them to variables for use in the function
     $email = filter_input(INPUT_POST,'username');
+    var_dump($email);
     $password = filter_input(INPUT_POST,'password');
+    var_dump($password);
+    echo "this is the user:" . $email . "<br>";
+    echo "this is the password:" . $password;
    //email and password are passed as parameters to login() and set to $user
     $user = login($email, $password);
     var_dump($user);
