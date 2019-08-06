@@ -36,7 +36,7 @@ if ($action == 'user_dashboard'){
 }else if($action == 'create_user'){
     header('Location: ../user/add_user.php');
 }else if($action == 'add_user'){
-]
+
     //Grab Account ID from current user
     $userID='5';
 
@@ -72,6 +72,7 @@ if ($action == 'user_dashboard'){
        //user is redirected to index.php
         header('Location: ../index.php');
     }
+    
 }else if ($action == 'login'){
  //grabs value from Post "Email and Password" sets them to variables for use in the function
     $email = filter_input(INPUT_POST,'username');
