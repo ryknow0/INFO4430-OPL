@@ -13,12 +13,11 @@
 </html> -->
 
 <footer>
-    <a href="http://10.52.2.69/account/create_account.php" class="link">Create Account</a>
-    <a href="http://10.52.2.69/event/event_tracker.php" class="link">Create Event</a>
-    <a href="http://10.52.2.69/user/user_add.php" class="link">Add User</a>
-    <a href="http://10.52.2.69/report/index.php" class="link">Generate Report</a>
-    <a href="http://10.52.2.69/user/index.php" class="link">Admin Page</a>
-    <a href="http://10.52.2.69/event/index.php" class="link">Event Tracker</a>
+    <a href="http://10.52.2.69/account/index.php?action=create_account" class="link">Create Account</a>
+    <a href="http://10.52.2.69/event/index.php?action=create_event" class="link">Create Event</a>
+    <a href="http://10.52.2.69/user/index.php?action=add_user" class="link">Add User</a>
+    <a href="http://10.52.2.69/report/index.php?action=report" class="link">Generate Report</a>
+    <a href="http://10.52.2.69/event/index.php?action=track_event" class="link">Event Tracker</a>
     <a href="http://10.52.2.69/index.php" class="link">Home</a>
     <a href="http://10.52.2.69/logout.php" class="link">Logout</a>
     <a href="http://10.52.2.69/loginform.php" class="link">Login</a>

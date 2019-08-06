@@ -39,7 +39,7 @@ include 'view/account_dashboard_header.php';
         </div>
         <div class="w-col w-col-2">
             <div class="centered-contents-div">
-            <a href="event/index.php?action=event_search" class="button login w-button">Edit Events</a>
+            <a href="event/index.php?action=event_tracker" class="button login w-button">Track Event</a>
             </div>
         </div>
       </div>

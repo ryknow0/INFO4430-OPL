@@ -80,7 +80,7 @@ if ($action == 'get_all_events'){
     $event_date = ' ';
     $event_start_time = ' ';
     $event_end_time = ' ';
-} else if ($action == 'event_search'){
-
+} else if ($action == 'track_event'){
+    
 }
 ?>
