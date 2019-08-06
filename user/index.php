@@ -11,7 +11,8 @@ session_start();
 require('../model/user_db.php');
 require('../model/account_db.php');
 require('../model/event_db.php');
-
+var_dump($action);
+echo "this is the action:" . $action;
 //Conditions to magange the various actions related to users
 //take 'action' from post and set to local $action variable
 $action = filter_input(INPUT_POST, 'action');
@@ -19,7 +20,7 @@ if ($action == NULL) {
     //If $action is NULL check get for 'action'
     $action = filter_input(INPUT_GET, 'action');
     if ($action == NULL) {
-        $action = 'user_dashboard';
+        $action = 'login';
     }
 }
 
@@ -74,6 +75,7 @@ if ($action == 'user_dashboard'){
     }
     
 }else if ($action == 'login'){
+
  //grabs value from Post "Email and Password" sets them to variables for use in the function
     $email = filter_input(INPUT_POST,'username');
     var_dump($email);
