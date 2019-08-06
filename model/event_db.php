@@ -43,7 +43,7 @@ function get_all_events($accountID){
     $statement->bindParam(':AccountID_FK', $accountID);
     //var_dump($statement);
     $statement->execute();
-    $events= $statement->fetch(PDO::FETCH_BOTH);
+    $events= $statement->fetchAll();
     $statement->closeCursor();
     //var_dump($events);
     return $events;
