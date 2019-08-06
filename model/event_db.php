@@ -36,16 +36,16 @@ function get_all_events($accountID){
     echo "this is get_all_events accountID: " . $accountID;
     global $db;
     $query = 'SELECT * FROM Events WHERE AccountID_FK = :AccountID_FK';
-    var_dump($query);
-    echo "<br>";
+    //var_dump($query);
+    //echo "<br>";
     $db->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
     $statement = $db->prepare($query);
     $statement->bindParam(':AccountID_FK', $accountID);
-    var_dump($statement);
+    //var_dump($statement);
     $statement->execute();
     $events= $statement->fetch(PDO::FETCH_ASSOC);
     $statement->closeCursor();
-    var_dump($events);
+    //var_dump($events);
     return $events;
 }
 
