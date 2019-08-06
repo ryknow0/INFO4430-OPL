@@ -19,6 +19,7 @@ var_dump($events);
 $json_events = json_encode($events);
 echo "<br>";
 echo $events[1][2];
+$array= $events;
 //}
 $user_first_name = 'Ryan';
 $ytd_attendance = 1202;
