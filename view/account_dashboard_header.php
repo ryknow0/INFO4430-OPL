@@ -22,7 +22,11 @@ echo "<br>";
 //echo $events[1][2];
 $array= $events;
 //}
-$user_first_name = 'Ryan';
+
+$login_username = $_SESSON['First_Name'];
+var_dump($login_username);
+echo "this is the first name of the logged in user: " . $login_username . "<br>";
+$user_first_name = 'Static Name';
 $ytd_attendance = 1202;
 $ytd_events = 112;
 ?>
