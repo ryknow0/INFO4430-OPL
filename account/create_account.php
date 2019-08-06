@@ -19,7 +19,7 @@ include '../view/header.php';
       <!-- ACCOUNT CREATION FORM            --> 
       <!-- action="../acocunt/index.php"  -->
       <!-- method="post"                    -->
-        <form id="email-form" name="email-form" data-name="Email Form" action='../account/index.php' class="form" method="post">
+        <form id="email-form" name="email-form" data-name="Email Form" class="form" method="post">
           <div class="right-aligned-text"><span class="asterisk">*</span>Required Fields</div>
           <!-- Account Name Field   -->
           <!-- name="account_name"  -->
