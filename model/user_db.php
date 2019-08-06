@@ -32,6 +32,7 @@ function login($email, $password){
    //db query gets passed to the prepare function
    $statement = $db->prepare($query);
    echo $email;
+   echo $password;
    $statement->bindParam(':Email', $email);
    $statement->bindParam(':Password', $password);
    var_dump($statement);   

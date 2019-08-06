@@ -82,7 +82,7 @@ if ($action == 'user_dashboard'){
     $password = filter_input(INPUT_POST,'password');
     var_dump($password);
     echo "this is the user:" . $email . "<br>";
-    echo "this is the password:" . $password;
+    echo "this is the password:" . $password . "<br>";
    //email and password are passed as parameters to login() and set to $user
     $user = login($email, $password);
     var_dump($user);
