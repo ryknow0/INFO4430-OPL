@@ -79,6 +79,7 @@ if ($action == 'user_dashboard'){
     $password = filter_input(INPUT_POST,'password');
    //email and password are passed as parameters to login() and set to $user
     $user = login($email, $password);
+    var_dump($user);
    //var_dump($user);
     if($user == NULL){//checks to see if $user is NOT empty
         //if $user is empty redirect user back to the loginform.php page
