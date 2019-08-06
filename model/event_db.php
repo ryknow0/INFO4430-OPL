@@ -140,10 +140,10 @@ function get_ytd_event_types(){
     return $ytd_event_types;     
 }
 
-function event_table($data = array())
+function event_table($events = array())
 {
     $rows = array();
-    foreach ($data as $row) {
+    foreach ($events as $row) {
         $cells = array();
         foreach ($row as $cell) {
             $cells[] = "<td>{$cell}</td>";
