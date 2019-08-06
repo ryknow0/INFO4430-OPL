@@ -54,12 +54,12 @@ $ytd_events = 12;
                 ['Book Signing',      2],
                 ['Clubs',  7],
                 ['Film Screening', 15],
-                ['Lecture',    10]
-                ['Outreach',    30]
-                ['Panel',    3]
-                ['Passive Program',    7]
-                ['Performance',    7]
-                ['Activity Station',    3]
+                ['Lecture',    10],
+                ['Outreach',    30],
+                ['Panel',    3],
+                ['Passive Program',    7],
+                ['Performance',    7],
+                ['Activity Station',    3],
                 ['Storytime',    20]
             ]);
 
