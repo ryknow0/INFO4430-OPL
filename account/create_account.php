@@ -76,7 +76,7 @@ include '../view/header.php';
           <!-- name="action"  value="create_account"              -->
           <!-- SUCCESS redirect to account dashboard(index.php)   -->
           <!-- FAIL or CANCEL redirect to account loginform.php   -->          
-            <input type="submit" value="Submit" data-wait="Please wait..." class="button login w-button">
+            <input type="submit" value="Submit" onclick="window.location.href = '../account/index.php';" data-wait="Please wait..." class="button login w-button">
             <input type="submit" value="Cancel" onclick="window.location.href = '../loginform.php';" data-wait="Please wait..." class="button w-button">
             <input type="hidden" name="action" value="add_account">
             </div>
