@@ -18,8 +18,8 @@ $events = get_all_events($accountID);
 var_dump($events);
 $json_events = json_encode($events);
 echo "<br>";
-echo $events[1][0];
-echo $events[1][2];
+//echo $events[1][0];
+//echo $events[1][2];
 $array= $events;
 //}
 $user_first_name = 'Ryan';
