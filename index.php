@@ -39,7 +39,7 @@ $nr_col = 11;       // Sets the number of columns
 
 $i = 0;       // index used to control when to add new row (incremented to each loop)
 // Traverse the array with FOREACH
-foreach($aray AS $key=>$val) {
+foreach($array AS $key=>$val) {
   $html_table .= '<td>' .$key. ' - '. $val. '</td>';       // adds key-value in columns in table
   $i++;
 
