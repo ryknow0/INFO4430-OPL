@@ -204,3 +204,10 @@ User Account ID is: User Add Function Account ID is:
 }
 echo build_table($array);
           ?>
+
+
+<script type="text/javascript">
+              document.getElementById("Cancel").onclick = function () {
+                location.href = "../loginform.php";
+              };  
+            </script>
