@@ -26,13 +26,13 @@ function get_account_users($accountID) {
 function login($email, $password){
    global $db;
    //
-   $query = 'SELECT UserID, First_Name, Last_Name, Username 
+   $query = 'SELECT UserID, First_Name, Last_Name, Username, AccountID_FK 
                FROM Users 
                WHERE Username = :Username AND Password = :Password';
    //db query gets passed to the prepare function
    $statement = $db->prepare($query);
-   echo "function username:" . $email . "<br>";
-   echo "function password:" . $password . "<br>";
+   //echo "function username:" . $email . "<br>";
+   //echo "function password:" . $password . "<br>";
    $statement->bindParam(':Username', $email);
    $statement->bindParam(':Password', $password);
    var_dump($statement);   
@@ -42,7 +42,7 @@ function login($email, $password){
    $user = $statement->fetch(PDO::FETCH_BOTH);//access the return array allows you to use names or numbers to access array items
    $statement->closeCursor();
    //$user is an aray of 4 elements
-   var_dump($user);
+   //var_dump($user);
    return $user;   
 }
 //var_dump($_SESSION);

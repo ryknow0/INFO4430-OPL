@@ -23,7 +23,7 @@ echo "<br>";
 $array= $events;
 //}
 
-$login_username = $_SESSON['First_Name'];
+$login_username = $_SESSION['First_Name'];
 var_dump($login_username);
 echo "this is the first name of the logged in user: " . $login_username . "<br>";
 $user_first_name = 'Static Name';
