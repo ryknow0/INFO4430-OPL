@@ -14,7 +14,7 @@ include 'view/account_dashboard_header.php';
   </div>
   <div class="page-wrapper">
     <div class="container w-container"><!--Maybe insert a heading for Account Name-->
-      <h1 class="centered-h1">Welcome, <?php echo $user_first_name $login_username?></h1>
+      <h1 class="centered-h1">Welcome, <?php echo $user_first_name $login_username;?></h1>
       <div class="columns w-row">
         <div class="w-col w-col-4 w-col-small-small-stack">
           <h3 class="h3">Event Types</h3><!--Google Charts API -> pie chart of count of event types-->
