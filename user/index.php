@@ -85,6 +85,7 @@ if ($action == 'user_dashboard'){
     echo "this is the password:" . $password . "<br>";
    //email and password are passed as parameters to login() and set to $user
     $user = login($email, $password);
+    echo "<br> This the return of the login function:";
     var_dump($user);
    //var_dump($user);
     if($user == NULL){//checks to see if $user is NOT empty
