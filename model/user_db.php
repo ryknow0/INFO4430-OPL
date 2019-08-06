@@ -33,14 +33,15 @@ function login($email, $password){
    $statement = $db->prepare($query);
 
    $statement->bindParam(':Email', $email);
-   $statement->bindParam(':Password', $password);   
+   $statement->bindParam(':Password', $password);
+   var_dump($statement);   
    //execute passes the statement (query) and sends it across the connection to the db sever       
    $statement->execute();
    // fetch is cursor runction
    $user = $statement->fetch(PDO::FETCH_BOTH);//access the return array allows you to use names or numbers to access array items
    $statement->closeCursor();
    //$user is an aray of 4 elements
-   //var_dump($user);
+   var_dump($user);
    return $user;   
 }
 //var_dump($_SESSION);
