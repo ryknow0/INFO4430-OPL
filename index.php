@@ -17,7 +17,7 @@ include 'view/account_dashboard_header.php';
       <h1 class="centered-h1">Welcome, <?php echo $user_first_name?></h1>
       <div class="columns w-row">
         <div class="w-col w-col-4 w-col-small-small-stack">
-          <h3 class="h3">Top Events</h3><!--Google Charts API -> pie chart of count of event types-->
+          <h3 class="h3">Event Types</h3><!--Google Charts API -> pie chart of count of event types-->
           <div id="donutchart">
           </div>
         </div>
