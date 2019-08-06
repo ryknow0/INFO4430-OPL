@@ -33,31 +33,31 @@ include 'view/account_dashboard_header.php';
           <!-- Google Charts API or manual Table to display upcoming events on an account-->
           <div>
           <?php 
-            // Create the beginning of HTML table, and of the first row
-$html_table = '<table border="1" cellspacing="0" cellpadding="2"><tr>';
-$nr_col = 11;       // Sets the number of columns
+            function build_table($array){
+    // start table
+    $html = '<table>';
+    // header row
+    $html .= '<tr>';
+    foreach($array[0] as $key=>$value){
+            $html .= '<th>' . htmlspecialchars($key) . '</th>';
+        }
+    $html .= '</tr>';
 
-$i = 0;       // index used to control when to add new row (incremented to each loop)
-// Traverse the array with FOREACH
-foreach($array AS $key=>$val) {
-  $html_table .= '<td>' .$key. ' - '. $val. '</td>';       // adds key-value in columns in table
-  $i++;
+    // data rows
+    foreach( $array as $key=>$value){
+        $html .= '<tr>';
+        foreach($value as $key2=>$value2){
+            $html .= '<td>' . htmlspecialchars($value2) . '</td>';
+        }
+        $html .= '</tr>';
+    }
 
-  // If the number of columns is completed for a row (rest of division of $i to $nr_col is 0)
-  // Closes the current row, and begins another row
-  $col_to_add = $i % $nr_col;
-  if($col_to_add == 0) { $html_table .= '</tr><tr>'; }
+    // finish table and return it
+
+    $html .= '</table>';
+    return $html;
 }
-
-// Adds empty column if the current row is not completed
-if($col_to_add != 0) $html_table .= '<td colspan="'. ($nr_col - $col_to_add). '">&nbsp;</td>';
-
-$html_table .= '</tr></table>';         // ends the last row, and the table
-
-// Delete posible empty row (<tr></tr>) which cand be created after last column
-$html_table = str_replace('<tr></tr>', '', $html_table);
-
-echo $html_table;        // display the HTML table
+echo build_table($array);
           ?>
           </div>
         </div>
