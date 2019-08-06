@@ -24,8 +24,9 @@ $array= $events;
 //}
 
 $login_username = $_SESSION['First_Name'];
-var_dump($login_username);
-echo "this is the first name of the logged in user: " . $login_username . "<br>";
+$accountID = $_SESSION['AccountID_FK'];
+//var_dump($login_username);
+//echo "this is the first name of the logged in user: " . $login_username . "<br>";
 $ytd_attendance = 1202;
 $ytd_events = 112;
 ?>
