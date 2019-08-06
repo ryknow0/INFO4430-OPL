@@ -78,7 +78,7 @@ include '../view/header.php';
           <!-- SUCCESS redirect to account dashboard(index.php)   -->
           <!-- FAIL or CANCEL redirect to account loginform.php   -->          
             <input type="submit" value="Submit"  data-wait="Please wait..." class="button login w-button">
-            <input id="Cancel" value="Cancel"  data-wait="Please wait..." class="button w-button">
+            <input id="Cancel" type="submit" value="Cancel"  data-wait="Please wait..." class="button w-button">
             <input type="hidden" name="action" value="add_account">
             <script type="text/javascript">
               document.getElementById("Cancel").onclick = function () {
