@@ -32,7 +32,7 @@ include 'view/account_dashboard_header.php';
         <div class="w-col w-col-7">
           <!-- Google Charts API or manual Table to display upcoming events on an account-->
           <div>
-          <?php echo event_table($events); ?>
+          <?php echo event_table($events)?>
           </div>
         </div>
         <div class="w-col w-col-4 w-col-small-small-stack">
