@@ -31,12 +31,13 @@ include 'view/account_dashboard_header.php';
       <div class="columns w-row">
         <div class="w-col w-col-7">
           <!-- Google Charts API or manual Table to display upcoming events on an account-->
-          <div id="table_div" class="gtable">
+          <div>
+          <?php echo event_table($events); ?>
           </div>
         </div>
         <div class="w-col w-col-4 w-col-small-small-stack">
             <div class="centered-contents-div">
-            <a href="event/index.php?action=edit_event" class="button login w-button">Edit Event</a>
+            <a href="event/index.php?action=event_search" class="button login w-button">Edit Event</a>
             </div>
         </div>
       </div>

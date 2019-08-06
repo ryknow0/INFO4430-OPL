@@ -69,11 +69,5 @@ $ytd_events = 12;
 
         table.draw(data, {showRowNumber: true, width: '100%'});
     }
-    google.visualization.events.addListener(visualization, 'select',function(){
-  var selection = visualization.getSelection();  
-  var valueselected="value selected" + data.getFormattedValue(selection[0].row, 0);  
-  window.open(valueselected); 
-});
 </script>
-<?php echo $valueselected;?>
 </head>
