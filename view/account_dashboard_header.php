@@ -44,6 +44,28 @@ $ytd_events = 12;
     <link href="http://10.52.2.69/images/favicon.ico" rel="shortcut icon" type="image/x-icon">
     <link href="http://10.52.2.69/images/webclip.png" rel="apple-touch-icon">
     <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    <script type="text/javascript">
+        google.charts.load("current", {packages:["corechart"]});
+        google.charts.setOnLoadCallback(drawChart);
+        function drawChart() {
+            var data = google.visualization.arrayToDataTable([
+                ['Task', 'Hours per Day'],
+                ['Work',     11],
+                ['Eat',      2],
+                ['Commute',  2],
+                ['Watch TV', 2],
+                ['Sleep',    7]
+            ]);
+
+            var options = {
+                title: 'My Daily Activities',
+                pieHole: 0.4,
+            };
+
+            var chart = new google.visualization.PieChart(document.getElementById('donutchart'));
+            chart.draw(data, options);
+        }
+    </script>
     <script>
     google.charts.load('current', {'packages':['table']});
     google.charts.setOnLoadCallback(drawTable);
