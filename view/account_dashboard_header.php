@@ -92,9 +92,9 @@ $ytd_events = 112;
         data.addColumn('string', 'Type');
         data.addColumn('string', 'Topic');
         data.addRows([
-            ['Acting up: Beauty and Beast', '2019-01-08', '19:00:00', '21:00:00', 'Fireplace', 'Acting', 'Kids', 'Comedy', 'Fiction'],
+            ['Acting up: Beauty and Beast', '2019-01-08', '19:00:00', '21:00:00', 'Fireplace', 'Performance', 'Kids', 'Comedy', 'Fiction'],
             ['Event Test 1', '2019-07-31', '07:00:00', '08:00:00', 'Story Telling Wing', 'After Hours', 'Kids', 'Library Sponsored', 'STEM'],
-            ['Utah Lyric Opera Young Artists', '2019-09-07', '19:00:00', '21:00:00', 'Fireplace', 'Music', 'Adult Kids', 'Singing', 'Opera']
+            ['Utah Lyric Opera Young Artists', '2019-09-07', '19:00:00', '21:00:00', 'Fireplace', 'Performance', 'Adult Kids', 'Singing', 'Opera']
         ]);
 
         var table = new google.visualization.Table(document.getElementById('table_div'));
