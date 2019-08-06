@@ -111,7 +111,7 @@
           </div>
           <div class="form-button-wrapperv">
           <input type="submit" value="Submit" data-wait="Please wait..." class="button login w-button">
-          <input type="submit" value="Cancel" onclick="window.location.href = '/index.php';" data-wait="Please wait..." class="button w-button">
+          <input type="submit" value="Cancel" onclick="window.location.href = '../index.php?action=user_dashboard';" data-wait="Please wait..." class="button w-button">
           <input type="hidden" name="action" value="track_event">
         </div>
           <div class="w-embed w-script">
