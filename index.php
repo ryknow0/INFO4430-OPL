@@ -41,7 +41,7 @@ include 'view/account_dashboard_header.php';
             </div>
         </div>
       </div>
-      <div class="columns w-row">
+      <div class="columns40 w-row">
         <div class="w-col w-col-4">
           <div class="centered-contents-div">
             <a href="event/index.php?action=create_event" class="button fixed-width-button w-button">Create Event</a>
