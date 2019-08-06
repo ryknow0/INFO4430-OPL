@@ -49,16 +49,22 @@ $ytd_events = 12;
         google.charts.setOnLoadCallback(drawChart);
         function drawChart() {
             var data = google.visualization.arrayToDataTable([
-                ['Task', 'Hours per Day'],
-                ['Work',     11],
-                ['Eat',      2],
-                ['Commute',  2],
-                ['Watch TV', 2],
-                ['Sleep',    7]
+                ['Category', 'Num of Events'],
+                ['After Hours',     8],
+                ['Book Signing',      2],
+                ['Clubs',  7],
+                ['Film Screening', 15],
+                ['Lecture',    10]
+                ['Outreach',    30]
+                ['Panel',    3]
+                ['Passive Program',    7]
+                ['Performance',    7]
+                ['Activity Station',    3]
+                ['Storytime',    20]
             ]);
 
             var options = {
-                title: 'My Daily Activities',
+                //title: 'My Daily Activities',
                 pieHole: 0.4,
             };
 
