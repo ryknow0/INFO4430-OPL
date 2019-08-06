@@ -26,14 +26,14 @@ function get_account_users($accountID) {
 function login($email, $password){
    global $db;
    //
-   $query = 'SELECT UserID, First_Name, Last_Name, Email 
+   $query = 'SELECT UserID, First_Name, Last_Name, Username 
                FROM Users 
-               WHERE Email = :Email AND Password = :Password';
+               WHERE Username = :Username AND Password = :Password';
    //db query gets passed to the prepare function
    $statement = $db->prepare($query);
    echo "function username:" . $email . "<br>";
    echo "function password:" . $password . "<br>";
-   $statement->bindParam(':Email', $email);
+   $statement->bindParam(':Username', $email);
    $statement->bindParam(':Password', $password);
    var_dump($statement);   
    //execute passes the statement (query) and sends it across the connection to the db sever       
