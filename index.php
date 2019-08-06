@@ -33,18 +33,18 @@ include 'view/account_dashboard_header.php';
           <!-- Google Charts API or manual Table to display upcoming events on an account-->
           <div>
           <?php 
-          function build_table($array){
+          function build_table($events){
     // start table
     $html = '<table>';
     // header row
     $html .= '<tr>';
-    foreach($array[0] as $key=>$value){
+    foreach($events[0] as $key=>$value){
             $html .= '<th>' . htmlspecialchars($key) . '</th>';
         }
     $html .= '</tr>';
 
     // data rows
-    foreach( $array as $key=>$value){
+    foreach( $events as $key=>$value){
         $html .= '<tr>';
         foreach($value as $key2=>$value2){
             $html .= '<td>' . htmlspecialchars($value2) . '</td>';
