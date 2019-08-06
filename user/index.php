@@ -11,8 +11,8 @@ session_start();
 require('../model/user_db.php');
 require('../model/account_db.php');
 require('../model/event_db.php');
-var_dump($action);
-echo "this is the action:" . $action;
+//var_dump($action);
+//echo "this is the action:" . $action;
 //Conditions to magange the various actions related to users
 //take 'action' from post and set to local $action variable
 $action = filter_input(INPUT_POST, 'action');
@@ -93,11 +93,11 @@ if ($action == 'user_dashboard'){
         header("Location: ../loginform.php?errors=Login Missing login credentials.");
     } else{
        //If $user is not NULL then user information is set in the $_SESSION
-        $_SESSION['Email'] = $user['Email'];
+        $_SESSION['Email'] = $user['Username'];
         $_SESSION['First_Name'] = $user['First_Name'];
         $_SESSION['Last_Name'] = $user['Last_Name'];
         $_SESSION['UserID'] = $user['UserID'];
-        $_SESSION['AccountID'] = $user['AccountID'];
+        $_SESSION['AccountID'] = $user['AccountID_FK'];
        //user is redirected to index.php
         header('Location: ../index.php');
     }
