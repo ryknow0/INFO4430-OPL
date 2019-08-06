@@ -72,13 +72,19 @@ include '../view/header.php';
             <input type="text" class="form-field w-input" maxlength="256" name="password2" data-name="password2" id="name-2">
           </div>
           <div class="form-button-wrapper">
+            
           <!-- Account Creation form buttons                      -->
           <!-- name="action"  value="create_account"              -->
           <!-- SUCCESS redirect to account dashboard(index.php)   -->
           <!-- FAIL or CANCEL redirect to account loginform.php   -->          
             <input type="submit" value="Submit"  data-wait="Please wait..." class="button login w-button">
-            <input type="submit" value="Cancel" onclick="window.location.href = '../loginform.php';" data-wait="Please wait..." class="button w-button">
+            <input id="Cancel" value="Cancel"  data-wait="Please wait..." class="button w-button">
             <input type="hidden" name="action" value="add_account">
+            <script type="text/javascript">
+              document.getElementById("Cancel").onclick = function () {
+                location.href = "../loginform.php";
+              };  
+            </script>
             </div>
         </form>
         <?php //var_dump($_SESSION);?>
