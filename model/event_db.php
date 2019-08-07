@@ -141,6 +141,9 @@ function get_ytd_event_types(){
     return $ytd_event_types;     
 }
 
+function add_event_data(){
+    
+}
 
 
 ?>

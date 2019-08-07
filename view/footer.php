@@ -1,17 +1,3 @@
-<!-- <footer>
-    <p class="copyright">
-        &copy; <?php //echo date("Y"); ?> Event Tracker
-    </p>
-</footer>
-</body>
-</html>-->
-<!-- <footer>
-  <a href="http://localhost/INFO3426/Assignment_6/index.php">Home</a><p class="copyright">&copy; <?php echo date("Y"); ?> The Book Loan System</p>
-</footer>
-<a href="http://localhost/INFO3426/Assignment_6/logout.php">Logout</a>
-</body>
-</html> -->
-
 <footer>
     <a href="http://10.52.2.69/account/index.php?action=create_account" class="link">Create Account</a>
     <a href="http://10.52.2.69/event/index.php?action=create_event" class="link">Create Event</a>
