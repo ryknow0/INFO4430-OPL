@@ -142,7 +142,9 @@ function get_ytd_event_types(){
 }
 
 function add_event_data(){
-    
+    global $db;
+    $query = 'INSERT INTO Event_Data()
+                VALUES () '
 }
 
 

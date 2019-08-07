@@ -81,6 +81,26 @@ if ($action == 'get_all_events'){
     $event_start_time = ' ';
     $event_end_time = ' ';
 } else if ($action == 'track_event'){
-    
+    $eventID = $_SESSION['EventID'];
+    $accountID = $_SESSION['AccountID'];
+    //Attendance
+    $attendance = filter_input(INPUT_POST, 'attendance');
+    //Age event demographics
+    $age_under_18 = filter_input(INPUT_POST, 'age_under_18');
+    $age_18_to_64 = filter_input(INPUT_POST, 'age_18_to_64');
+    $age_over_65  = filter_input(INPUT_POST, 'age_over_65');
+    //Gender event demographics
+    $gender_boys = filter_input(INPUT_POST, 'gender_boys');
+    $gender_girls = filter_input(INPUT_POST, 'gender_girls');
+    $gender_men = filter_input(INPUT_POST, 'gender_men');
+    $gender_women = filter_input(INPUT_POST, 'gender_women');
+    //Ethnicity event demograpics
+    $ethnicity_hispanic = filter_input(INPUT_POST, 'ethnicity_hispanic');
+    $ethnicity_black = filter_input(INPUT_POST, 'ethnicity_black');
+    $ethnicity_white = filter_input(INPUT_POST, 'ethnicity_white');
+    $ethnicity_asian = filter_input(INPUT_POST, 'ethnicity_asian');
+    $ethnicity_other = filter_input(INPUT_POST, 'ethnicity_other');
+    $event_data_added = track_event($eventID, $accountID, $attendance, $age_under_18, $age_18_to_64, $age_over_65, $gender_boys, $gender_girls,$gender_women, $ethnicity_hispanic, $ethnicity_black, $ethnicity_white, $ethnicity_asian, $ethnicity_other);
+    header('Location: ../index.php');
 }
 ?>

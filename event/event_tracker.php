@@ -1,4 +1,4 @@
-<?php include '../view/header.php' ?>
+<?php include '../view/event_tracker_header.php' ?>
 <body class="event-tracker-body">
   <div data-collapse="medium" data-animation="default" data-duration="400" class="navbar w-nav">
     <div class="container-2 w-container"><a href="index.html" class="w-nav-brand"><img src="images/orem-library.jpg" alt="" class="navbar-image"></a>
@@ -9,12 +9,12 @@
   </div>
   <div class="page-wrapper">
     <div class="container w-container">
-      <h1 class="centered-h1">Event Test 1</h1>
+      <h1 class="centered-h1">Acting Up: Beauty and the Beast</h1>
       <h4 class="centered-h1">Event Data Tracker</h4>
       <div class="fields-wrapper w-form">
         <form id="email-form" name="email-form" data-name="Email Form" action='../index.php' method="post">
           <div>
-            <h2 class="h2-centered">Total: 85</h2>
+            <h2 class="h2-centered">Total: 0</h2>
           </div>
           <div class="attendance-demographic-wrapper">
             <div class="w-row">
